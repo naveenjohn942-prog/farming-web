@@ -1,0 +1,10 @@
+1st--- 
+git add .
+2nd--
+git commit -m "save_name"
+3rd
+git push
+
+
+TO copy the files
+git pull git_url
