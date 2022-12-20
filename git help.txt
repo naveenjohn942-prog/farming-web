@@ -7,4 +7,4 @@ git push
 
 
 TO copy the files
-git pull git_url
+git pull https://github.com/naveenjohn942-prog/farming-web.git
