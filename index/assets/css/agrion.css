@@ -473,6 +473,7 @@ ul {
   background-color: var(--agrion-black);
   padding: 15px 40px 15px;
   border-radius: 22.5px;
+  justify-content: space-around;
 }
 
 .main-header__contact-list {
@@ -2256,7 +2257,7 @@ ul {
 
 .main-slider__title {
   position: relative;
-  font-size: 170px;
+  font-size: 4.9rem;
   color: var(--agrion-white);
   font-weight: 700;
   font-family: var(--agrion-font);
