@@ -3,7 +3,7 @@ git add .
 2nd--
 git commit -m "save_name"
 3rd
-git push
+git push URL
 
 
 TO copy the files

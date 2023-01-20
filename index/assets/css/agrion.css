@@ -474,6 +474,7 @@ ul {
   padding: 15px 40px 15px;
   border-radius: 22.5px;
   justify-content: space-around;
+  left: -58px;
 }
 
 .main-header__contact-list {
@@ -553,6 +554,8 @@ ul {
 
 .main-header__menu-box-bottom {
   display: block;
+  position: relative;
+left: -78px;
 }
 
 .main-menu {
@@ -9774,7 +9777,8 @@ ul {
 }
 
 .contact-form__input-box input[type="text"],
-.contact-form__input-box input[type="email"] {
+.contact-form__input-box input[type="email"],
+.contact-form__input-box #Subject {
   height: 64px;
   width: 100%;
   border: none;
