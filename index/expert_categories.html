@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Cart || Agrion || Agrion HTML 5 Template </title>
+    <title> Blog || Agrion || Agrion HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
-    <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.css" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrion.css" />
@@ -268,7 +267,7 @@
                                                             <li><a href="404.html">404 Error</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="dropdown">
+                                                    <li class="dropdown current">
                                                         <a href="#">Blog</a>
                                                         <ul class="shadow-box">
                                                             <li><a href="blog.html">Blog</a></li>
@@ -277,7 +276,7 @@
                                                             <li><a href="blog-details.html">Blog Details</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="dropdown current">
+                                                    <li class="dropdown">
                                                         <a href="#">Shop</a>
                                                         <ul class="shadow-box">
                                                             <li><a href="products.html">Products</a></li>
@@ -341,124 +340,167 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li>Shop</li>
+                        <li>Blog</li>
                     </ul>
-                    <h2>Cart</h2>
+                    <h2>question by categories</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Start Cart Page-->
-        <section class="cart-page">
+        <!--Blog Page Start-->
+        <section class="blog-page">
             <div class="container">
-                <div class="table-responsive">
-                    <table class="table cart-table">
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td>
-                                    <div class="product-box">
-                                        <div class="img-box">
-                                            <img src="assets/images/shop/cart-page-img-1.jpg" alt="">
-                                        </div>
-                                        <h3><a href="product-details.html">Brown Bread</a></h3>
-                                    </div>
-                                </td>
-                                <td id="Price">$10.00</td>
-                                <td>
-                                    <div class="quantity-box">
-                                        <button type="button" class="sub" onclick="quantity_value()"><i class="fa fa-minus"></i></button>
-                                        <input type="number" id="product-1" value="1" onchange="quantity_value(this.value)" />
-                                        <button type="button" class="add" onclick="quantity_value()"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </td>
-                                <td id="total-1">
-                                    $10.00
-                                </td>
-                                <td>
-                                    <div class="cross-icon">
-                                        <i class="icon-close remove-icon"></i>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div class="product-box">
-                                        <div class="img-box">
-                                            <img src="assets/images/shop/cart-page-img-2.jpg" alt="">
-                                        </div>
-                                        <h3><a href="product-details.html">Broccoli</a></h3>
-                                    </div>
-                                </td>
-                                <td id="price-2">$5.00</td>
-                                <td>
-                                    <div class="quantity-box">
-                                        <button type="button" class="sub" onclick="quantity_value()"><i class="fa fa-minus"></i></button>
-                                        <input type="number" id="product-2" value="1" onchange="quantity_value(this.value)" />
-                                        <button type="button" class="add" onclick="quantity_value()"><i class="fa fa-plus"></i></button>
-                                    </div>
-                                </td>
-                                <td id="total-2">
-                                    $5.00
-                                </td>
-                                <td>
-                                    <div class="cross-icon">
-                                        <i class="icon-close remove-icon"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
                 <div class="row">
-                    <div class="col-xl-8 col-lg-7">
-                        <form action="#" class="default-form cart-cupon__form">
-                            <input type="text" placeholder="Enter Coupon Code" class="cart-cupon__input">
-                            <button class="thm-btn" type="submit">
-                                <span>Apply Coupon</span> <i class="icon-right-arrow"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="col-xl-4 col-lg-5">
-                        <ul class="cart-total list-unstyled">
-                            <li>
-                                <span>Subtotal</span>
-                                <span>$20.98 USD </span>
-                            </li>
-                            <li>
-                                <span>Shipping Cost</span>
-                                <span>$0.00 USD</span>
-                            </li>
-                            <li>
-                                <span>Total</span>
-                                <span class="cart-total-amount">$20.98 USD</span>
-                            </li>
-                        </ul>
-                        <div class="cart-page__buttons">
-                            <div class="cart-page__buttons-1">
-                                <a href="#" class="thm-btn">Update <i class="icon-right-arrow"></i></a>
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-1.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
                             </div>
-                            <div class="cart-page__buttons-2">
-                                <a href="checkout.html" class="thm-btn">Checkout <i class="icon-right-arrow"></i></a>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html">What is the main purpose of crop rotation?</a></h3>
                             </div>
                         </div>
                     </div>
+                    <!--Blog One Single End-->
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-2.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html
+                                    ">What are some common pests and diseases that affect crop growth?</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blog One Single End-->
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-3.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html">What is the difference between conventional and organic farming?</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blog One Single End-->
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-4.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html">What are the benefits of sustainable agriculture?</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blog One Single End-->
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-5.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html">What are the importance of irrigation in agriculture?</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blog One Single End-->
+                    <!--Blog One Single Start-->
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <img src="assets/images/blog/blog-one-6.jpg" alt="">
+                                <div class="blog-one__date">
+                                    <span>28</span>
+                                    <p>Aug</p>
+                                </div>
+                            </div>
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-user-circle"></i>Admin</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a href="expert_reply.html">What is the difference between monoculture and polyculture?</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Blog One Single End-->
                 </div>
             </div>
         </section>
-        <!--End Cart Page-->
+        <!--Blog Page End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -656,25 +698,7 @@
     <!-- /.search-popup -->
 
 
-    <script>
-        var price = document.getElementById('Price').innerText;
-        price = price.slice(1);
-        console.log(price);
-        function quantity_value(val) {
 
-            var quantity1 = document.getElementById('product-1').value;
-            var quantity2 = document.getElementById('product-2').value;
-            
-            // console.log(quantity);
-            var total1 = price * quantity1;
-            var total2 = price * quantity2;
-            document.getElementById('total-1').innerText = "$"+total1;
-            document.getElementById('total-2').innerText = "$"+total2;
-
-            
-        }
-        
-    </script>
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/jarallax/jarallax.min.js"></script>
@@ -699,12 +723,9 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
-    <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
 
 
 
-
- 
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>

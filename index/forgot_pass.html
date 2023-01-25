@@ -111,7 +111,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     
-                    <h2 class="section-title__title" style="color: black;">Register</h2>
+                    <h2 class="section-title__title" style="color: black;">Forgot Password</h2>
                     <div class="section-title__icon">
                         <img src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -120,86 +120,22 @@
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
                         <div class="row">
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="first Name" name="fname">
-                                </div>
-                               
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="last Name" name="lname">
-                                </div>
-                               
-                            </div>
+                            
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Username" name="username">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="password" placeholder="password" name="password">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Address" name="address">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                   
-                                    
-                                        <select name="Subject" id="Subject" onchange="display_input()">
-                                            <option value="" disabled selected>User Type</option>
-                                            <option value="Farmers">Farmers</option>
-                                            <option value="Dealer">Dealer</option>
-                                            <option value="Expert">Expert</option>
-                                        </select>
-                                </div>
-                            </div>
-
-
-                            <div class="col-xl-12" id="farmer" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="ID Number" name="fnumber">
+                                    <input type="email" placeholder="Email Address Or Username" name="email" >
                                 </div>
                             </div>
                             
-                            <div class="col-xl-12" id="dealer" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="GSTIN" name="gstin" min="15" max="15">
-                                </div>
-                            </div>
-
-                            <div class="col-xl-12" id="expert" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Qualification" name="qual">
-                                </div>
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Experience" name="exp">
-                                </div>
-                            </div>
-
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
                                 
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Register<i
+                                    <a href="change_pass.html" class="thm-btn contact-two__btn">GET LINK<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
+                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
                                 </div>
                             </div>
                         </div>
@@ -446,28 +382,6 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
-    <script>
-        function display_input(){
-            let role = $("#Subject").val();
-            
-            if(role == "Farmers"){
-                $('#farmer').show();
-                $('#expert').hide();
-                $('#dealer').hide();
-            }
-            else if(role == "Dealer"){
-                $('#dealer').show();
-                $('#expert').hide();
-                $('#farmer').hide();
-            }
-            else if(role == "Expert"){
-                $('#expert').show();
-                $('#dealer').hide();
-                $('#farmer').hide();
-            }
-        }
-    </script>
-    
 </body>
 
 </html>

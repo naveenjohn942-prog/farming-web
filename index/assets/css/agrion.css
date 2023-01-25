@@ -4456,7 +4456,7 @@ left: -78px;
   background-color: var(--agrion-extra);
   border-bottom-left-radius: var(--agrion-bdr-radius);
   border-bottom-right-radius: var(--agrion-bdr-radius);
-  padding: 22px 40px 33px;
+  padding: 0.5rem 0.5rem 2rem;
 }
 
 .blog-one__meta {
@@ -9778,6 +9778,7 @@ left: -78px;
 
 .contact-form__input-box input[type="text"],
 .contact-form__input-box input[type="email"],
+.contact-form__input-box input[type="password"],
 .contact-form__input-box #Subject {
   height: 64px;
   width: 100%;

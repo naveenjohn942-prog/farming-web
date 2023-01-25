@@ -58,10 +58,15 @@
         }
         .section-title__tagline{
             color: rgb(0, 0, 0);
-            font-size: 1.8rem !important;
+            font-size: 1.3rem !important;
         }
         .thm-breadcrumb{
             background-color: rgba(var(--agrion-white-rgb), .50);
+        }
+        .forgot_link{
+            color: black;
+            display: flex;
+            flex-direction: row-reverse;
         }
     </style>
 
@@ -120,19 +125,15 @@
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
                         <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
+                            
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
                                     <input type="email" placeholder="Email Address" name="email">
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
+                                    <input type="password" placeholder="Password" name="Password">
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -140,24 +141,22 @@
                                    
                                     
                                         <select name="Subject" id="Subject">
-                                            <option value="" disabled selected>Query Type</option>
-                                            <option value="Crop">Crop</option>
-                                            <option value="Pesticides">Pesticides</option>
-                                            <option value="Machineries">Machineries</option>
+                                            <option value="" disabled selected>User Type</option>
+                                            <option value="Farmers">Farmers</option>
+                                            <option value="Dealer">Dealer</option>
+                                            <option value="Expert">Expert</option>
                                         </select>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write your Query"></textarea>
-                                </div>
+                                <a href="forgot_pass.html" class="forgot_link">Forgot Password?</a>
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Submit Query<i
+                                    <a href="about.html" class="thm-btn contact-two__btn">Login<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
-                            <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
+                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
                                 </div>
                             </div>
                         </div>
