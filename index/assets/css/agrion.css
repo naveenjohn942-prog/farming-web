@@ -240,6 +240,7 @@ ul {
   display: inline-block;
   vertical-align: middle;
   -webkit-appearance: none;
+  appearance: none;
   outline: none !important;
   background-color: var(--agrion-base);
   color: var(--agrion-white);
@@ -4015,8 +4016,8 @@ left: -78px;
 .project-one {
   position: relative;
   display: block;
-  padding: 225px 0 90px;
-  margin-top: -105px;
+  padding: 130px 0 90px;
+  margin-top: 25px;
   z-index: 1;
 }
 
@@ -7269,6 +7270,8 @@ left: -78px;
   background: rgb(31, 99, 6);
   background: linear-gradient(90deg, rgba(31, 99, 6, 1) 21%, rgba(255, 205, 30, 1) 68%);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 2;
 }
