@@ -68,6 +68,9 @@
             display: flex;
             flex-direction: row-reverse;
         }
+        .error{
+            color:red !important;
+        }
     </style>
 
 </head>
@@ -124,23 +127,29 @@
                 <div class="contact-two__form-box">
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
-                        <div class="row">
+                        <div class="row" style="
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        ">
                             
-                            <div class="col-xl-12">
+                            <div class="col-xl-9">
                                 <div class="contact-form__input-box">
                                     <input type="email" placeholder="Email Address" name="email">
                                 </div>
                             </div>
-                            <div class="col-xl-12">
+                            <div class="col-xl-9">
                                 <div class="contact-form__input-box">
                                     <input type="password" placeholder="Password" name="Password">
                                 </div>
                             </div>
-                            <div class="col-xl-6">
+                            <div class="col-xl-4">
                                 <div class="contact-form__input-box">
                                    
                                     
-                                        <select name="Subject" id="Subject">
+                                        <select name="Subject" id="Subject" style="text-align: center;
+                                        font-size: 1.50rem;
+                                        font-weight: bolder;">
                                             <option value="" disabled selected>User Type</option>
                                             <option value="Farmers">Farmers</option>
                                             <option value="Dealer">Dealer</option>
@@ -153,7 +162,7 @@
                             <div class="col-xl-12">
                                 <a href="forgot_pass.html" class="forgot_link">Forgot Password?</a>
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Login<i
+                                    <a href="#" class="thm-btn contact-two__btn">Login<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
                              <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
