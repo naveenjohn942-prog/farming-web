@@ -87,7 +87,7 @@
                  <div class="content">
                     <h1>Opps ! Something Went Wrong</h1>
                     <p>While trying to reserve money from your account </p>
-                    <a href="index.html">Go to Home</a>
+                    <a href="index.php">Go to Home</a>
                  </div>
                  
               </div>

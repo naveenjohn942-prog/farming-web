@@ -173,12 +173,12 @@
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
-                                <a href="forgot_pass.html" class="forgot_link">Forgot Password?</a>
+                                <a href="forgot_pass.php" class="forgot_link">Forgot Password?</a>
                                 <div class="contact-form__btn-box">
                                     <a href="#" class="thm-btn contact-two__btn">Login<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
-                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
+                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.php">  Create a New Account</a></span>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img src="assets/images/resources/footer-logo.png"
+                                        <a href="index.php"><img src="assets/images/resources/footer-logo.png"
                                                 alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
@@ -344,7 +344,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
+                <a href="index.php" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->

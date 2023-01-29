@@ -33,7 +33,7 @@
                                         <p class="main-slider__sub-title">we are providing expert services</p>
                                         <h4 class="main-slider__title">Online Assistant WebService</h4>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
                                                     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                         <p class="main-slider__sub-title">we are providing expert services</p>
                                         <h4 class="main-slider__title">Online Assistant WebService</h4>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
                                                     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
@@ -73,11 +73,12 @@
                                         <p class="main-slider__sub-title">we are providing expert services</p>
                                         <h4 class="main-slider__title">Online Assistant WebService</h4>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Discover More <i
+                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
                                                     class="icon-right-arrow"></i> </a>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -175,7 +176,7 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="agriculture-products.html">Agriculture <br>
+                                <h3 class="services-one__title"><a href="agriculture-products.php">Agriculture <br>
                                         Products</a></h3>
                                 <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
                                     simply free text.</p>
@@ -197,7 +198,7 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="Expert-Guidence.html">Expert
+                                <h3 class="services-one__title"><a href="Expert-Guidence.php">Expert
                                         <br>Guidence</a></h3>
                                 <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
                                     simply free text.</p>
@@ -220,7 +221,7 @@
                                     </div>
                                 </div>
                                 <div class="services-one__content">
-                                    <h3 class="services-one__title"><a href="organic-products.html">Organic
+                                    <h3 class="services-one__title"><a href="organic-products.php">Organic
                                             <br> Products</a></h3>
                                     <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
                                         simply free text.</p>
@@ -378,11 +379,11 @@
                                     <img src="./assets/images/category/cat1.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="icon-right-arrow"></i></a>
+                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.html">Biofertilizers</a></h3>
+                                    <h3 class="project-one__title"><a href="project-details.php">Biofertilizers</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -396,11 +397,11 @@
                                     <img src="./assets/images/category/cat2.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="icon-right-arrow"></i></a>
+                                    <a href="product-details.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.html">Seasonal<br>Seeds</a></h3>
+                                    <h3 class="project-one__title"><a href="product-details.php">Seasonal<br>Seeds</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -415,11 +416,11 @@
                                    
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="icon-right-arrow"></i></a>
+                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.html">Tools and<br>Equipments</a></h3>
+                                    <h3 class="project-one__title"><a href="project-details.php">Tools and<br>Equipments</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -433,11 +434,11 @@
                                     <img src="./assets/images/category/cat4.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.html"><i class="icon-right-arrow"></i></a>
+                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.html">Chemical <br> Fertilizers</a></h3>
+                                    <h3 class="project-one__title"><a href="project-details.php">Chemical <br> Fertilizers</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -650,7 +651,7 @@
                                                     <textarea name="message" placeholder="Write a Message"></textarea>
                                                 </div>
                                                 <div class="contact-one__btn-box">
-                                                    <a href="about.html" class="thm-btn contact-one__btn">Send a Message
+                                                    <a href="index.php" class="thm-btn contact-one__btn">Send a Message
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -682,7 +683,7 @@
                                 </h3>
                             </div>
                             <div class="cta-one__right">
-                                <a href="about.html" class="thm-btn cta-one__btn">Discover More <i
+                                <a href="about.php" class="thm-btn cta-one__btn">Discover More <i
                                         class="icon-right-arrow"></i> </a>
                             </div>
                         </div>

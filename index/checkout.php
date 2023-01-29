@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Shop</li>
                     </ul>
@@ -144,7 +144,7 @@
                                 </div><!-- /.checkout__payment__item -->
                             </div><!-- /.checkout__payment -->
                             <div class="text-right d-flex justify-content-end">
-                                <a href="checkout.html" class="thm-btn">Place your order <i
+                                <a href="checkout.php" class="thm-btn">Place your order <i
                                         class="icon-right-arrow"></i></a>
                             </div><!-- /.text-right -->
 

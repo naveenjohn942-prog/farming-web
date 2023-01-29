@@ -58,7 +58,7 @@
                                     <textarea name="message" placeholder="Write your Query"></textarea>
                                 </div>
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Submit Query<i
+                                    <a href="about.php" class="thm-btn contact-two__btn">Submit Query<i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
@@ -113,10 +113,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b> Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted  <br>
-                                                <b>Answer:</b>eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What is the main purpose of crop rotation?<br>
+                                                <b>Answer:</b>The main purpose of crop rotation is to improve soil health by alternating different types of crops in the same field each year. This helps to reduce pest and disease pressure, add nutrients to the soil, and increase overall crop yield.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="">
@@ -139,10 +137,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted <br>
-                                                <b>Answer:</b>adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What are some common pests and diseases that affect crop growth?<br>
+                                                <b>Answer:</b>Some common pests that affect crop growth include insects, such as aphids and caterpillars, and mammals, such as rodents. Some common diseases that affect crop growth include fungal infections, such as powdery mildew and rust, and viral infections, such as mosaic virus.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-2.jpg" alt="">
@@ -165,10 +161,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted adipisicing<br>
-                                                <b>Answer:</b> elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What is the difference between conventional and organic farming?<br>
+                                                <b>Answer:</b> Conventional farming typically involves the use of synthetic pesticides and fertilizers, while organic farming relies on natural methods such as crop rotation, companion planting, and the use of beneficial insects to control pests. Organic farmers also avoid the use of genetically modified organisms and synthetic pesticides and fertilizers.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-3.jpg" alt="">
@@ -191,10 +185,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted <br>
-                                                <b>Answer:</b>adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What are the benefits of sustainable agriculture? <br>
+                                                <b>Answer:</b>The benefits of sustainable agriculture include increased biodiversity, improved soil health, reduced use of harmful chemicals, and a more resilient food system. It also helps to protect natural resources, such as water and soil, and promote social and economic well-being in farming communities.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-4.jpg" alt="">
@@ -217,10 +209,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted<br>
-                                                <b>Answer:</b> adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What are the importance of irrigation in agriculture?<br>
+                                                <b>Answer:</b> Irrigation is important in agriculture because it allows farmers to grow crops in areas where there is not enough rainfall to sustain them. Irrigation also helps to increase crop yields and improve crop quality. Additionally, irrigation can help to control weeds and pests, and it can be used to manage soil salinity.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-5.jpg" alt="">
@@ -243,10 +233,8 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>Lorem ipsum is simply free text dolor sit
-                                                amet, consect notted<br>
-                                                <b>Answer:</b> adipisicing elit sed do eiusmod tempor incididunt
-                                                ut labore et dolore magna aliqua.</p>
+                                            <p class="testimonial-one__text"><b>Question:</b>What are the benefits of sustainable agriculture?<br>
+                                                <b>Answer:</b> The benefits of sustainable agriculture include increased biodiversity, improved soil health, reduced use of harmful chemicals, and a more resilient food system. It also helps to protect natural resources, such as water and soil, and promote social and economic well-being in farming communities.</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">
                                                     <img src="assets/images/testimonial/testimonial-1-6.jpg" alt="">

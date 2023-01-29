@@ -132,10 +132,10 @@
                             <div class="col-xl-12">
                                 
                                 <div class="contact-form__btn-box">
-                                    <a href="change_pass.html" class="thm-btn contact-two__btn">GET LINK<i
+                                    <a href="change_pass.php" class="thm-btn contact-two__btn">GET LINK<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
-                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
+                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.php">  Create a New Account</a></span>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img src="assets/images/resources/footer-logo.png"
+                                        <a href="index.php"><img src="assets/images/resources/footer-logo.png"
                                                 alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
