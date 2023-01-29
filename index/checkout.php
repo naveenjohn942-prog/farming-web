@@ -28,19 +28,7 @@
                                 <h2 align="center">Billing Details</h2>
                             </div>
                             <form class="billing_details_form">
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <div class="select-box">
-                                                <select class="wide">
-                                                    <option data-display="Select a country">Select a Country</option>
-                                                    <option value="1">India</option>
-                                                   
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row bs-gutter-x-20">
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">

@@ -46,6 +46,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrion.css" />
     <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
+    <link rel="stylesheet" href="assets/css/validation-style.css">
     <style>
         .contact-two {
             padding-top: 0 !important;
@@ -63,13 +64,11 @@
         .thm-breadcrumb{
             background-color: rgba(var(--agrion-white-rgb), .50);
         }
-        .forgot_link{
-            color: black;
-            display: flex;
-            flex-direction: row-reverse;
+        #username-error{
+            color: red !important;
         }
         .error{
-            color:red !important;
+            color: red;
         }
     </style>
 
@@ -119,7 +118,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     
-                    <h2 class="section-title__title" style="color: black;">Login</h2>
+                    <h2 class="section-title__title" style="color: black;">Register</h2>
                     <div class="section-title__icon">
                         <img src="assets/images/icon/section-title-icon-1.png" alt="">
                     </div>
@@ -127,29 +126,64 @@
                 <div class="contact-two__form-box">
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
-                        <div class="row" style="
-                        text-align: center;
-                        display: flex;
-                        justify-content: center;
-                        ">
-                            
-                            <div class="col-xl-9">
+                        <div class="row">
+                            <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
+                                    <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="First Name" name="fname">
+                                    <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br/></small>
+                                </div>
+                               
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="contact-form__input-box">
+                                    <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="Last Name" name="lname">
+                                    <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br/></small>
+                                </div>
+                               
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="Username" name="username" maxlength="12" minlength="5">
                                 </div>
                             </div>
-                            <div class="col-xl-9">
+                            <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="password" placeholder="Password" name="Password">
+                                    <input type="email" required onkeyup="emails(this)" invalid-text="exampleInputemail21"  placeholder="Email Address" name="email">
+                                    <small id="exampleInputemail21" style="color: red; display: none;">Please Enter Valid Email.<br/></small>
                                 </div>
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-xl-12">
+                                <div class="contact-form__input-box">
+                                    <input type="password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword21"  placeholder="Password" name="password">
+                                    <small id="exampleInputPassword21" style="color: red; display: none;"><ul>
+                                        <li style="color: red;
+                                        display: table;">min 6 characters, max 50 characters</li>
+                                        <li style="color: red;
+                                        display: table;">must contain 1 letter</li>
+                                        <li style="color: red;
+                                        display: table;">must contain 1 number</li>
+                                        <li style="color: red;
+                                        display: table;">may contain special characters like !@#$%^&*()_+</li>
+                      
+                                      </ul><br/></small>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="contact-form__input-box">
+                                    <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09"  placeholder="Phone" name="Phone Number">
+                                    <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br/></small>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="Address" name="address">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
                                 <div class="contact-form__input-box">
                                    
                                     
-                                        <select name="Subject" id="Subject" style="text-align: center;
-                                        font-size: 1.50rem;
-                                        font-weight: bolder;">
+                                        <select name="Subject" id="Subject" onchange="display_input()">
                                             <option value="" disabled selected>User Type</option>
                                             <option value="Farmers">Farmers</option>
                                             <option value="Dealer">Dealer</option>
@@ -157,15 +191,37 @@
                                         </select>
                                 </div>
                             </div>
+
+
+                            <div class="col-xl-12" id="farmer" style="display: none;">
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="ID Number" name="fnumber">
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-12" id="dealer" style="display: none;">
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="GSTIN" name="gstin" min="15" max="15">
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12" id="expert" style="display: none;">
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="Qualification" name="qual">
+                                </div>
+                                <div class="contact-form__input-box">
+                                    <input type="text" placeholder="Experience" name="exp">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
-                                <a href="forgot_pass.html" class="forgot_link">Forgot Password?</a>
+                                
                                 <div class="contact-form__btn-box">
-                                    <a href="#" class="thm-btn contact-two__btn">Login<i
+                                    <a href="about.html" class="thm-btn contact-two__btn">Register<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
-                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.html">  Create a New Account</a></span>
                                 </div>
                             </div>
                         </div>
@@ -412,6 +468,29 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
+    <script>
+        function display_input(){
+            let role = $("#Subject").val();
+            
+            if(role == "Farmers"){
+                $('#farmer').show();
+                $('#expert').hide();
+                $('#dealer').hide();
+            }
+            else if(role == "Dealer"){
+                $('#dealer').show();
+                $('#expert').hide();
+                $('#farmer').hide();
+            }
+            else if(role == "Expert"){
+                $('#expert').show();
+                $('#dealer').hide();
+                $('#farmer').hide();
+            }
+        }
+    </script>
+     <script src="assets/js/validation.js"></script>
+    
 </body>
 
 </html>

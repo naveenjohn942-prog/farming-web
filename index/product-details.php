@@ -191,18 +191,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="review-form-one__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
+                                    <input type="text" placeholder="Your Name" required onkeyup="text(this)" invalid-text="yournameexample17" name="name">
+                                    <small id="yournameexample17" style="color: red; display: none;">Please Enter valid name.<br/></small>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
                                 <div class="review-form-one__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
+                                    <input type="email" required onkeyup="emails(this)" invalid-text="exampleInputEmail18" placeholder="Email Address" name="email">
+                                    <small id="exampleInputEmail18" style="color: red; display: none;">Please Enter valid Email.<br/></small>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-xl-12">
                                 <button type="submit" class="thm-btn review-form-one__btn">Submit a Review <i

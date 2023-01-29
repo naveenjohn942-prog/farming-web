@@ -123,12 +123,19 @@
                             
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="email" placeholder="New Password" name="email" >
+                                    <input type="password" placeholder="New Password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword15" name="email">
+                                    <small id="exampleInputPassword15" style="color: red; display: none;"><ul>
+                                        <li>min 6 characters, max 50 characters</li>
+                                        <li>must contain 1 letter</li>
+                                        <li>must contain 1 number</li>
+                                        <li>may contain special characters like !@#$%^&*()_+</li>
+                      
+                                      </ul><br/></small>
                                 </div>
                             </div>
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="email" placeholder="confirm Password" name="email" >
+                                    <input type="password" placeholder="confirm Password" name="email" >
                                 </div>
                             </div>
                         </div>
