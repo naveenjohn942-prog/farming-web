@@ -41,12 +41,12 @@
                                 <td>
                                     <div class="product-box">
                                         <div class="img-box">
-                                            <img src="assets/images/shop/cart-page-img-1.jpg" alt="">
+                                            <img src="assets/images/product/bf(7).jpeg" alt="">
                                         </div>
-                                        <h3><a href="product-details.php">Lilly</a></h3>
+                                        <h3><a href="product-details.php">Bee NPK</a></h3>
                                     </div>
                                 </td>
-                                <td id="Price">&#8377;10.00</td>
+                                <td id="Price">&#8377;230.00</td>
                                 <td>
                                     <div class="quantity-box">
                                         <button type="button" class="sub" onclick="quantity_value()"><i class="fa fa-minus"></i></button>
@@ -55,7 +55,7 @@
                                     </div>
                                 </td>
                                 <td id="total-1">
-                                    &#8377;10.00
+                                    &#8377;230.00
                                 </td>
                                 <td>
                                     <div class="cross-icon">
@@ -68,12 +68,12 @@
                                 <td>
                                     <div class="product-box">
                                         <div class="img-box">
-                                            <img src="assets/images/shop/shop-product-1-1.jpg" alt="">
+                                            <img src="assets/images/product/bf(1).jpeg" alt="">
                                         </div>
-                                        <h3><a href="product-details.php">Lavinder</a></h3>
+                                        <h3><a href="product-details.php">Mustard Cake Powder</a></h3>
                                     </div>
                                 </td>
-                                <td id="price-2">&#8377;25.00</td>
+                                <td id="price-2">&#8377;200.00</td>
                                 <td>
                                     <div class="quantity-box">
                                         <button type="button" class="sub" onclick="quantity_value()"><i class="fa fa-minus"></i></button>
@@ -82,7 +82,7 @@
                                     </div>
                                 </td>
                                 <td id="total-2">
-                                    &#8377;25.00
+                                    &#8377;200.00
                                 </td>
                                 <td>
                                     <div class="cross-icon">
@@ -95,19 +95,19 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-8 col-lg-7">
+                    <!-- <div class="col-xl-8 col-lg-7">
                         <form action="#" class="default-form cart-cupon__form">
                             <input type="text" placeholder="Enter Coupon Code" class="cart-cupon__input">
                             <button class="thm-btn" type="submit">
                                 <span>Apply Coupon</span> <i class="icon-right-arrow"></i>
                             </button>
                         </form>
-                    </div>
-                    <div class="col-xl-4 col-lg-5">
+                    </div> -->
+                    <div class="col-xl-12 col-lg-9">
                         <ul class="cart-total list-unstyled">
                             <li>
                                 <span>Subtotal</span>
-                                <span>$20.98 USD </span>
+                                <span>&#8377;430.00</span>
                             </li>
                             <li>
                                 <span>Shipping Cost</span>
@@ -115,13 +115,11 @@
                             </li>
                             <li>
                                 <span>Total</span>
-                                <span class="cart-total-amount">&#8377;20.98 USD</span>
+                                <span class="cart-total-amount">&#8377;430</span>
                             </li>
                         </ul>
                         <div class="cart-page__buttons">
-                            <div class="cart-page__buttons-1">
-                                <a href="#" class="thm-btn">Update <i class="icon-right-arrow"></i></a>
-                            </div>
+                            
                             <div class="cart-page__buttons-2">
                                 <a href="checkout.php" class="thm-btn">Checkout <i class="icon-right-arrow"></i></a>
                             </div>
