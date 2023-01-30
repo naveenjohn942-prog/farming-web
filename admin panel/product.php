@@ -9,7 +9,7 @@
                 <div class="card-body">
                   <h4 class="card-title">All Products Details</h4>
                   <div>
-                    <a href="add_product.html">
+                    <a href="add_product.php">
                     <button class="btn-primary">Add New Product</button>
                   </a>
                   </div>
@@ -71,7 +71,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -102,7 +102,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -133,7 +133,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -164,7 +164,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -195,7 +195,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -226,7 +226,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -257,7 +257,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -288,7 +288,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -319,7 +319,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
@@ -350,7 +350,7 @@
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>

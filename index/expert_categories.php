@@ -44,7 +44,7 @@
                                         <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="expert_reply.html">What is the main purpose of crop rotation?</a></h3>
+                                <h3 class="blog-one__title"><a href="expert_reply.php">What is the main purpose of crop rotation?</a></h3>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                                         <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="expert_reply.html
+                                <h3 class="blog-one__title"><a href="expert_reply.php
                                     ">What are some common pests and diseases that affect crop growth?</a></h3>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                                         <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="expert_reply.html">What are the benefits of sustainable agriculture?</a></h3>
+                                <h3 class="blog-one__title"><a href="expert_reply.php">What are the benefits of sustainable agriculture?</a></h3>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                                         <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="expert_reply.html">What are the importance of irrigation in agriculture?</a></h3>
+                                <h3 class="blog-one__title"><a href="expert_reply.php">What are the importance of irrigation in agriculture?</a></h3>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                                         <a href="blog-details.html"><i class="fas fa-comments"></i>2 Comments</a>
                                     </li>
                                 </ul>
-                                <h3 class="blog-one__title"><a href="expert_reply.html">What is the difference between monoculture and polyculture?</a></h3>
+                                <h3 class="blog-one__title"><a href="expert_reply.php">What is the difference between monoculture and polyculture?</a></h3>
                             </div>
                         </div>
                     </div>
