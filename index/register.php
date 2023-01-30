@@ -196,7 +196,7 @@
 
                             <div class="col-xl-12" id="farmer" style="display: none;">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="ID Number" name="fnumber">
+                                    <input type="text" placeholder="kheduthaq number" name="fnumber">
                                 </div>
                             </div>
                             

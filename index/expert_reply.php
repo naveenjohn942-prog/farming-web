@@ -10,16 +10,14 @@
                                 <img src="assets/images/blog/blog-details-img-1.jpg" alt="">
                                 <div class="blog-details__date">
                                     <p>28</p>
-                                    <span>Aug</span>
+                                    <span>Dec</span>
                                 </div>
                             </div>
                             <div class="blog-details__content">
                                 <ul class="list-unstyled blog-details__meta">
-                                    <li><a href="blog-details.html"><i class="fas fa-user-circle"></i> Admin</a>
+                                    <li><a href="blog-details.html"><i class="fas fa-user-circle"></i> By David Smith</a>
                                     </li>
-                                    <li><a href="blog-details.html"><i class="fas fa-comments"></i> 02
-                                            Comments</a>
-                                    </li>
+                                    
                                 </ul>
                                 <h3 class="blog-details__title">What is the main purpose of crop rotation?</h3>
                                 <p class="blog-details__text-1">Crop rotation is a farming technique in which different types of crops are grown in a 
@@ -53,11 +51,7 @@
                                                     <input type="text" placeholder="Your Name" name="name">
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6">
-                                                <div class="comment-form__input-box">
-                                                    <input type="email" placeholder="Email Address" name="email">
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-12">
@@ -79,14 +73,9 @@
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="sidebar">
-                            <div class="sidebar__single sidebar__search">
-                                <form action="#" class="sidebar__search-form">
-                                    <input type="search" placeholder="Search here">
-                                    <button type="submit"><i class="icon-magnifying-glass"></i></button>
-                                </form>
-                            </div>
+                            
                             <div class="sidebar__single sidebar__post">
-                                <h3 class="sidebar__title">Latest Posts</h3>
+                                <h3 class="sidebar__title">Latest Question</h3>
                                 <ul class="sidebar__post-list list-unstyled">
                                     <li>
                                         <div class="sidebar__post-image">
@@ -95,7 +84,7 @@
                                         <div class="sidebar__post-content">
                                             <h3>
                                                 <span class="sidebar__post-content-meta"><i
-                                                        class="fas fa-user-circle"></i>Admin</span>
+                                                        class="fas fa-user-circle"></i>Harsh</span>
                                                 <a href="blog-details.html">Agriculture Miracle
                                                     you Dont know About</a>
                                             </h3>
@@ -108,7 +97,7 @@
                                         <div class="sidebar__post-content">
                                             <h3>
                                                 <span class="sidebar__post-content-meta"><i
-                                                        class="fas fa-user-circle"></i>Admin</span>
+                                                        class="fas fa-user-circle"></i>Jenin</span>
                                                 <a href="blog-details.html">There are many variations of</a>
                                             </h3>
                                         </div>
@@ -120,7 +109,7 @@
                                         <div class="sidebar__post-content">
                                             <h3>
                                                 <span class="sidebar__post-content-meta"><i
-                                                        class="fas fa-user-circle"></i>Admin</span>
+                                                        class="fas fa-user-circle"></i>Tejas</span>
                                                 <a href="blog-details.html">Bring to the table win-win survival</a>
                                             </h3>
                                         </div>
@@ -149,7 +138,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="sidebar__single sidebar__tags">
+                            <!-- <div class="sidebar__single sidebar__tags">
                                 <h3 class="sidebar__title">Tags</h3>
                                 <div class="sidebar__tags-list">
                                     <a href="#">Agriculture</a>
@@ -159,8 +148,8 @@
                                     <a href="#">Dairy</a>
                                     <a href="#">Organic</a>
                                 </div>
-                            </div>
-                            <div class="sidebar__single sidebar__comments">
+                            </div> -->
+                            <!-- <div class="sidebar__single sidebar__comments">
                                 <h3 class="sidebar__title">Recent Comments</h3>
                                 <ul class="sidebar__comments-list list-unstyled">
                                     <li>
@@ -198,7 +187,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

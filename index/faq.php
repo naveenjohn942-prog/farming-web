@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Agrion || Agrion HTML 5 Template </title>
+    <title> Online Assistant Web Services </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -88,12 +88,7 @@
                                     </div>
                                 </li>
                             </ul>
-                            <!-- <div class="main-header__social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div> -->
+                            
                         </div>
                         <div class="main-header__menu-box-bottom">
                             <nav class="main-menu">
@@ -124,12 +119,8 @@
                                                     </li>
                                                     
                                                     <li class="dropdown">
-                                                        <a href="#">Account</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="product.php">Products</a></li>
-                                                            
-                                                            <li><a href="checkout.php">Checkout</a></li>
-                                                        </ul>
+                                                        <a href="product.php">Products</a>
+                                          
                                                     </li>
                                                     <li>
                                                         <a href="about.php">About</a>
@@ -140,15 +131,15 @@
                                                     <li>
                                                         <a href="register.php">Register</a>
                                                     </li>
+                                                    <!-- <li>
+                                                        <a href="expert_update_profile.php">Account</a>
+                                                    </li> -->
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="main-menu__right">
                                             <div class="main-menu__search-cart-btn-box">
-                                                <div class="main-menu__search-box">
-                                                    <a href="#"
-                                                        class="main-menu__search search-toggler icon-magnifying-glass"></a>
-                                                </div>
+                                               
                                                 <div class="main-menu__cart-box">
                                                     <a href="cart.php" class="main-menu__cart icon-shopping-cart"></a>
                                                 </div>
@@ -584,7 +575,7 @@
         <!--Contact Two End-->
 
         <!--Site Footer Start-->
-        <footer class="site-footer">
+        <footer class="site-footer" id="fcontact">
             <div class="site-footer__top">
                 <div class="container">
                     <div class="site-footer__top-inner">

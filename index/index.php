@@ -152,10 +152,9 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="agriculture-products.php">Agriculture <br>
+                                <h3 class="services-one__title"><a href="product.php">Agriculture <br>
                                         Products</a></h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
-                                    simply free text.</p>
+                                <p class="services-one__text">We are offering broad range of agriculture products.</p>
                             </div>
                         </div>
                     </div>
@@ -176,7 +175,8 @@
                             <div class="services-one__content">
                                 <h3 class="services-one__title"><a href="Expert-Guidance.php">Expert
                                         <br>Guidance</a></h3>
-                                <p class="services-one__text">We have experts in multiple field to solve each and every doubt</p>
+                                <p class="services-one__text">We are providing expertise guidance to farmers 
+                                    having any issues or queries.</p>
                             </div>
                         </div>
                     </div>
@@ -196,10 +196,9 @@
                                     </div>
                                 </div>
                                 <div class="services-one__content">
-                                    <h3 class="services-one__title"><a href="organic-products.php">Organic
+                                    <h3 class="services-one__title"><a href="product.php">Organic
                                             <br> Products</a></h3>
-                                    <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
-                                        simply free text.</p>
+                                    <p class="services-one__text">We have dealers who sells organic products to farmers which help them nurture their crops effectively.</p>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +224,7 @@
                         <div class="testimonial-one__top">
                             <div class="section-title text-center">
                                 
-                                <h2 class="section-title__title" style="color: white;">Top Offers</h2>
+                                <h2 class="section-title__title" style="color: white;">Latest Products</h2>
                                 <div class="section-title__icon">
                                     <img src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
@@ -259,42 +258,46 @@
                             }'>
                                 <!--Testimonial One Single Start-->
                                 <div class="item">
-                                    <div class="testimonial-one__single">
+                                    <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
                                            
                                             <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-6.jpg" alt=""/></a>
-                                       
+                                            <p style="color: white; font-size: 40px;    ">Spinach seeds </p>
                                         </div>
+                                        
+                                    <!-- </div> -->
+                                </div>
+                                <!--Testimonial One Single End-->
+                                <!--Testimonial One Single Start-->
+                                <div class="item">
+                                    <!-- <div class="testimonial-one__single"> -->
+                                        <div class="testimonial-one__content">
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-3.jpg" alt=""/></a>
+                                        <p style="color: white; font-size: 40px;    ">Lotus seeds </p>
+                                        <!-- </div> -->
                                         
                                     </div>
                                 </div>
                                 <!--Testimonial One Single End-->
                                 <!--Testimonial One Single Start-->
                                 <div class="item">
-                                    <div class="testimonial-one__single">
+                                    <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
-                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-4.jpg" alt=""/></a>  
-                                        </div>
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-2.jpg" alt=""/></a>
+                                        <p style="color: white; font-size: 40px;    ">Biofertilizer </p>
+                                        <!-- </div> -->
+                                    
                                         
                                     </div>
                                 </div>
                                 <!--Testimonial One Single End-->
                                 <!--Testimonial One Single Start-->
                                 <div class="item">
-                                    <div class="testimonial-one__single">
+                                    <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
-                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-5.jpg" alt=""/></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <!--Testimonial One Single End-->
-                                <!--Testimonial One Single Start-->
-                                <div class="item">
-                                    <div class="testimonial-one__single">
-                                        <div class="testimonial-one__content">
-                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-7.jpg" alt=""/></a>
-                                        </div>
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-1.jpg" alt=""/></a>
+                                        <p style="color: white; font-size: 40px;    ">Lavender seeds </p>
+                                        <!-- </div> -->
                                         
                                     </div>
                                 </div>
@@ -354,11 +357,11 @@
                                     <img src="./assets/images/category/cat1.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
+                                    <a href="product-details.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.php">Biofertilizers</a></h3>
+                                    <h3 class="project-one__title"><a href="product-details.php">Biofertilizers</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -426,62 +429,7 @@
 
 
         <!--Healthey Food One Start-->
-        <section class="healthy-food-one">
-            <div class="healthy-food-one__bg float-bob-x"
-                style="background-image: url(assets/images/shapes/healthy-food-one-shape-1.png);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="healthy-food-one__left">
-                            <div class="healthy-food-one__img">
-                                <img src="assets/images/resources/healthy-food-one-1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="healthy-food-one__right">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline">Pure Organic Food</span>
-                                <h2 class="section-title__title">Healthy food for your good
-                                    growth</h2>
-                                <div class="section-title__icon">
-                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                                </div>
-                            </div>
-                            <p class="healthy-food-one__text">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe
-                                ndisse suscipit sagittis leo sit met entum estibu dignissim posuere cubilia durae. Leo
-                                sit met entum cubilia crae onec.</p>
-                            <ul class="list-unstyled healthy-food-one__list">
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-harvester"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Harvesting</p>
-                                    </div>
-                                </li>
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-agriculture-1"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Growth</p>
-                                    </div>
-                                </li>
-                                <li class="healthy-food-one__single">
-                                    <div class="healthy-food-one__content">
-                                        <div class="healthy-food-one__icon">
-                                            <span class="icon-harvest-1"></span>
-                                        </div>
-                                        <p class="healthy-food-one__title">Maintenance</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!--Healthey Food One End-->
 
        
@@ -506,7 +454,7 @@
                                         </div>
                                     </div>
                                     <div class="counter-one__content-box count-box">
-                                        <h3 class="count-text" data-stop="6420" data-speed="1500">00</h3>
+                                        <h3 class="count-text" data-stop="50" data-speed="20">00</h3>
                                         <p class="counter-one__text">Agriculture Products</p>
                                     </div>
                                 </li>
@@ -522,7 +470,7 @@
                                         </div>
                                     </div>
                                     <div class="counter-one__content-box count-box">
-                                        <h3 class="count-text" data-stop="9360" data-speed="1500">00</h3>
+                                        <h3 class="count-text" data-stop="5" data-speed="2">00</h3>
                                         <p class="counter-one__text">satisfied customers</p>
                                     </div>
                                 </li>
@@ -537,8 +485,8 @@
                                         </div>
                                     </div>
                                     <div class="counter-one__content-box count-box">
-                                        <h3 class="count-text" data-stop="1070" data-speed="1500">00</h3>
-                                        <p class="counter-one__text">Expert farmers</p>
+                                        <h3 class="count-text" data-stop="10" data-speed="5">00</h3>
+                                        <p class="counter-one__text">Experts </p>
                                     </div>
                                 </li>
                             </ul>
@@ -567,8 +515,7 @@
                                     <img src="assets/images/icon/section-title-icon-1.png" alt="">
                                 </div>
                             </div>
-                            <p class="contact-one__text">Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse
-                                platea dictumst. Duis porta, <br> quam ut finibus ultrices.</p>
+                            <p class="contact-one__text">Whatever support you're looking for, we can help you.</p>
                             <ul class="list-unstyled contact-one__contact-list">
                                 <li>
                                     <div class="icon">
