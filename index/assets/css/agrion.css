@@ -2110,7 +2110,8 @@ left: -78px;
 }
 
 .search-popup__content form input[type="search"],
-.search-popup__content form input[type="text"] {
+.search-popup__content form input[type="text"],
+.search-popup__content form input[type="password"] {
   width: 100%;
   background-color: #fff;
   font-size: 16px;
@@ -4016,7 +4017,7 @@ left: -78px;
 .project-one {
   position: relative;
   display: block;
-  padding: 130px 0 90px;
+  padding: 57px 0 90px;
   margin-top: 25px;
   z-index: 1;
 }
@@ -4328,7 +4329,8 @@ left: -78px;
 }
 
 .contact-one__input-box input[type="text"],
-.contact-one__input-box input[type="email"] {
+.contact-one__input-box input[type="email"],
+.contact-one__input-box input[type="password"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -4452,12 +4454,13 @@ left: -78px;
 }
 
 .blog-one__content {
+  height: 165px;
   position: relative;
   display: block;
   background-color: var(--agrion-extra);
   border-bottom-left-radius: var(--agrion-bdr-radius);
   border-bottom-right-radius: var(--agrion-bdr-radius);
-  padding: 22px 40px 33px;
+  padding: 0.5rem 0.5rem 2rem;
 }
 
 .blog-one__meta {
@@ -8229,7 +8232,8 @@ left: -78px;
 }
 
 .comment-form__input-box input[type="text"],
-.comment-form__input-box input[type="email"] {
+.comment-form__input-box input[type="email"],
+.comment-form__input-box input[type="password"] {
   height: 64px;
   width: 100%;
   border: none;
@@ -9781,6 +9785,7 @@ left: -78px;
 
 .contact-form__input-box input[type="text"],
 .contact-form__input-box input[type="email"],
+.contact-form__input-box input[type="password"],
 .contact-form__input-box #Subject {
   height: 64px;
   width: 100%;
