@@ -52,7 +52,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -74,7 +74,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
@@ -96,7 +96,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -118,7 +118,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -140,7 +140,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
@@ -162,7 +162,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -184,7 +184,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -206,7 +206,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -228,7 +228,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
@@ -250,7 +250,7 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
 

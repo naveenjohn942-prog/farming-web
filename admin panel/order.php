@@ -72,10 +72,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            Rejected
+                          <label for="" class="badge badge-danger">Rejected</label>
                           </td>
                         </tr>
                         <tr>
@@ -106,10 +106,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                         </tr>
                         <tr>
@@ -140,10 +140,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            rejected
+                          <label for="" class="badge badge-danger">rejected</label>
                           </td>
                           <td>
-                            rejected
+                          <label for="" class="badge badge-danger">rejected</label>
                           </td>
                         </tr>
                         
@@ -175,10 +175,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                         </tr>
                         <tr>
@@ -209,10 +209,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            rejected
+                          <label for="" class="badge badge-danger">rejected</label>
                           </td>
                           <td>
-                            rejected
+                          <label for="" class="badge badge-danger">rejected</label>
                           </td>
                         </tr>
                         <tr>
@@ -243,10 +243,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                           <td>
-                            rejected
+                          <label for="" class="badge badge-danger">rejected</label>
                           </td>
                         </tr>
                         <tr>
@@ -277,10 +277,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                         </tr>
                         <tr>
@@ -311,10 +311,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                         </tr>
                         <tr>
@@ -345,10 +345,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                         </tr>
                         <tr>
@@ -379,10 +379,10 @@
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">completed</label>
                           </td>
                           <td>
-                            pending
+                          <label for="" class="badge badge-warning">pending</label>
                           </td>
                         </tr>
                         
