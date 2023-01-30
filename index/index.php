@@ -174,10 +174,9 @@
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="Expert-Guidence.php">Expert
-                                        <br>Guidence</a></h3>
-                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
-                                    simply free text.</p>
+                                <h3 class="services-one__title"><a href="Expert-Guidance.php">Expert
+                                        <br>Guidance</a></h3>
+                                <p class="services-one__text">We have experts in multiple field to solve each and every doubt</p>
                             </div>
                         </div>
                     </div>

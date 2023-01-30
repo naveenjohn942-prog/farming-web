@@ -10,62 +10,7 @@
             <div class="contact-two__shape-1 float-bob-x">
                 <img src="assets/images/shapes/contact-two-shape-1.png" alt="">
             </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">Write a Message</span>
-                    <h2 class="section-title__title">Always here to help you</h2>
-                    <div class="section-title__icon">
-                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
-                    </div>
-                </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Phone" name="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <!-- <input type="text" placeholder="Query Type" name="Subject"> -->
-                                    
-                                        <select name="Subject" id="Subject">
-                                            <option value="" disabled selected>Query Type</option>
-                                            <option value="Flower seeds">Flower seeds</option>
-                                            <option value="Seasonal seeds">Seasonal seeds</option>
-                                            <option value="Tool and Equipment">Tool and Equipment</option>
-                                            <option value="Bio Fertilizer">Bio Fertilizer</option>
-                                            <option value="Chemical Fertilizers">Chemical Fertilizers</option>
-                                        </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write your Query"></textarea>
-                                </div>
-                                <div class="contact-form__btn-box">
-                                    <a href="about.php" class="thm-btn contact-two__btn">Submit Query<i
-                                            class="icon-right-arrow"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+
         </section>
         <!--Contact Two End-->
         <section class="testimonial-one">
@@ -87,7 +32,7 @@
                             <div class="testimonial-one__carousel owl-carousel owl-theme thm-owl__carousel"
                                 data-owl-options='{
                                 "loop": true,
-                                "autoplay": true,
+                                "autoplay": false,
                                 "margin": 30,
                                 "nav": false,
                                 "dots": false,

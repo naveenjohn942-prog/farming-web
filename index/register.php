@@ -127,18 +127,7 @@
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
                         <div class="row">
-                        <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                   
-                                    
-                                        <select name="Subject" id="Subject" onchange="display_input()">
-                                            <option value="" disabled selected>User Type</option>
-                                            <option value="Farmers">Farmers</option>
-                                            <option value="Dealer">Dealer</option>
-                                            <option value="Expert">Expert</option>
-                                        </select>
-                                </div>
-                            </div>
+                        
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
                                     <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="First Name" name="fname">
@@ -191,7 +180,18 @@
                                     <input type="text" placeholder="Address" name="address">
                                 </div>
                             </div>
-                            
+                            <div class="col-xl-12">
+                                <div class="contact-form__input-box">
+                                   
+                                    
+                                        <select name="Subject" id="Subject" onchange="display_input()">
+                                            <option value="" disabled selected>User Type</option>
+                                            <option value="Farmers">Farmers</option>
+                                            <option value="Dealer">Dealer</option>
+                                            <option value="Expert">Expert</option>
+                                        </select>
+                                </div>
+                        </div>
 
 
                             <div class="col-xl-12" id="farmer" style="display: none;">
@@ -220,12 +220,11 @@
                             <div class="col-xl-12">
                                 
                                 <div class="contact-form__btn-box">
-                                    <a href="about.php" class="thm-btn contact-two__btn">Register<i
+                                    <a href="index.php" class="thm-btn contact-two__btn">Register<i
                                             class="icon-right-arrow"></i> </a>
-                                            <br><br>
-                                            <a href="index.php" class="thm-btn contact-two__btn">Back to home<i
-                                            class="icon-right-arrow"></i> </a>
-                                            <br>
+                                            
+                                            
+                                            
                                 </div>
                             </div>
                         </div>
@@ -234,8 +233,8 @@
                                 
                                 <div class="contact-form__btn-box">
                                     
-                                            <br>
-                             <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.php">  Create a New Account</a></span>
+                                            
+                             <span class="section-title__tagline" style="padding-top: 27px;">Already Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="login.php">Login</a></span>
                                 </div>
                             </div>
                         </div>
