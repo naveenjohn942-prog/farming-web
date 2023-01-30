@@ -32,35 +32,14 @@
                                     <div class="main-slider__content">
                                         <p class="main-slider__sub-title">we are providing expert services</p>
                                         <h4 class="main-slider__title">Online Assistant WebService</h4>
-                                        <div class="main-slider__btn-box">
-                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(assets/images/backgrounds/main-slider-1-2.jpg);"></div>
-                        <!-- /.image-layer -->
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="main-slider__content">
-                                        <p class="main-slider__sub-title">we are providing expert services</p>
-                                        <h4 class="main-slider__title">Online Assistant WebService</h4>
-                                        <div class="main-slider__btn-box">
-                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="swiper-slide">
                         <div class="image-layer"
@@ -72,9 +51,7 @@
                                     <div class="main-slider__content">
                                         <p class="main-slider__sub-title">we are providing expert services</p>
                                         <h4 class="main-slider__title">Online Assistant WebService</h4>
-                                        <div class="main-slider__btn-box">
-                                            <a href="about.php" class="thm-btn main-slider__btn">Discover More <i
-                                                    class="icon-right-arrow"></i> </a>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +63,6 @@
 
                 </div>
 
-                <div class="swiper-pagination" id="main-slider-pagination"></div>
 
                 <!-- If we need navigation buttons -->
                 <div class="main-slider__nav">
@@ -287,7 +263,7 @@
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
                                            
-                                            <img src="./assets/images/offer/img1.jpg" alt=""/>
+                                            <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-6.jpg" alt=""/></a>
                                        
                                         </div>
                                         
@@ -298,7 +274,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <img src="./assets/images/offer/img2.jpg" alt=""/>    
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-4.jpg" alt=""/></a>  
                                         </div>
                                         
                                     </div>
@@ -308,7 +284,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <img src="./assets/images/offer/img3.jpg" alt=""/>
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-5.jpg" alt=""/></a>
                                         </div>
                                         
                                     </div>
@@ -318,7 +294,7 @@
                                 <div class="item">
                                     <div class="testimonial-one__single">
                                         <div class="testimonial-one__content">
-                                            <img src="./assets/images/offer/img4.jpg" alt=""/>
+                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-7.jpg" alt=""/></a>
                                         </div>
                                         
                                     </div>
@@ -601,7 +577,7 @@
                                     </div>
                                     <div class="content">
                                         <p>Have Question?</p>
-                                        <h4><a href="tel:9288009850">Free +92 (8800)-9850</a></h4>
+                                        <h4><a href="tel:918588858823">Free +91 85888 58823</a></h4>
                                     </div>
                                 </li>
                                 <li>
@@ -619,7 +595,7 @@
                                     </div>
                                     <div class="content">
                                         <p>Visit Now</p>
-                                        <h4>88 Broklyn Golden Street. USA</h4>
+                                        <h4>St Xavier's college, Ahmedabad</h4>
                                     </div>
                                 </li>
                             </ul>
@@ -667,29 +643,5 @@
         <!--Contact One End-->
 
         
-        <!--Cta One Start-->
-        <section class="cta-one">
-            <div class="cta-one__bg" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url(assets/images/backgrounds/cta-one-bg.jpg);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="cta-one__inner">
-                            <div class="cta-one__left">
-                                <div class="cta-one__icon">
-                                    <span class="icon-agriculture-2"></span>
-                                </div>
-                                <h3 class="cta-one__title">We’re popular leader in agriculture <br> & Organic market.
-                                </h3>
-                            </div>
-                            <div class="cta-one__right">
-                                <a href="about.php" class="thm-btn cta-one__btn">Discover More <i
-                                        class="icon-right-arrow"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Cta One End-->
+        
         <?php include './include/footer.html'; ?>
