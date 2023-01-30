@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Contact</li>
                     </ul>
@@ -120,7 +120,7 @@
                                     <textarea name="message" placeholder="Write a Comment"></textarea>
                                 </div>
                                 <div class="contact-form__btn-box">
-                                    <a href="about.html" class="thm-btn contact-two__btn">Send a Message<i
+                                    <a href="index.php" class="thm-btn contact-two__btn">Send a Message<i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>

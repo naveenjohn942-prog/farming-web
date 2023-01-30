@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Shop</li>
                     </ul>
@@ -59,10 +59,10 @@
 
                         <div class="product-details__buttons">
                             <div class="product-details__buttons-1">
-                                <a href="cart.html" class="thm-btn">Add to Cart <i class="icon-right-arrow"></i></a>
+                                <a href="cart.php" class="thm-btn">Add to Cart <i class="icon-right-arrow"></i></a>
                             </div>
                             <div class="product-details__buttons-2">
-                                <a href="product-details.html" class="thm-btn">Add to Wislist <i
+                                <a href="product-details.php" class="thm-btn">Add to Wislist <i
                                         class="icon-right-arrow"></i></a>
                             </div>
                         </div>

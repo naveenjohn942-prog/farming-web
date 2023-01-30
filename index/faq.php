@@ -66,7 +66,7 @@
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
                     <div class="main-header__logo">
-                        <a href="index.html"><img src="assets/images/resources/logo-1.jpg" alt=""></a>
+                        <a href="index.php"><img src="assets/images/resources/logo-1.jpg" alt=""></a>
                     </div>
                     <div class="main-header__menu-box">
                         <div class="main-header__menu-box-top">
@@ -104,7 +104,7 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li class="current megamenu">
-                                                        <a href="index.html">Home </a>
+                                                        <a href="index.php">Home </a>
                                                             
                                                     </li>
                                                     <li>
@@ -113,32 +113,32 @@
                                                     <li class="dropdown">
                                                         <a href="#">Help</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="faq.html">FAQs</a></li>
+                                                            <li><a href="faq.php">FAQs</a></li>
                                                             <li><a href="#fcontact">Contact Us</a></li>
                                     
                                                         </ul>
                                                     </li>
                                                     <li class="dropdown">
-                                                        <a href="expert_guidance.html">Expert-Guidance</a>
+                                                        <a href="expert_guidance.php">Expert-Guidance</a>
                                                         
                                                     </li>
                                                     
                                                     <li class="dropdown">
                                                         <a href="#">Account</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="product.html">Products</a></li>
+                                                            <li><a href="product.php">Products</a></li>
                                                             
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="checkout.php">Checkout</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="about.php">About</a>
                                                     </li>
                                                     <li>
-                                                        <a href="login.html">Login</a>
+                                                        <a href="login.php">Login</a>
                                                     </li>
                                                     <li>
-                                                        <a href="register.html">Register</a>
+                                                        <a href="register.php">Register</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -150,10 +150,10 @@
                                                         class="main-menu__search search-toggler icon-magnifying-glass"></a>
                                                 </div>
                                                 <div class="main-menu__cart-box">
-                                                    <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
+                                                    <a href="cart.php" class="main-menu__cart icon-shopping-cart"></a>
                                                 </div>
                                                 <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
+                                                    <a href="contact.php" class="thm-btn main-menu__btn">Get Free Quote
                                                         <i class="icon-right-arrow"></i> </a>
                                                 </div>
                                             </div>
@@ -190,7 +190,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>FAQs</li>
                     </ul>
@@ -594,7 +594,7 @@
                             <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                                 <div class="footer-widget__column footer-widget__about">
                                     <div class="footer-widget__logo">
-                                        <a href="index.html"><img src="assets/images/resources/footer-logo.png"
+                                        <a href="index.php"><img src="assets/images/resources/footer-logo.png"
                                                 alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
@@ -609,7 +609,7 @@
                                         <h3 class="footer-widget__title">Explore</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="about.php">About</a></li>
                                         <li><a href="farmers.html">Our Farmers</a></li>
                                         <li><a href="project-01.html">New Projects</a></li>
                                         <li><a href="services.html">Services</a></li>
@@ -729,7 +729,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
+                <a href="index.php" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->

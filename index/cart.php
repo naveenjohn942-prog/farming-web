@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Shop</li>
                     </ul>
@@ -43,7 +43,7 @@
                                         <div class="img-box">
                                             <img src="assets/images/shop/cart-page-img-1.jpg" alt="">
                                         </div>
-                                        <h3><a href="product-details.html">Lilly</a></h3>
+                                        <h3><a href="product-details.php">Lilly</a></h3>
                                     </div>
                                 </td>
                                 <td id="Price">&#8377;10.00</td>
@@ -70,7 +70,7 @@
                                         <div class="img-box">
                                             <img src="assets/images/shop/shop-product-1-1.jpg" alt="">
                                         </div>
-                                        <h3><a href="product-details.html">Lavinder</a></h3>
+                                        <h3><a href="product-details.php">Lavinder</a></h3>
                                     </div>
                                 </td>
                                 <td id="price-2">&#8377;25.00</td>
@@ -123,7 +123,7 @@
                                 <a href="#" class="thm-btn">Update <i class="icon-right-arrow"></i></a>
                             </div>
                             <div class="cart-page__buttons-2">
-                                <a href="checkout.html" class="thm-btn">Checkout <i class="icon-right-arrow"></i></a>
+                                <a href="checkout.php" class="thm-btn">Checkout <i class="icon-right-arrow"></i></a>
                             </div>
                         </div>
                     </div>

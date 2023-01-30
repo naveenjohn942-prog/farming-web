@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Shop</li>
                     </ul>
@@ -88,7 +88,7 @@
                                                     <img src="assets/images/shop/cart-page-img-1.jpg" alt="" height="307">
                                                     <span class="product__all-sale">Sale</span>
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -100,7 +100,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Rajnigandha Bulb</a></h4>
+                                                <h4 class="product__all-title"><a href="product-details.php">Rajnigandha Bulb</a></h4>
                                                 <p class="product__all-price">&#x20b9;25.00</p>
                                             </div>
                                         </div>
@@ -113,7 +113,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-1.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,7 +125,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Lavinder</a></h4>
+                                                <h4 class="product__all-title"><a href="product-details.php">Lavinder</a></h4>
                                                 <p class="product__all-price">&#x20b9;35.00</p>
                                             </div>
                                         </div>
@@ -138,7 +138,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-3.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,7 +151,7 @@
                                                     <i class="fa fa-star"></i>
                                                 </div>
                                                 <h4 class="product__all-title"><a
-                                                        href="product-details.html">Lotus</a></h4>
+                                                        href="product-details.php">Lotus</a></h4>
                                                 <p class="product__all-price">&#x20b9;20.00</p>
                                             </div>
                                         </div>
@@ -164,7 +164,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-4.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -176,7 +176,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Bhendi</a></h4>
+                                                <h4 class="product__all-title"><a href="product-details.php">Bhendi</a></h4>
                                                 <p class="product__all-price">&#x20b9;30.00</p>
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-5.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -202,7 +202,7 @@
                                                     <i class="fa fa-star"></i>
                                                 </div>
                                                 <h4 class="product__all-title"><a
-                                                        href="product-details.html">White Bitter Gourd</a></h4>
+                                                        href="product-details.php">White Bitter Gourd</a></h4>
                                                 <p class="product__all-price">&#x20b9;30.00</p>
                                             </div>
                                         </div>
@@ -215,7 +215,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-6.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -227,7 +227,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Spinach</a>
+                                                <h4 class="product__all-title"><a href="product-details.php">Spinach</a>
                                                 </h4>
                                                 <p class="product__all-price">&#x20b9;30.00</p>
                                             </div>
@@ -241,7 +241,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-7.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -253,7 +253,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Bio Decomposer</a></h4>
+                                                <h4 class="product__all-title"><a href="product-details.php">Bio Decomposer</a></h4>
                                                 <p class="product__all-price">&#x20b9;2500.00</p>
                                             </div>
                                         </div>
@@ -266,7 +266,7 @@
                                                 <div class="product__all-img">
                                                     <img src="assets/images/shop/shop-product-1-8.jpg" alt="" height="307">
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,7 +279,7 @@
                                                     <i class="fa fa-star"></i>
                                                 </div>
                                                 <h4 class="product__all-title"><a
-                                                        href="product-details.html">Potassium Mobilizing</a></h4>
+                                                        href="product-details.php">Potassium Mobilizing</a></h4>
                                                 <p class="product__all-price">&#x20b9;200.00</p>
                                             </div>
                                         </div>
@@ -293,7 +293,7 @@
                                                     <img src="assets/images/shop/shop-product-1-2.jpg" alt="" height="307">
                                                     <span class="product__all-sale">Sale</span>
                                                     <div class="product__all-img-icon">
-                                                        <a href="cart.html"><i class="icon-shopping-cart"></i></a>
+                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -305,7 +305,7 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star"></i>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.html">Zinc Solubilising</a></h4>
+                                                <h4 class="product__all-title"><a href="product-details.php">Zinc Solubilising</a></h4>
                                                 <p class="product__all-price">&#x20b9;200.00</p>
                                             </div>
                                         </div>
