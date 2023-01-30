@@ -1,5 +1,4 @@
 <?php include './include/header.html'; ?>
-      <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -7,26 +6,25 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">All Category Details</h4>
-                  <div>
-                    <a href="add_category.html">
-                    <button class="btn-primary">Add New Category</button>
-                  </a>
-                  </div>
+                  <h4 class="card-title">User Details</h4>
+                  
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
                       <thead>
                         <tr>
-                          <th>
-                            Category id
+                          <th style="width: 85.613px;">
+                            User id
                           </th>
                           <th>
-                            Category name
+                            Username
                           </th>
                           <th>
-                            Created By
+                            Email
                           </th>
                           <th>
+                            Mobile No.
+                          </th>
+                          <th style="width: 100.613px;">
                             Action
                           </th>
                           <th>
@@ -37,21 +35,24 @@
                       <tbody>
                         <tr>
                           <td>
-                            4
+                            1
                           </td>
                           <td>
-                            Flower Seeds
+                            dhruv34
                           </td>
                           <td>
-                            naveenpatel
+                            dhruvrathore21@gmail.com
+                          </td>
+                          <td>
+                            9784563214
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -59,18 +60,21 @@
                             2
                           </td>
                           <td>
-                            Seasonal Seeds
+                            helly2992
                           </td>
                           <td>
-                            rajivshah
+                            heyhellyy123@gmail.com
+                          </td>
+                          <td>
+                            8547513651
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
@@ -78,18 +82,43 @@
                             3
                           </td>
                           <td>
-                            Bio Fertilizers
+                            rishiii45we
                           </td>
                           <td>
-                            jenson
+                            itsrishikaaa40@gmail.com
+                          </td>
+                          <td>
+                            9487523011
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-success">Active</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                           4
+                          </td>
+                          <td>
+                           deep_12
+                          </td>
+                          <td>
+                            ideep.heyyy@gmail.com
+                          </td>
+                          <td>
+                            9484569844
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -97,135 +126,134 @@
                             5
                           </td>
                           <td>
-                            Flower Seeds
+                            tanuu90
                           </td>
                           <td>
-                            Ramjoshi
+                            tanuuuu222@gmail.com
+                          </td>
+                          <td>
+                            8841211585
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            1
+                            6
                           </td>
                           <td>
-                            Tools and equipments
+                            ganggg215
                           </td>
                           <td>
-                            snehadas
+                            welgang202@gmail.com
+                          </td>
+                          <td>
+                            7465215584
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            4
+                            7
                           </td>
                           <td>
-                            Chemical fertilizers
+                            yashhh32
                           </td>
                           <td>
-                            joychristian
+                            iyash.202@gmail.com
+                          </td>
+                          <td>
+                            8200541254
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Deactive
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            3
+                            8
                           </td>
                           <td>
-                            Flower Seeds
+                            isuhaniii
                           </td>
                           <td>
-                            tusharjohn
+                            suhanihere@gmail.com
+                          </td>
+                          <td>
+                            9489023011
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            3
+                            9
                           </td>
                           <td>
-                            Seasonal Seeds
+                            devvpatel02
                           </td>
                           <td>
-                            princelalwani
+                            pateldev02020@gmail.com
+                          </td>
+                          <td>
+                            8547523011
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-danger">Deactive</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            1
+                            10
                           </td>
                           <td>
-                            Bio Fertilizers
+                            me_vaishnavii
                           </td>
                           <td>
-                            arjuntekwani
+                            ahujavaishnavi@gmail.com
                           </td>
                           <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                            Deactive
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Chemical Fertilizers
-                          </td>
-                          <td>
-                            himanshudas
+                            7254023011
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_user.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            Active
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
-                        
+
                       </tbody>
                     </table>
                     
@@ -239,4 +267,5 @@
         </div>
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
-        <?php include './include/footer.html'; ?>
+        
+  <?php include './include/footer.html'; ?>

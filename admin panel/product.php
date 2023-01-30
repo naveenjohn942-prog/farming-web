@@ -7,40 +7,43 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Order Details</h4>
-                  
+                  <h4 class="card-title">All Products Details</h4>
+                  <div>
+                    <a href="add_product.php">
+                    <button class="btn-primary">Add New Product</button>
+                  </a>
+                  </div>
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
                       <thead>
                         <tr>
                           <th>
-                            Order id
+                            Product id
                           </th>
                           <th>
                             Product name
                           </th>
                           <th>
-                            username
+                            Created By
                           </th>
                           <th>
-                            Customer Name
+                            Product Type
                           </th>
-                         <th>
+                          <th>
+                            MRP
+                          </th>
+                          <th>
                             Price   
                           </th>
                           <th>
                             Quantity
                           </th>
-                          <th>
-                            Date    
-                          </th>
-                          <th style="width: 150px;">
+                          <th style="width: 70px;">
                             Action
                           </th>
                           <th>
-                            Order Status
+                            Status
                           </th>
-                          <th>Payment Status</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -49,33 +52,30 @@
                             1
                           </td>
                           <td>
-                            Vasara Neem Cake Powder
+                            Micronutrient Mixture Liquid Fertilizer
                           </td>
                           <td>
-                            rajsharma45
+                            heisenberg
                           </td>
                           <td>
-                            Raj Sharma
+                            Biofertilizers
                           </td>
                           <td>
-                            200
+                            900
                           </td>
                           <td>
-                            4
+                            730
                           </td>
                           <td>
-                            22/1/2023
+                            5
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
-                          </td>
-                          <td>
-                            Rejected
+                          <label for="" class="badge badge-success"> Active</label>
                           </td>
                         </tr>
                         <tr>
@@ -83,33 +83,30 @@
                             2
                           </td>
                           <td>
-                            Leaf And Clay Garden Store
+                            Nano Gold Agriculture Growth Promoter
                           </td>
                           <td>
-                            rahulkhanna12
+                            heisenberg
                           </td>
                           <td>
-                            Rahul Khanna
+                            Biofertilizers
                           </td>
                           <td>
-                            245
+                            999
                           </td>
                           <td>
-                            18
+                            710
                           </td>
                           <td>
-                            27/4/2022
+                            3
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
-                          </td>
-                          <td>
-                            pending
+                          <label for="" class="badge badge-danger">Unavailable</label>
                           </td>
                         </tr>
                         <tr>
@@ -117,272 +114,247 @@
                             3
                           </td>
                           <td>
-                            Vermi Compost
+                            Daisy Double Mixed Seeds
                           </td>
                           <td>
-                            ishitachauhan23
+                            crashcourse
                           </td>
                           <td>
-                            Ishita Chauhan
-                          </td>
-                          <td>
-                            190
-                          </td>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            01/01/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                            rejected
-                          </td>
-                          <td>
-                            rejected
-                          </td>
-                        </tr>
-                        
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Vasara Mustard Cake Powder
-                          </td>
-                          <td>
-                            divyamalhotra89
-                          </td>
-                          <td>
-                            Divya Malhotra
+                            Flower Seeds
                           </td>
                           <td>
                             250
                           </td>
                           <td>
-                            5
+                            180
                           </td>
                           <td>
-                            10/05/2022
+                            4
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
-                          </td>
-                          <td>
-                            pending
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            5
+                            4 
                           </td>
                           <td>
-                            Bio Gizz Bio Grow
+                            Marigold Hawaii Orange Seeds
                           </td>
                           <td>
-                            ram10
+                            crashcourse
                           </td>
                           <td>
-                           Ram Narayan
+                            Flower Seeds
                           </td>
                           <td>
-                            300
+                            499
                           </td>
                           <td>
-                            3
+                            290
                           </td>
-                          <td>
-                            15/09/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                            rejected
-                          </td>
-                          <td>
-                            rejected
-                          </td>
-                        </tr>
-                        <tr>
                           <td>
                             6
                           </td>
                           <td>
-                           Flower Booster
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            riyashah45
+                          <label for="" class="badge badge-success">Active</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5 
                           </td>
                           <td>
-                            Riya Shah
+                            Palak/Spinach
                           </td>
                           <td>
-                            150
+                            crashcourse
+                          </td>
+                          <td>
+                            Seasonal Seeds
+                          </td>
+                          <td>
+                            654
+                          </td>
+                          <td>
+                            499
+                          </td>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          <label for="" class="badge badge-success"> Active</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            6 
+                          </td>
+                          <td>
+                            Brinjal green 
+                          </td>
+                          <td>
+                            crashcourse
+                          </td>
+                          <td>
+                            Seasonal Seeds
+                          </td>
+                          <td>
+                            599
+                          </td>
+                          <td>
+                            475
                           </td>
                           <td>
                             3
                           </td>
                           <td>
-                            14/09/2022
-                          </td>
-                          <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            pending
-                          </td>
-                          <td>
-                            rejected
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            7
+                            7 
                           </td>
                           <td>
-                            Mob-K
+                            Neptune VN-13 Battery Sprayers
                           </td>
                           <td>
-                            diyapatel03
+                            crashcourse
                           </td>
                           <td>
-                            Diya Patel
+                            Tools and Equioments
                           </td>
                           <td>
-                            100
+                            9999
                           </td>
                           <td>
-                            2
+                           8859
                           </td>
-                          <td>
-                            09/04/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                            completed
-                          </td>
-                          <td>
-                            completed
-                          </td>
-                        </tr>
-                        <tr>
                           <td>
                             8
                           </td>
                           <td>
-                            AZOFIX
-                          </td>
-                          <td>
-                            tanay12
-                          </td>
-                          <td>
-                            Tanay Pandey
-                          </td>
-                          <td>
-                            150
-                          </td>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            03/01/2022
-                          </td>
-                          <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            pending
-                          </td>
-                          <td>
-                            pending
+                          <label for="" class="badge badge-danger">Unavailable</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            9
+                            8 
                           </td>
                           <td>
-                            UTKARSH
+                            Husqvarna 143R-II Brush Cutter 
                           </td>
                           <td>
-                            dhara03
+                            crashcourse
                           </td>
                           <td>
-                           Dhara Joshi
+                            Tools and Equioments
                           </td>
                           <td>
-                            100
+                            34000
                           </td>
                           <td>
-                            1
+                           31000
                           </td>
                           <td>
-                            28/12/2022
+                            3
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
-                          </td>
-                          <td>
-                            completed
+                          <label for="" class="badge badge-danger">Unavailable</label>
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            10
+                            9 
                           </td>
                           <td>
-                            AZOFIX
+                           MKP (Mono Potassium Phosphate)KH2PO4 
                           </td>
                           <td>
-                            avani78
+                            crashcourse
                           </td>
                           <td>
-                            Avani Desai
+                            Chemical Fertilizer
                           </td>
                           <td>
-                            150
+                            2500
                           </td>
                           <td>
-                            2
+                           1950
                           </td>
                           <td>
-                            06/04/2022
+                            6
                           </td>
                           <td>
                             <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.html"><i class="mdi mdi-border-color"></i></a>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
                             <i class="mdi mdi-delete"></i>
                           </td>
                           <td>
-                            completed
+                          <label for="" class="badge badge-success">Active</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            10 
                           </td>
                           <td>
-                            pending
+                            Grade A Premium Quality NPK Hydroponic Fertilizer
+                          </td>
+                          <td>
+                            crashcourse
+                          </td>
+                          <td>
+                            Chemical Fertilizer
+                          </td>
+                          <td>
+                            700
+                          </td>
+                          <td>
+                           510
+                          </td>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          <label for="" class="badge badge-success">Active</label>
                           </td>
                         </tr>
                         

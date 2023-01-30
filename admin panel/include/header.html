@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -21,14 +23,16 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
   <link rel="stylesheet" href="css/vertical-layout-light/validation-style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5 font-weight-bold" href="index.html"><img src="images/logo.jpg" class="mr-2" alt="logo"/>FarmAid</a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo.jpg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5 font-weight-bold" href="index.php"><img src="images/logo.jpg" class="mr-2" alt="logo"/>FarmAid</a>
+        <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/logo.jpg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -297,7 +301,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -310,8 +314,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="user.html">Users</a></li>
-                <li class="nav-item"> <a class="nav-link" href="update_user.html">Update Users</a></li>
+                <li class="nav-item"> <a class="nav-link" href="user.php">Users</a></li>
+                <li class="nav-item"> <a class="nav-link" href="update_user.php">Update Users</a></li>
                 
               </ul>
             </div>
@@ -324,9 +328,9 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="update_product.html">Update Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="add_product.html">Add Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.php">Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="update_product.php">Update Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="add_product.php">Add Product</a></li>
               </ul>
             </div>
           </li>
@@ -338,8 +342,8 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="order.html">Order</a></li>
-                <li class="nav-item"> <a class="nav-link" href="update_order.html">Update Order</a></li>
+                <li class="nav-item"> <a class="nav-link" href="order.php">Order</a></li>
+                <li class="nav-item"> <a class="nav-link" href="update_order.php">Update Order</a></li>
               </ul>
             </div>
           </li>
@@ -351,9 +355,9 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="category.html">Category</a></li>
-                <li class="nav-item"> <a class="nav-link" href="add_category.html">Add Category</a></li>
-                <li class="nav-item"> <a class="nav-link" href="update_category.html">Update Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="category.php">Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="add_category.php">Add Category</a></li>
+                <li class="nav-item"> <a class="nav-link" href="update_category.php">Update Category</a></li>
               </ul>
             </div>
           </li>
@@ -365,7 +369,7 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="payment.html">Payment   </a></li>
+                <li class="nav-item"> <a class="nav-link" href="payment.php">Payment   </a></li>
               </ul>
             </div>
           </li>

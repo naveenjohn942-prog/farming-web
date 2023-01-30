@@ -46,8 +46,8 @@
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Description" value="afgkdguykgaguyfggfgggaykgke">
                     </div> 
                     <div class="col-md-6 form-group">
-                    <span for>Order Status </span>
-                      <select name="order_status">
+                    <span>Order Status </span>
+                      <select name="order_status" class="form-control">
                         <option></option>
                         <option value="Rejected" selected="">Rejected</option>
                         <option value="Completed">Completed</option>
@@ -56,8 +56,8 @@
                     </select>
                 </div>
                 <div class="col-md-6 form-group">
-                    <span for>Payment status</span>
-                    <select name="order_status">
+                    <span>Payment status</span>
+                    <select name="order_status" class="form-control">
                         <option></option>
                         <option value="Rejected" selected="">Rejected</option>
                         <option value="Completed">Completed</option>
