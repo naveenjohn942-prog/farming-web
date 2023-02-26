@@ -1,10 +1,11 @@
+<?php include './include/connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Agrion || Agrion HTML 5 Template </title>
+    <title> Product Details || Agrion || Agrion HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -42,24 +43,29 @@
     <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.css" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrion.css" />
     <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
 </head>
 
-<div class="custom-cursor">
+<body class="custom-cursor">
 
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
+
+
+
+
 
     <div class="preloader">
         <div class="preloader__image"></div>
     </div>
     <!-- /.preloader -->
 
-<div class="page-wrapper">
-    <!-- <div class="page-wrapper"> -->
+
+    <div class="page-wrapper">
         <header class="main-header">
             <div class="main-header__wrapper">
                 <div class="main-header__wrapper-inner">
@@ -112,7 +118,7 @@
                                                         <a href="#">Help</a>
                                                         <ul class="shadow-box">
                                                             <li><a href="#">FAQs</a></li>
-                                                            <li><a href="contact.html">Contact Us</a></li>
+                                                            <li><a href="#fcontact">Contact Us</a></li>
                                     
                                                         </ul>
                                                     </li>
@@ -196,14 +202,6 @@
                 </div>
             </div>
         </header>
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
-</div>
-
-    <div class="page-wrapper">
-        
 
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
@@ -218,56 +216,205 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li>About</li>
+                        <li>Shop</li>
                     </ul>
-                    <h2>About</h2>
+                    <h2>Product Details</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Google Map Start-->
-        
-        <!--Google Map End-->
-
-        <!--Contact Two Start-->
-        <section class="contact-two">
-            <div class="contact-two__shape-1 float-bob-x">
-                <img src="assets/images/shapes/contact-two-shape-1.png" alt="">
-            </div>
+        <!--Product Details Start-->
+        <section class="product-details">
             <div class="container">
-                <div class="section-title text-center">
-                
-                    
-                    <div class="section-title__icon">
-                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="product-details__img">
+                            <img src="assets/images/product/bf(2).jpeg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-6">
+                        <div class="product-details__top">
+                            <h3 class="product-details__title">Mycorrhiza Biofertilizers <span>Rs250.00</span> </h3>
+                        </div>
+                        <div class="product-details__reveiw">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <span>2 Customer Reviews</span>
+                        </div>
+                        <div class="product-details__content">
+                            <p class="product-details__content-text1">Mycorrhiza Biofertilizers contains Mycorrhiza developed by root organ culture(ROC) technique. It increases root proliferation therepy, increase in nutrients and water uptake.</p>
+                            <!-- <p class="product-details__content-text2">REF. 4231/406 <br> -->
+                                Available in store</p>
+                        </div>
+
+                        <div class="product-details__quantity">
+                            <h3 class="product-details__quantity-title">Choose Quantity</h3>
+                            <div class="quantity-box">
+                                <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+                                <input type="number" id="1" value="1" />
+                                <button type="button" class="add"><i class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+
+
+                        <div class="product-details__buttons">
+                            <div class="product-details__buttons-1">
+                                <a href="cart.html" class="thm-btn">Add to Cart <i class="icon-right-arrow"></i></a>
+                            </div>
+                            <div class="product-details__buttons-2">
+                                <a href="product-details.html" class="thm-btn">Add to Wislist <i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-details__social">
+                            <div class="title">
+                                <h3>Share with Friends</h3>
+                            </div>
+                            <div class="product-details__social-link">
+                                <a href="#"><span class="fab fa-twitter"></span></a>
+                                <a href="#"><span class="fab fa-facebook"></span></a>
+                                <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                                <a href="#"><span class="fab fa-instagram"></span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
+            </div>
+        </section>
+        <!--Product Details End-->
+
+        <!--Product Description Start-->
+        <section class="product-description">
+            <div class="container">
+                <h3 class="product-description__title">Description</h3>
+                <p class="product-description__text1">Mycorrhiza biofertilizer improves the soil health and mobilizes nutrients in general and especially phosphorous to plant. It also increases crop yield and quality of produce. It impairts biotic and abiotic stress tolerance to crop plants.</p>
+                
+            </div>
+        </section>
+        <!--Product Description End-->
+
+        <!--Review One Start-->
+        <section class="review-one">
+            <div class="container">
+                <div class="comments-area">
+                    <div class="review-one__title">
+                        <h3>2 Reviews</h3>
+                    </div>
+                    <!--Start Comment Box-->
+                    <div class="comment-box">
+                        <div class="comment">
+                            <div class="author-thumb">
+                                <figure class="thumb"><img src="assets/images/product/person.jpeg" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="review-one__content">
+                                <div class="review-one__content-top">
+                                    <div class="info">
+                                        <h2>Raj sharma <span>27 July, 2022 . 4:00 pm</span></h2>
+                                    </div>
+                                    <div class="reply-btn">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="review-one__content-bottom">
+                                    <p>It might be good product by didn't benefited to my land.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Comment Box-->
+
+                    <!--Start Comment Box-->
+                    <div class="comment-box">
+                        <div class="comment">
+                            <div class="author-thumb">
+                                <figure class="thumb"><img src="assets/images/product/person.jpeg" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="review-one__content">
+                                <div class="review-one__content-top">
+                                    <div class="info">
+                                        <h2>Rajvi <span>15 July, 2022 . 7:00 pm</span></h2>
+                                    </div>
+                                    <div class="reply-btn">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+
+                                <div class="review-one__content-bottom">
+                                    <p>Awesome product.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Comment Box-->
+                </div>
+            </div>
+        </section>
+        <!--Review One End-->
+
+        <!--Start Review Form-->
+        <section class="review-form-one">
+            <div class="container">
+                <div class="review-form-one__inner">
+                    <h3 class="review-form-one__title">Add a Review</h3>
+                    <div class="review-form-one__rate-box">
+                        <p class="review-form-one__rate-text">Rate this Product?</p>
+                        <div class="review-form-one__rate">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <form action="assets/inc/sendemail.php" class="review-form-one__form contact-form-validated"
                         novalidate="novalidate">
-                        
                         <div class="row">
                             <div class="col-xl-12">
-                                <div class="contact-form__input-box text-message-box">
-                                    <p>"Welcome to our Farming Assistant web service! 
-                                    We provide farmers with a wide range of tools and resources to help them manage their operations more efficiently and effectively. 
-                                    We have team of experts who work together to provide the most accurate and up-to-date information to help farmers and solve their queries. 
-                                    <br>We are committed to helping farmers improve their yields, reduce costs, and stay ahead of the latest trends in agriculture.
-                                    Our service is easy to use and accessible from any device with an internet connection. 
-                                    We offer a variety of products from various dealers with good deals and discounts on it. 
-                                    <br>Thank you for choosing our Farming Assistant web service 
-                                    We look forward to helping you achieve success in your farming operations."
-                                </p>
+                                <div class="review-form-one__input-box text-message-box">
+                                    <textarea name="message" placeholder="Write a Comment"></textarea>
                                 </div>
-                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="review-form-one__input-box">
+                                    <input type="text" placeholder="Your Name" name="name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="review-form-one__input-box">
+                                    <input type="email" placeholder="Email Address" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <button type="submit" class="thm-btn review-form-one__btn">Submit a Review <i
+                                        class="icon-right-arrow"></i></button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
-        <!--Contact Two End-->
+        <!--End Review Form-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -490,6 +637,7 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+    <script src="assets/vendors/nice-select/jquery.nice-select.min.js"></script>
 
 
 

@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
         <!--Page Header Start-->
         <section class="page-header">
             <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">

@@ -1,3 +1,4 @@
+<?php include './include/connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -125,7 +126,7 @@
                 </div>
                 <div class="contact-two__form-box">
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
+                        novalidate="novalidate" method="post">
                         <div class="row">
                         
                             <div class="col-xl-6">
@@ -171,7 +172,7 @@
                             </div>
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
-                                    <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09"  placeholder="Phone" name="Phone Number">
+                                    <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09"  placeholder="Phone" name="phone_no">
                                     <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br/></small>
                                 </div>
                             </div>
@@ -196,7 +197,7 @@
 
                             <div class="col-xl-12" id="farmer" style="display: none;">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="kheduthaq number" name="fnumber">
+                                    <input type="text" placeholder="kheduthaq number" name="farm_no">
                                 </div>
                             </div>
                             
@@ -220,7 +221,8 @@
                             <div class="col-xl-12">
                                 
                                 <div class="contact-form__btn-box">
-                                    <a href="index.php" class="thm-btn contact-two__btn">Register<i
+                                    <a href="index.php" class="thm-btn contact-two__btn"><input type="submit" value="Register" name="submit">
+                                    <i
                                             class="icon-right-arrow"></i> </a>
                                             
                                             
@@ -364,9 +366,46 @@
                 $('#farmer').hide();
             }
         }
+        
     </script>
      <script src="assets/js/validation.js"></script>
-    
+     <?php
+     if (isset($_POST['submit']))
+        {
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+            $email = $_POST['email'];
+            $pass = $_POST['password'];
+            $phoneno = $_POST['phone_no'];
+            $farmer_no = $_POST['farm_no'];
+            $gstin = $_POST['gstin'];
+            $qualif = $_POST['qual'];
+            $experience = $_POST['exp'];
+
+
+            $insert_query = " INSERT INTO tbl_farmer(f_id, username, first_name, last_name, f_email, f_password, created_on, address, phone_no, farmer_no) 
+            VALUES ('','','$fname','$lname','$email','$pass','','','$phoneno','$farmer_no','')";
+
+            $res = mysqli_query($conn, $insert_query);
+            if($res){
+               ?> 
+               <script>
+                alert("Data inserted");
+                </script>
+                <?php
+            }else{
+                ?>
+                <script>
+                alert("Data not inserted");
+                </script>
+                <?php
+                }
+                
+            }
+            
+            ?>
+        
+     
 </body>
 
 </html>

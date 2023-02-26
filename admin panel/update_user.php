@@ -1,4 +1,6 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html';
+include './include/connection.php';
+ ?>
       <!-- partial -->
       <div class="main-panel">        
         <div class="content-wrapper">
