@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html'; 
+include './include/connection.php';?>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -22,9 +23,7 @@
                           <th>
                             username
                           </th>
-                          <th>
-                            Customer Name
-                          </th>
+                          
                          <th>
                             Price   
                           </th>
@@ -40,353 +39,55 @@
                           <th>
                             Order Status
                           </th>
-                          <th>Payment Status</th>
+                          
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Vasara Neem Cake Powder
-                          </td>
-                          <td>
-                            rajsharma45
-                          </td>
-                          <td>
-                            Raj Sharma
-                          </td>
-                          <td>
-                            200
-                          </td>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            22/1/2023
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">Rejected</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Leaf And Clay Garden Store
-                          </td>
-                          <td>
-                            rahulkhanna12
-                          </td>
-                          <td>
-                            Rahul Khanna
-                          </td>
-                          <td>
-                            245
-                          </td>
-                          <td>
-                            18
-                          </td>
-                          <td>
-                            27/4/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Vermi Compost
-                          </td>
-                          <td>
-                            ishitachauhan23
-                          </td>
-                          <td>
-                            Ishita Chauhan
-                          </td>
-                          <td>
-                            190
-                          </td>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            01/01/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">rejected</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">rejected</label>
-                          </td>
-                        </tr>
-                        
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Vasara Mustard Cake Powder
-                          </td>
-                          <td>
-                            divyamalhotra89
-                          </td>
-                          <td>
-                            Divya Malhotra
-                          </td>
-                          <td>
-                            250
-                          </td>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            10/05/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Bio Gizz Bio Grow
-                          </td>
-                          <td>
-                            ram10
-                          </td>
-                          <td>
-                           Ram Narayan
-                          </td>
-                          <td>
-                            300
-                          </td>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            15/09/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">rejected</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">rejected</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                           Flower Booster
-                          </td>
-                          <td>
-                            riyashah45
-                          </td>
-                          <td>
-                            Riya Shah
-                          </td>
-                          <td>
-                            150
-                          </td>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            14/09/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">rejected</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            7
-                          </td>
-                          <td>
-                            Mob-K
-                          </td>
-                          <td>
-                            diyapatel03
-                          </td>
-                          <td>
-                            Diya Patel
-                          </td>
-                          <td>
-                            100
-                          </td>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            09/04/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            8
-                          </td>
-                          <td>
-                            AZOFIX
-                          </td>
-                          <td>
-                            tanay12
-                          </td>
-                          <td>
-                            Tanay Pandey
-                          </td>
-                          <td>
-                            150
-                          </td>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            03/01/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            9
-                          </td>
-                          <td>
-                            UTKARSH
-                          </td>
-                          <td>
-                            dhara03
-                          </td>
-                          <td>
-                           Dhara Joshi
-                          </td>
-                          <td>
-                            100
-                          </td>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            28/12/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            10
-                          </td>
-                          <td>
-                            AZOFIX
-                          </td>
-                          <td>
-                            avani78
-                          </td>
-                          <td>
-                            Avani Desai
-                          </td>
-                          <td>
-                            150
-                          </td>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            06/04/2022
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">completed</label>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-warning">pending</label>
-                          </td>
-                        </tr>
-                        
-                      </tbody>
+                      <?php
+    $sql = "SELECT order_id, product_name,username, price, quantity, order_date,order_status FROM tbl_orders, tbl_farmer, tbl_product WHERE tbl_farmer.f_id = tbl_orders.f_id AND tbl_product.product_id = tbl_orders.product_id;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    
+   
+
+    if($resultCheck!=0)
+    {
+        while(($total=mysqli_fetch_assoc($result)))
+        {
+            echo "
+            <tr>
+            <td>".$total['order_id']."</td>
+            <td>".$total['product_name']."</td>
+            <td>".$total['username']."</td>
+            
+            <td>".$total['price']."</td>
+            <td>".$total['quantity']."</td>
+            <td>".$total['order_date']."</td>
+            ";
+            
+            ?>
+            <td><a href="update_order.php"><i class="mdi mdi-border-color"></i></a>
+            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <!--  -->
+            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
+            <script>
+            function deactivate(){document.getElementById("deactivate").blur();}</script>
+            <?php
+            echo "
+            <td>".$total['order_status']."</td>
+            ";
+            ?>
+            <?php
+            echo "</tr>";
+            
+            
+        }
+
+    }
+    else
+    {
+        echo "No Records Found";
+    }
+?>
                     </table>
                     
                   </div>

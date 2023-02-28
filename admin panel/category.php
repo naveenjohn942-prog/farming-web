@@ -1,4 +1,42 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html'; 
+include './include/connection.php';
+
+
+if (isset($_POST['active']))
+{
+  $total=mysqli_fetch_assoc($result);
+    $uc_id = $total['c_id'];
+    $query = "UPDATE tbl_category SET c_status = 'ACTIVE' WHERE c_id='$uc_id'";
+   
+
+    if ($conn->query($query) === TRUE) {
+    echo "<script>alert('Done');</script>";
+    }
+    else{
+      echo $aid;
+      echo "Error".mysqli_error($conn);
+    }
+  }
+  if (isset($_POST['deactive']))
+{
+    
+    
+    $query = "UPDATE tbl_category SET c_status = 'INACTIVE' WHERE c_status = ACTIVE;";
+   
+
+    if ($conn->query($query) === TRUE) {
+    echo "<script>alert('Done');</script>";
+    }
+    else{
+      echo $aid;
+      echo "Error".mysqli_error($conn);
+    }
+  }  
+
+
+
+
+?>
       <!-- partial -->
       <style>
     i.mdi{
@@ -30,9 +68,7 @@
                           <th>
                             Category name
                           </th>
-                          <th>
-                            Created By
-                          </th>
+                          
                           <th>
                             Action
                           </th>
@@ -41,199 +77,48 @@
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Flower Seeds
-                          </td>
-                          <td>
-                            naveenpatel
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Seasonal Seeds
-                          </td>
-                          <td>
-                            rajivshah
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">Deactive</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Bio Fertilizers
-                          </td>
-                          <td>
-                            jenson
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">Deactive</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Flower Seeds
-                          </td>
-                          <td>
-                            Ramjoshi
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Tools and equipments
-                          </td>
-                          <td>
-                            snehadas
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Chemical fertilizers
-                          </td>
-                          <td>
-                            joychristian
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">Deactive</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Flower Seeds
-                          </td>
-                          <td>
-                            tusharjohn
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            Seasonal Seeds
-                          </td>
-                          <td>
-                            princelalwani
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Bio Fertilizers
-                          </td>
-                          <td>
-                            arjuntekwani
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-danger">Deactive</label>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Chemical Fertilizers
-                          </td>
-                          <td>
-                            himanshudas
-                          </td>
-                          <td>
-                            <i class="mdi mdi-crosshairs-gps"></i>
-                            <a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-                            <i class="mdi mdi-delete"></i>
-                          </td>
-                          <td>
-                          <label for="" class="badge badge-success">Active</label>
-                          </td>
-                        </tr>
-                        
-                      </tbody>
+                      <?php
+    $sql = "SELECT c_id, c_name, c_status FROM tbl_category;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    
+   
+
+    if($resultCheck!=0)
+    {
+      
+        while(($total=mysqli_fetch_assoc($result)))
+        {
+          
+            echo "
+            <tr>
+            <td>".$total['c_id']."</td>
+            <td>".$total['c_name']."</td>
+            
+           ";
+            ?>
+            <td><a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
+            <button type="submit" name="active"><i class="mdi mdi-crosshairs-gps"></i></button>
+            <!--  -->
+            <a href="category-disable.php?id=<?php echo $total['c_id']; ?>"><i class="mdi mdi-delete"></i></button></a>
+            <?php 
+            echo "<td>".$total['c_status']."</td>"
+            ?>
+
+            
+            <?php
+            echo "</tr>";
+          
+            
+        }
+
+    }
+    else
+    {
+        echo "No Records Found";
+    }
+    
+?>
                     </table>
                     
                   </div>

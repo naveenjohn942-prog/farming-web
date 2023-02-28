@@ -45,7 +45,7 @@ include './include/header.html';
             <td>".$total['f_email']."</td>
             <td>".$total['phone_no']."</td>
             <td>".$total['farmer_no']."</td>
-
+</tr>
             
             ";
         }

@@ -1,5 +1,5 @@
-<?php include './include/header.html'; 
-include './include/connection.php';?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -8,26 +8,30 @@ include './include/connection.php';?>
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Payment Details</h4>
+                  <h4 class="card-title">Order Details</h4>
                   
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
                       <thead>
                         <tr>
-                          <th style="width: 85.613px;">
-                            Payment id
+                          <th>
+                            Review id
                           </th>
                           <th>
-                            Payment Mode
+                            Review Details
                           </th>
+                          
                           <th>
-                          Date    
+                            Date    
                           </th>
-                          <th>Payment Status</th>
+                          <th style="width: 150px;">
+                            Action
+                          </th>
+                          <th>Ratings</th>
                         </tr>
                       </thead>
- <?php
-    $sql = "SELECT payment_id, payment_mode,created_on, payment_status FROM tbl_payment;";
+                      <?php
+    $sql = "SELECT review_id, review_details,review_date, ratings FROM tbl_reviews;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     
@@ -39,29 +43,22 @@ include './include/connection.php';?>
         {
             echo "
             <tr>
-            <td>".$total['payment_id']."</td>
-            <td>".$total['payment_mode']."</td>
-            <td>".$total['created_on']."</td>
+            <td>".$total['review_id']."</td>
+            <td>".$total['review_details']."</td>
+            <td>".$total['review_date']."</td>
             
             ";
             ?>
-            
+            <td><a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <!--  -->
+            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
+            <script>
+            function deactivate(){document.getElementById("deactivate").blur();}</script>
+
             <?php
-            if($total['payment_status']=='Rejected'){
-              ?>
-            <td><label for="" class="badge badge-danger">Rejected</label></td>
-            <?php
-            }
-            elseif($total['payment_status']=='success'){?>
-              <td><label for="" class="badge badge-success">Successful</label></td>
-            <?php }
-            else{
-              ?>
-            <td><label for="" class="badge badge-warning">Pending</label></td>
-            <?php
-            }
-            ?>
-            <?php
+            echo "<td>".$total['ratings']."</td>";
+         
             echo "</tr>";
             
             

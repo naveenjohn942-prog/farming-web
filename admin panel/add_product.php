@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html'; 
+include './include/connection.php';?>
       <!-- partial -->
       <div class="main-panel">        
         <div class="content-wrapper">
@@ -10,15 +11,15 @@
                 <div class="card-body">
                   <h4 class="card-title">Add Product</h4>
                   
-                  <form class="forms-sample">
+                  <form class="forms-sample" method="POST">
                     <div class="form-group" id="pname-input-div">
                       <label for="exampleInputName1">Product  Name</label>
-                      <input type="text" class="form-control" id="pname-input" placeholder="Name">
+                      <input type="text" class="form-control" id="pname-input" placeholder="Name" name="pname">
                       <div id="pname-input-label" class="form-control-feedback" style="display: none; color: red;">Please Enter alphabet</div>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputName1">Product  Type</label>
-                        <select class="form-control">
+                        <select class="form-control" name="ptype">
                           <option>Flower Seeds</option>
                           <option>seasonal seeds</option>
                           <option>tool and equipment</option>
@@ -26,29 +27,25 @@
                           <option>chemical fertilizer</option>
                         </select>
                       </div> 
-                    <div class="form-group">
-                        <label for="exampleInputName1">MRP</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName4" placeholder="MRP">
-                        <small id="exampleInputName4" style="color: red; display: none;">Please Enter valid MRP.<br/></small>
-                    </div>  
+                      
                     <div class="form-group">
                         <label for="exampleInputName1">Price</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName3" placeholder="Price">
-                        <small id="exampleInputName3" style="color: red; display: none;">Please Enter valid price.<br/></small>
+                        <input type="number" class="form-control" invalid-text="exampleInputName3" placeholder="Price" name="price">
+                        <!-- <small id="exampleInputName3" style="color: red; display: none;">Please Enter valid price.<br/></small> -->
                     </div>                   
                     <div class="form-group">
                         <label for="exampleInputName1">Quantity</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName2" placeholder="Quantity">
-                        <small id="exampleInputName2" style="color: red; display: none;">Please Enter valid Quantity.<br/></small>
+                        <input type="number" class="form-control" invalid-text="exampleInputName2" placeholder="Quantity" name="quantity">
+                        <!-- <small id="exampleInputName2" style="color: red; display: none;">Please Enter valid Quantity.<br/></small> -->
                     </div> 
                     <div class="form-group">
                         <label for="exampleInputName1">Product  Description</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Description">
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Description" name="p_desc">
                     </div> 
                     <div class="form-group">
-                        Image <input type="file" id="file" style="margin-left:150px">
+                        Image <input type="file" id="file" style="margin-left:150px" name="image">
                     </div>
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>
@@ -94,4 +91,37 @@
 
 
 	</script>
+  <?php
+     if (isset($_POST['submit']))
+        {
+            $pname = $_POST['pname'];
+            $ptype = $_POST['ptype'];
+            $price = $_POST['price'];
+            $quant = $_POST['quantity'];
+            $p_desc = $_POST['p_desc'];
+            $image = $_POST['image'];
+
+
+
+            $insert_query = " INSERT INTO tbl_product(product_name, product_type, price, quantity, p_image, p_description) 
+            VALUES ('$pname','$ptype','$price','$quant','$image','$p_desc')";
+
+            $res = mysqli_query($conn, $insert_query);
+            if($res){
+               ?> 
+               <script>
+                alert("Data inserted");
+                </script>
+                <?php
+            }else{
+                ?>
+                <script>
+                alert("Data not inserted");
+                </script>
+                <?php
+                }
+                
+            }
+            
+            ?>
         <?php include './include/footer.html'; ?>
