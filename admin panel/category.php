@@ -98,9 +98,9 @@ if (isset($_POST['active']))
            ";
             ?>
             <td><a href="update_category.php"><i class="mdi mdi-border-color"></i></a>
-            <button type="submit" name="active"><i class="mdi mdi-crosshairs-gps"></i></button>
+            <a href="category-enable.php?id=<?php echo $total['c_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
-            <a href="category-disable.php?id=<?php echo $total['c_id']; ?>"><i class="mdi mdi-delete"></i></button></a>
+            <a href="category-disable.php?id=<?php echo $total['c_id']; ?>"><i class="mdi mdi-delete"></i></a>
             <?php 
             echo "<td>".$total['c_status']."</td>"
             ?>

@@ -8,7 +8,7 @@ include './include/connection.php'; ?>
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Order Details</h4>
+                  <h4 class="card-title">Review Details</h4>
                   
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
@@ -28,10 +28,11 @@ include './include/connection.php'; ?>
                             Action
                           </th>
                           <th>Ratings</th>
+                          <th>Status</th>
                         </tr>
                       </thead>
                       <?php
-    $sql = "SELECT review_id, review_details,review_date, ratings FROM tbl_reviews;";
+    $sql = "SELECT review_id, review_details,review_date, ratings, status FROM tbl_reviews;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     
@@ -50,15 +51,13 @@ include './include/connection.php'; ?>
             ";
             ?>
             <td><a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
-            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <a href="review-enable.php?id=<?php echo $total['review_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
-            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
-            <script>
-            function deactivate(){document.getElementById("deactivate").blur();}</script>
-
+            <a href="review-disable.php?id=<?php echo $total['review_id']; ?>"><i class="mdi mdi-delete"></i></a></td>
+            
             <?php
             echo "<td>".$total['ratings']."</td>";
-         
+            echo "<td>".$total['status']."</td>";
             echo "</tr>";
             
             

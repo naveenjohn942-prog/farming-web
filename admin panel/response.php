@@ -8,7 +8,7 @@ include './include/connection.php'; ?>
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Order Details</h4>
+                  <h4 class="card-title">Response Details</h4>
                   
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
@@ -27,11 +27,13 @@ include './include/connection.php'; ?>
                           <th style="width: 150px;">
                             Action
                           </th>
-                          
+                          <th>
+                            Status
+                          </th>
                         </tr>
                       </thead>
                       <?php
-    $sql = "SELECT response_id,response_details, response_date FROM tbl_response;";
+    $sql = "SELECT response_id,response_details, response_date, status FROM tbl_response;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     
@@ -49,14 +51,12 @@ include './include/connection.php'; ?>
             ";
             ?>
             <td><a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <a href="response-enable.php?id=<?php echo $total['response_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
-            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
-            <script>
-            function deactivate(){document.getElementById("deactivate").blur();}</script>
-
+            <a href="response-disable.php?id=<?php echo $total['response_id']; ?>"><i class="mdi mdi-delete"></i></a></td>
             
             <?php
+            echo "<td>".$total['status']."</td>";
             echo "</tr>";
             
             

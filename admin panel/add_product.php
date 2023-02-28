@@ -103,8 +103,8 @@ include './include/connection.php';?>
 
 
 
-            $insert_query = " INSERT INTO tbl_product(product_name, product_type, price, quantity, p_image, p_description) 
-            VALUES ('$pname','$ptype','$price','$quant','$image','$p_desc')";
+            $insert_query = " INSERT INTO tbl_product(product_name, product_type, price, quantity, p_image, p_description, p_status) 
+            VALUES ('$pname','$ptype','$price','$quant','$image','$p_desc', 'ACTIVE')";
 
             $res = mysqli_query($conn, $insert_query);
             if($res){

@@ -34,10 +34,7 @@ include './include/connection.php';?>
                             Date    
                           </th>
                           <th style="width: 150px;">
-                            Action
-                          </th>
-                          <th>
-                            Order Status
+                            Status
                           </th>
                           
                         </tr>
@@ -48,7 +45,7 @@ include './include/connection.php';?>
     $resultCheck = mysqli_num_rows($result);
     
    
-
+  
     if($resultCheck!=0)
     {
         while(($total=mysqli_fetch_assoc($result)))
@@ -65,16 +62,22 @@ include './include/connection.php';?>
             ";
             
             ?>
-            <td><a href="update_order.php"><i class="mdi mdi-border-color"></i></a>
-            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
-            <!--  -->
-            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
-            <script>
-            function deactivate(){document.getElementById("deactivate").blur();}</script>
+            
             <?php
-            echo "
-            <td>".$total['order_status']."</td>
-            ";
+            if($total['order_status']=='Completed'){
+              ?>
+            <td><label for="" class="badge badge-success">Completed</label></td>
+            <?php
+            }
+            elseif($total['order_status']=='Pending'){?>
+              <td><label for="" class="badge badge-warning">Pending</label></td>
+            <?php }
+            else{
+              ?>
+            <td><label for="" class="badge badge-danger">Rejected</label></td>
+            <?php
+            }
+            
             ?>
             <?php
             echo "</tr>";

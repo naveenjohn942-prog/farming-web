@@ -45,10 +45,13 @@ include './include/connection.php';
                           <th>
                             Status
                           </th>
+                          <th>
+                            Product Status
+                          </th>
                         </tr>
                       </thead>
                       <?php
-    $sql = "SELECT product_id, product_name,username, product_type, price, quantity FROM tbl_product, tbl_dealer WHERE tbl_dealer.d_id = tbl_product.d_id;";
+    $sql = "SELECT product_id, product_name,username, product_type, price, quantity, p_status FROM tbl_product, tbl_dealer WHERE tbl_dealer.d_id = tbl_product.d_id;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
     
@@ -68,11 +71,10 @@ include './include/connection.php';
             <td>".$total['quantity']."</td>";
             ?>
             <td><a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
-            <a href="#"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <a href="product-enable.php?id=<?php echo $total['product_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
-            <a href="#" id="deactivate"><i class="mdi mdi-delete" onclick="deactivate()"></i></a></td>
-            <script>
-            function deactivate(){document.getElementById("deactivate").blur();}</script>
+            <a href="product-disable.php?id=<?php echo $total['product_id']; ?>"><i class="mdi mdi-delete"></i></a></td>
+            
 
             <?php
             if($total['quantity']==0){
@@ -85,6 +87,9 @@ include './include/connection.php';
             <td><label for="" class="badge badge-success">Available</label></td>
             <?php
             }
+            ?>
+            <?php
+            echo"<td>".$total['p_status']."</td>";
             ?>
             <?php
             echo "</tr>";
