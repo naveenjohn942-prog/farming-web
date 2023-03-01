@@ -25,7 +25,7 @@ $qrow = mysqli_fetch_assoc($qquery);
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update Review</h4>
+                  <h4 class="card-title">Update Response</h4>
                   
                   <form class="forms-sample" method="POST">
                     <div class="form-group" id="pname-update-input-div">

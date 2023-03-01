@@ -21,6 +21,8 @@ include './include/header.html';
 <th>farmer email</th>
 <th>phone no</th>
 <th>farmer no</th>
+<th>Action</th>
+<th>Status</th>
 </tr>
                       </thead>
 
@@ -45,6 +47,14 @@ include './include/header.html';
             <td>".$total['f_email']."</td>
             <td>".$total['phone_no']."</td>
             <td>".$total['farmer_no']."</td>
+";?>
+          <td><a href="update_user.php?id=<?php echo $total['f_id']; ?>"><i class="mdi mdi-border-color"></i></a>
+            <a href="user-enable.php?id=<?php echo $total['f_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
+            <!--  -->
+            <a href="user-disable.php?id=<?php echo $total['f_id']; ?>"><i class="mdi mdi-delete"></i></a></td>
+
+<?php
+echo "      <td>".$total['status']."</td>
 </tr>
             
             ";
