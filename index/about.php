@@ -1,3 +1,4 @@
+<?php include './include/connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -117,7 +118,7 @@
                                                         </ul>
                                                     </li>
                                                     <li class="dropdown">
-                                                        <a href="expert_guidence.html">Expert-Guidence</a>
+                                                        <a href="expert_guidance.php">Expert-Guidance</a>
                                                         
                                                     </li>
                                                     <!-- <li class="dropdown">
@@ -153,21 +154,21 @@
                                                         </ul>
                                                     </li> -->
                                                     <li class="dropdown">
-                                                        <a href="#">Account</a>
+                                                        <a href="farmer_update_profile.php">Account</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="products.html">Products</a></li>
-                                                            <li><a href="cart.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="products.php">Products</a></li>
+                                                            <li><a href="cart.php">Cart</a></li>
+                                                            <li><a href="checkout.php">Checkout</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="about.php">About</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Login</a>
+                                                        <a href="login.php">Login</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Register</a>
+                                                        <a href="register.php">Register</a>
                                                     </li>
                                                 </ul>
                                             </div>
