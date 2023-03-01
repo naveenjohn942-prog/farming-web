@@ -8,25 +8,25 @@ include './include/header.html';
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Farmer Details</h4>
+                  <h4 class="card-title">Order Details</h4>
                   
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
                       <thead>
 <tr>
-<th>Farmer Id</th>
-<th>Username </th>
-<th>first name</th>
-<th>last name</th>
-<th>farmer email</th>
-<th>phone no</th>
-<th>farmer no</th>
+<th>Order Id</th>
+<th>Farmer ID</th>
+<th>expert id</th>
+<th>product id</th>
+<th>order date</th>
+<th>Order status</th>
+<th>total amount</th>
 </tr>
                       </thead>
 
 
 <?php
-    $sql = "SELECT * FROM tbl_farmer;";
+    $sql = "SELECT * FROM tbl_orders;";
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
@@ -38,13 +38,13 @@ include './include/header.html';
         {
             echo "
             <tr>
+            <td>".$total['order_id']."</td>
             <td>".$total['f_id']."</td>
-            <td>".$total['username']."</td>
-            <td>".$total['first_name']."</td>
-            <td>".$total['last_name']."</td>
-            <td>".$total['f_email']."</td>
-            <td>".$total['phone_no']."</td>
-            <td>".$total['farmer_no']."</td>
+            <td>".$total['e_id']."</td>
+            <td>".$total['product_id']."</td>
+            <td>".$total['order_date']."</td>
+            <td>".$total['order_status']."</td>
+            <td>".$total['total_amt']."</td>
 
             
             ";

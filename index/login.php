@@ -1,10 +1,104 @@
+<?php include './include/connection.php';
+
+
+if (isset($_POST['submit'])) {
+	$email = ($_POST['email']);
+	$pass = $_POST['password'];
+	if (empty($_POST["email"])) {
+		$error = "<p style='color:red;font-size:10;margin:0px;margin-left:-130px'>*Email is required</p>";
+	  } else {
+		$email = $_POST["email"];
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		  $error = "<p style='color:red;font-size:10;margin:0px;margin-left:-40px'>Invalid email format</p>";
+		}
+	  }
+	if (empty($pass)) {
+		$error1 = "<p style='color:red;font-size:10;margin:0px;margin-left:-40px'>*Please Enter your password</p>";
+	}
+	if($sub == 'farmer'){
+		$query = "select * from tbl_farmer where f_email='$email'";
+		echo $query;
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['f_id'];
+				$db_pass = $row['f_password'];
+				if((md5($pass) != $db_pass)) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+				}
+				else{
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['f_id'];
+                        $_SESSION['EMAIL_id'] = $row['f_email'];
+				
+				}
+			}
+            elseif($sub == 'dealer'){
+                $query = "select * from tbl_dealer where d_email='$email'";
+		echo $query;
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['d_id'];
+				$db_pass = $row['d_password'];
+				if((md5($pass) != $db_pass)) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+				}
+				else{
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['d_id'];
+                        $_SESSION['EMAIL_id'] = $row['d_email'];
+				
+				}
+			}
+
+            }
+		elseif($sub == 'expert'){
+            $query = "select * from tbl_expert_details where e_email='$email'";
+		echo $query;
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['e_id'];
+				$db_pass = $row['e_password'];
+				if((md5($pass) != $db_pass)) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+				}
+				else{
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['e_id'];
+                        $_SESSION['EMAIL_id'] = $row['e_email'];
+				
+				}
+			}
+
+        }
+        else
+        {
+			$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>E-mail does not exists</p> ";
+		}
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Agrion || Agrion HTML 5 Template </title>
+    
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -132,12 +226,10 @@
                 <div class="contact-two__form-box">
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
                         novalidate="novalidate">
-                        <div class="row" style="
-                        text-align: center;
+                        <div class="row" style="text-align: center;
                         display: flex;
-                        justify-content: center;
-                        ">
-                            
+                        justify-content: center;">
+                        
                             <div class="col-xl-9">
                                 <div class="contact-form__input-box">
                                     <input type="email" placeholder="Email Address" name="email">
@@ -145,7 +237,7 @@
                             </div>
                             <div class="col-xl-9">
                                 <div class="contact-form__input-box">
-                                    <input type="password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword16" placeholder="Password" name="Password">
+                                    <input type="password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword16" placeholder="Password" name="password">
                                     <small id="exampleInputPassword16" style="color: red; display: none;">
                                         <ul>
                                         <li style="color: red; display: table;">min 6 characters, max 50 characters</li>
@@ -162,7 +254,7 @@
                             <div class="col-xl-12">
                                 <a href="forgot_pass.php" class="forgot_link">Forgot Password?</a>
                                 <div class="contact-form__btn-box">
-                                    <a href="#" class="thm-btn contact-two__btn">Login<i
+                                    <a href="index.php" class="thm-btn contact-two__btn" name="submit">Login<i
                                             class="icon-right-arrow"></i> </a>
                                             <br>
                              <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.php">  Create a New Account</a></span>
@@ -276,6 +368,8 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
+    
+
 </body>
 
 </html>

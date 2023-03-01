@@ -1,5 +1,43 @@
 
-<?php include './include/header.html'; ?>
+<?php 
+include './include/header.html';
+include './include/connection.php'; 
+
+     if(isset($_POST['submit']))
+        {
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+            $apart_name = $_POST['apart_name'];
+            $city = $_POST['city'];
+            $state = $_POST['state'];
+            $form_zip = $_POST['form_zip'];
+            $farmer_no = $_POST['farm_no'];
+            $email = $_POST['email'];
+            $phoneno = $_POST['phoneno'];
+            
+
+            $insert_query = " INSERT INTO tbl_product(product_name, product_type, price, quantity, p_image, p_description, p_status) 
+            VALUES ('$pname','$ptype','$price','$quant','$image','$p_desc', 'ACTIVE')";
+
+            $res = mysqli_query($conn, $insert_query);
+            if($res){
+               ?> 
+               <script>
+                alert("Data inserted");
+                </script>
+                <?php
+            }else{
+                ?>
+                <script>
+                alert("Data not inserted");
+                </script>
+                <?php
+                }
+                
+            }
+?>
+  
+
         <!--Page Header Start-->
         <section class="page-header">
             <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
@@ -32,13 +70,13 @@
                                 <div class="row bs-gutter-x-20">
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="first_name" value="" placeholder="First Name"
+                                            <input type="text" name="fname" value="" placeholder="First Name"
                                                 required="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="last_name" value="" placeholder="Last Name"
+                                            <input type="text" name="lname" value="" placeholder="Last Name"
                                                 required="">
                                         </div>
                                     </div>
@@ -47,33 +85,10 @@
                                     
                                     <div class="col-xl-12">
                                         <div class="billing_input_box">
-                                            <input type="text" name="Address" value="" placeholder="Address">
+                                            <input type="text" name="address" value="" placeholder="Address">
                                         </div>
                                     </div>
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="company_name" value=""
-                                                placeholder="Appartment, Unit, etc. (optional)">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="Town/City" value="" placeholder="Town / City"
-                                                required="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row bs-gutter-x-20">
-                                    <div class="col-xl-6">
-                                        <div class="billing_input_box">
-                                            <input type="text" name="State" value="" placeholder="State" required="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="billing_input_box">
-                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip Code">
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
                                             <input name="email" type="email" placeholder="Email Address">
@@ -81,7 +96,7 @@
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="tel" name="form_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                            <input type="tel" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                                 required="" placeholder="Phone Number">
                                         </div>
                                     </div>

@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
 
         <!--Blog Details Start-->
         <section class="blog-details">

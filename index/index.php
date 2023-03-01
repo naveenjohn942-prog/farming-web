@@ -1,5 +1,10 @@
 
-<?php include './include/header.html'; ?>
+<?php 
+if(!isset($_SESSION)) {
+    session_start();
+}
+include './include/header.html';
+include './include/connection.php'; ?>
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
@@ -198,7 +203,7 @@
                                 <div class="services-one__content">
                                     <h3 class="services-one__title"><a href="product.php">Organic
                                             <br> Products</a></h3>
-                                    <p class="services-one__text">We have dealers who sells organic products to farmers which help them nurture their crops effectively.</p>
+                                    <p class="services-one__text">We have dealers who sells organic products to farmers.</p>
                                 </div>
                             </div>
                         </div>

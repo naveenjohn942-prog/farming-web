@@ -9,7 +9,7 @@ include './include/connection.php'; ?>
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update Product</h4>
+                  <h4 class="card-title">Update Review</h4>
                   
                   <form class="forms-sample">
                     <div class="form-group" id="pname-update-input-div">
@@ -17,38 +17,18 @@ include './include/connection.php'; ?>
                       <input type="text" class="form-control" id="pname-update-input" placeholder="Name" value="xyz">
                       <div id="pname-update-input-label" class="form-control-feedback" style="display: none; color: red;">Please Enter alphabet</div>
                     </div>
+                    <div class="form-group" id="pname-update-input-div">
+                      <label for="exampleInputName1">Expert  Name</label>
+                      <input type="text" class="form-control" id="pname-update-input" placeholder="Name" value="xyz">
+                      <div id="pname-update-input-label" class="form-control-feedback" style="display: none; color: red;">Please Enter alphabet</div>
+                    </div>
+                     
                     <div class="form-group">
-                        <label for="exampleInputName1">Product  Type</label>
-                        <select class="form-control">
-                          <option>Flower Seeds</option>
-                          <option selected>seasonal seeds</option>
-                          <option>tool and equipment</option>
-                          <option>bio fertilizer</option>
-                          <option>chemical fertilizer</option>
-                        </select>
-                    </div> 
-                    <div class="form-group">
-                        <label for="exampleInputName1">MRP</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName9" placeholder="MRP" value="789">
-                        <small id="exampleInputName9" style="color: red; display: none;">Please Enter valid MRP.<br/></small>
-                    </div>  
-                    <div class="form-group">
-                        <label for="exampleInputName1">Price</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName10" placeholder="Price" value="78">
-                        <small id="exampleInputName10" style="color: red; display: none;">Please Enter valid price.<br/></small>
-                    </div>                   
-                    <div class="form-group">
-                        <label for="exampleInputName1">Quantity</label>
-                        <input type="number" class="form-control" required onkeyup="numbers(this)" invalid-text="exampleInputName11" placeholder="Quantity" value="9">
-                        <small id="exampleInputName11" style="color: red; display: none;">Please Enter valid Quantity.<br/></small>
-                    </div> 
-                    <div class="form-group">
-                        <label for="exampleInputName1">Product  Description</label>
+                        <label for="exampleInputName1">Response</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Description" value="afgkdguykgaguyfggfgggaykgke">
                     </div> 
-                    <div class="form-group">
-                        Image <input type="file" id="file" style="margin-left:150px">
-                    </div>
+                     
+                    
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>

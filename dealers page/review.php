@@ -1,5 +1,5 @@
-<?php include './include/header.html'; 
-include './include/connection.php';?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -8,22 +8,26 @@ include './include/connection.php';?>
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Payment Details</h4>
+                  <h4 class="card-title">Order Details</h4>
                   
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">
                       <thead>
                         <tr>
-                          <th style="width: 85.613px;">
-                            Payment id
+                          <th>
+                            Review id
                           </th>
                           <th>
-                            Payment name
+                            Review Details
                           </th>
+                          
                           <th>
-                          Date    
+                            Date    
                           </th>
-                          <th>Payment Status</th>
+                          <th style="width: 150px;">
+                            Action
+                          </th>
+                          <th>Ratings</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -32,178 +36,213 @@ include './include/connection.php';?>
                             1
                           </td>
                           <td>
-                            rishika
-                          </td>
-                          <td>
-                          20/1/2023
+                            Vasara Neem Cake Powder
                           </td>
                           
                           <td>
-                            Rejected
+                            22/1/2023
                           </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
+                          </td>
+                          
                         </tr>
                         <tr>
                           <td>
                             2
                           </td>
                           <td>
-                            dhruv rathore
+                            Leaf And Clay Garden Store
                           </td>
                           
                           <td>
-                            12/1/2023
+                            27/4/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            pending
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             3
                           </td>
                           <td>
-                            deep patel 
+                            Vermi Compost
                           </td>
                           
                           <td>
-                            20/12/2022
+                            01/01/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            successful
-                          </td>
                         </tr>
+                        
                         <tr>
                           <td>
                             4
                           </td>
                           <td>
-                            tanuu
+                            Vasara Mustard Cake Powder
                           </td>
                           
                           <td>
-                            20/11/2022
+                            10/05/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            successful
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             5
                           </td>
                           <td>
-                            roshni jha  
+                            Bio Gizz Bio Grow
                           </td>
                           
                           <td>
-                            05/12/2022
+                            15/09/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            Rejected
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             6
                           </td>
                           <td>
-                            devv
+                           Flower Booster
                           </td>
                           
                           <td>
-                            02/01/2023
+                            14/09/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            Pending
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             7
                           </td>
                           <td>
-                            Kavita 
+                            Mob-K
                           </td>
                           
                           <td>
-                            22/01/2023
+                            09/04/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            successful
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             8
                           </td>
                           <td>
-                            gangg
+                            AZOFIX
                           </td>
                           
                           <td>
-                            29/11/2022
+                            03/01/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            Rejected
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             9
                           </td>
                           <td>
-                            hellyy 
+                            UTKARSH
                           </td>
                           
                           <td>
-                            08/12/2022
+                            28/12/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            9
-                          </td>
-                          <td>
-                            Yashh
-                          </td>
-                          
-                          <td>
-                            14/11/2022
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
                         </tr>
                         <tr>
                           <td>
                             10
                           </td>
                           <td>
-                            suhani
+                            AZOFIX
                           </td>
                           
                           <td>
-                            25/01/2023
+                            06/04/2022
+                          </td>
+                          <td>
+                            <i class="mdi mdi-crosshairs-gps"></i>
+                            <a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+                            <i class="mdi mdi-delete"></i>
+                          </td>
+                          <td>
+                          
                           </td>
                           
-                          <td>
-                            successful
-                          </td>
-                        </tr>      
-                
-
+                        </tr>
+                        
                       </tbody>
                     </table>
                     

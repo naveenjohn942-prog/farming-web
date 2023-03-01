@@ -1,10 +1,12 @@
+<?php include './include/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Agriculture Products || Agrion || Agrion HTML 5 Template </title>
+    <title> Services || Agrion || Agrion HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -340,157 +342,359 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.html">Home</a></li>
                         <li><span>/</span></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><span>/</span></li>
-                        <li>Agriculture Products</li>
+                        <li>Services</li>
                     </ul>
-                    <h2>Agriculture Products</h2>
+                    <h2>Our services</h2>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
 
-        <!--Services Details Start-->
-        <div class="services-details">
+        <!--Services Two Start-->
+        <section class="services-page">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="services-details__left">
-                            <div class="sidebar__single sidebar__category">
-                                <h3 class="sidebar__title">All Services</h3>
-                                <ul class="sidebar__category-list list-unstyled">
-                                    <li class="active"><a href="agriculture-products.html">Agriculture Products<span
-                                                class="icon-right-arrow"></span></a>
-                                    </li>
-                                    <li><a href="organic-products.html">Organic Products<span
-                                                class="icon-right-arrow"></span></a></li>
-                                    <li><a href="fresh-vegetables.html">Fresh Vegetables<span
-                                                class="icon-right-arrow"></span></a>
-                                    </li>
-                                    <li><a href="dairy-products.html">Dairy Products<span
-                                                class="icon-right-arrow"></span></a>
-                                    </li>
-                                </ul>
+                    <!--Services Two Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="services-two__single">
+                            <div class="services-two__img">
+                                <img src="assets/images/services/services-two-1.jpg" alt="">
                             </div>
-                            <div class="services-details__need-help">
-                                <div class="services-details__need-help-bg"
-                                    style="background-image: url(assets/images/services/services-details-need-help-bg.jpg);">
+                            <div class="services-two__content">
+                                <div class="services-two__icon">
+                                    <span class="icon-dairy-products"></span>
                                 </div>
-                                <h3 class="services-details__need-help-title">We’re Salling our <br> agriculture <br>
-                                    products</h3>
-                                <div class="services-details__need-help-icon">
-                                    <span class="icon-phone-ringing"></span>
+                                <div class="services-two__more-details">
+                                    <a href="dairy-products.html"><i class="icon-right-arrow"></i>More Detail</a>
                                 </div>
-                                <div class="services-details__need-help-contact">
-                                    <p>Lorem ipsum dolor sit am cons sid</p>
-                                    <a href="tel:12463330088">+ 1- (246) 333-0088</a>
+                            </div>
+                            <div class="services-two__title-box">
+                                <p class="services-two__subtitle">01 Services</p>
+                                <h3 class="services-two__title"><a href="dairy-products.html">Dairy Products</a></h3>
+                            </div>
+                            <div class="services-two__hover-content">
+                                <p class="services-two__hover-sub-title">01 Services</p>
+                                <h3 class="services-two__hover-title"><a href="dairy-products.html">Dairy Products</a>
+                                </h3>
+                                <p class="services-two__hover-text">Lorem ium dolor sit do <br> sed pisicing elit.</p>
+                                <div class="services-two__hover-more-details">
+                                    <a href="dairy-products.html"><i class="icon-right-arrow"></i>More Detail</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="services-details__right">
-                            <div class="services-details__content-box">
-                                <div class="services-details__img">
-                                    <img src="assets/images/services/services-details-img-1.jpg" alt="">
-                                    <div class="services-details__img-icon">
-                                        <span class="icon-organic-food"></span>
-                                    </div>
-                                </div>
-                                <h3 class="services-details__title">Agriculture Products</h3>
-                                <p class="services-details__text-1">Lorem ipsum is simply free text used by copytyping
-                                    refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et
-                                    quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var
-                                    sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy
-                                    text of the printing and typesetting industry. Lorem Ipsum has been the ndustry
-                                    standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                                    type and scrambled it to make a type specimen book.</p>
-                                <p class="services-details__text-2">When an unknown printer took a galley of type and
-                                    scrambled it to make a type specimen book. It has survived not only five centuries,
-                                    but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                    <!--Services Two Single End-->
+                    <!--Services Two Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="services-two__single">
+                            <div class="services-two__img">
+                                <img src="assets/images/services/services-two-2.jpg" alt="">
                             </div>
-                            <div class="service-details__choose">
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="service-details__choose-img">
-                                            <img src="assets/images/services/service-details-benefit-img.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="service-details__choose-content">
-                                            <h4 class="service-details__choose-title">Why Choose?</h4>
-                                            <p class="service-details__choose-text">Duis aute irure dolor in
-                                                reprehenderit in voluptate velit esse cillum.</p>
-                                            <ul class="list-unstyled service-details__choose-points">
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="icon-tick"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Refresing to get such a touch</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="icon-tick"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Duis aute irure dolor in in voluptate</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="icon">
-                                                        <i class="icon-tick"></i>
-                                                    </div>
-                                                    <div class="text">
-                                                        <p>Velit esse cillum eu fugiat pariatur</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="services-two__content">
+                                <div class="services-two__icon">
+                                    <span class="icon-dairy-products"></span>
+                                </div>
+                                <div class="services-two__more-details">
+                                    <a href="fresh-vegetables.html"><i class="icon-right-arrow"></i>More Detail</a>
                                 </div>
                             </div>
-                            <div class="service-details__faq">
-                                <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                                    <div class="accrodion active">
-                                        <div class="accrodion-title">
-                                            <h4>Company Provides a Full Range of Services?</h4>
+                            <div class="services-two__title-box">
+                                <p class="services-two__subtitle">02 Services</p>
+                                <h3 class="services-two__title"><a href="fresh-vegetables.html">Fresh vegetables</a>
+                                </h3>
+                            </div>
+                            <div class="services-two__hover-content">
+                                <p class="services-two__hover-sub-title">02 Services</p>
+                                <h3 class="services-two__hover-title"><a href="fresh-vegetables.html">Fresh
+                                        vegetables</a></h3>
+                                <p class="services-two__hover-text">Lorem ium dolor sit do <br> sed pisicing elit.</p>
+                                <div class="services-two__hover-more-details">
+                                    <a href="fresh-vegetables.html"><i class="icon-right-arrow"></i>More Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services Two Single End-->
+                    <!--Services Two Single Start-->
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="services-two__single">
+                            <div class="services-two__img">
+                                <img src="assets/images/services/services-two-3.jpg" alt="">
+                            </div>
+                            <div class="services-two__content">
+                                <div class="services-two__icon">
+                                    <span class="icon-dairy-products"></span>
+                                </div>
+                                <div class="services-two__more-details">
+                                    <a href="organic-products.html"><i class="icon-right-arrow"></i>More Detail</a>
+                                </div>
+                            </div>
+                            <div class="services-two__title-box">
+                                <p class="services-two__subtitle">03 Services</p>
+                                <h3 class="services-two__title"><a href="organic-products.html">Organic items</a></h3>
+                            </div>
+                            <div class="services-two__hover-content">
+                                <p class="services-two__hover-sub-title">03 Services</p>
+                                <h3 class="services-two__hover-title"><a href="organic-products.html">Organic items</a>
+                                </h3>
+                                <p class="services-two__hover-text">Lorem ium dolor sit do <br> sed pisicing elit.</p>
+                                <div class="services-two__hover-more-details">
+                                    <a href="organic-products.html"><i class="icon-right-arrow"></i>More Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services Two Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Services Two End-->
+
+        <!--Unbeatable One Start-->
+        <section class="unbeatable-one">
+            <div class="unbeatable-one__bg  jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
+                style="background-image: url(assets/images/backgrounds/unbeatable-one-bg.jpg);"></div>
+            <div class="container">
+                <div class="unbeatable-one__inner text-center">
+                    <div class="unbeatable-one__content">
+                        <div class="unbeatable-one__shape-one wow slideInLeft" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <img src="assets/images/shapes/unbeatable-shape-1.png" alt="" class="float-bob-y">
+                        </div>
+                        <div class="unbeatable-one__shape-two wow slideInRight" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <img src="assets/images/shapes/unbeatable-shape-2.png" alt="" class="float-bob-y">
+                        </div>
+                        <p class="unbeatable-one__tagline">We’re Selling Healthy Products</p>
+                        <h3 class="unbeatable-one__title">Unbeatable Organic and
+                            <br> Agriculture Services</h3>
+                        <div class="unbeatable-one__btn-box">
+                            <a href="about.html" class="thm-btn unbeatable-one__btn">Discover More <i
+                                    class="icon-right-arrow"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Unbeatable One End-->
+
+        <!--Healthey Food One Start-->
+        <section class="healthy-food-one">
+            <div class="healthy-food-one__bg"
+                style="background-image: url(assets/images/shapes/healthy-food-one-shape-1.png);"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="healthy-food-one__left">
+                            <div class="healthy-food-one__img">
+                                <img src="assets/images/resources/healthy-food-one-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="healthy-food-one__right">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">Pure Organic Food</span>
+                                <h2 class="section-title__title">Healthy food for your good
+                                    growth</h2>
+                                <div class="section-title__icon">
+                                    <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                                </div>
+                            </div>
+                            <p class="healthy-food-one__text">Lorem ipsum dolor sit amet nsectetur cing elit. Suspe
+                                ndisse suscipit sagittis leo sit met entum estibu dignissim posuere cubilia durae. Leo
+                                sit met entum cubilia crae onec.</p>
+                            <ul class="list-unstyled healthy-food-one__list">
+                                <li class="healthy-food-one__single">
+                                    <div class="healthy-food-one__content">
+                                        <div class="healthy-food-one__icon">
+                                            <span class="icon-harvester"></span>
                                         </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo
-                                                    ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                    adipisi cing elit.</p>
-                                            </div><!-- /.inner -->
-                                        </div>
+                                        <p class="healthy-food-one__title">Harvesting</p>
                                     </div>
-                                    <div class="accrodion">
-                                        <div class="accrodion-title">
-                                            <h4>Home Improvement Works are Expensive?</h4>
+                                </li>
+                                <li class="healthy-food-one__single">
+                                    <div class="healthy-food-one__content">
+                                        <div class="healthy-food-one__icon">
+                                            <span class="icon-agriculture-1"></span>
                                         </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo
-                                                    ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                    adipisi cing elit.</p>
-                                            </div><!-- /.inner -->
-                                        </div>
+                                        <p class="healthy-food-one__title">Growth</p>
                                     </div>
-                                    <div class="accrodion">
-                                        <div class="accrodion-title">
-                                            <h4>Taking Seamless Key Performance Indicators?</h4>
+                                </li>
+                                <li class="healthy-food-one__single">
+                                    <div class="healthy-food-one__content">
+                                        <div class="healthy-food-one__icon">
+                                            <span class="icon-harvest-1"></span>
                                         </div>
-                                        <div class="accrodion-content">
-                                            <div class="inner">
-                                                <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum
-                                                    leo
-                                                    ligula, vitae commodo nisl. Lorem ipsum dolor sit amet, consectetur
-                                                    adipisi cing elit.</p>
-                                            </div><!-- /.inner -->
-                                        </div>
+                                        <p class="healthy-food-one__title">Maintenance</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Healthey Food One End-->
+
+        <!--Services One Start-->
+        <section class="services-one">
+            <div class="services-one__bg" style="background-image: url(assets/images/shapes/services-one-shape-1.png);">
+            </div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">What We’re Doing</span>
+                    <h2 class="section-title__title">Services We’re offering</h2>
+                    <div class="section-title__icon">
+                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Services One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/images/services/services-one-1.jpg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-tractor"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="agriculture-products.html">Agriculture <br>
+                                        Products</a></h3>
+                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                    simply free text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                    <!--Services One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/images/services/services-one-2.jpg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-organic-food"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="organic-products.html">Organic
+                                        <br> Products</a></h3>
+                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                    simply free text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                    <!--Services One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/images/services/services-one-3.jpg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-vegetables"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="fresh-vegetables.html">Fresh
+                                        <br> Vegetables</a></h3>
+                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                    simply free text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                    <!--Services One Single Start-->
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="assets/images/services/services-one-4.jpg" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-dairy"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__content">
+                                <h3 class="services-one__title"><a href="dairy-products.html">Dairy <br> Products</a>
+                                </h3>
+                                <p class="services-one__text">I was impresed by the agrion services, not lorem ipsum is
+                                    simply free text.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Services One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Services One End-->
+
+        <!--Brand One Start-->
+        <section class="brand-one">
+            <div class="brand-one__inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="brand-one__carousel thm-owl__carousel owl-theme owl-carousel" data-owl-options='{
+                                "margin": 0,
+                                "smartSpeed": 700,
+                                "loop":true,
+                                "autoplay": 6000,
+                                "nav":false,
+                                "dots":false,
+                                "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+                                "responsive":{
+                                    "0":{
+                                        "items":1
+                                    },
+                                    "600":{
+                                        "items":2
+                                    },
+                                    "800":{
+                                        "items":3
+                                    },
+                                    "1024":{
+                                        "items": 4
+                                    },
+                                    "1200":{
+                                        "items": 5
+                                    }
+                                }
+                            }'>
+                                <!--Brand One Single-->
+                                <div class="brand-one__single">
+                                    <div class="brand-one__img">
+                                        <img src="assets/images/brand/brand-1-1.png" alt="">
+                                    </div>
+                                </div>
+                                <!--Brand One Single-->
+                                <div class="brand-one__single">
+                                    <div class="brand-one__img">
+                                        <img src="assets/images/brand/brand-1-2.png" alt="">
+                                    </div>
+                                </div>
+                                <!--Brand One Single-->
+                                <div class="brand-one__single">
+                                    <div class="brand-one__img">
+                                        <img src="assets/images/brand/brand-1-3.png" alt="">
+                                    </div>
+                                </div>
+                                <!--Brand One Single-->
+                                <div class="brand-one__single">
+                                    <div class="brand-one__img">
+                                        <img src="assets/images/brand/brand-1-4.png" alt="">
+                                    </div>
+                                </div>
+                                <!--Brand One Single-->
+                                <div class="brand-one__single">
+                                    <div class="brand-one__img">
+                                        <img src="assets/images/brand/brand-1-5.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -498,8 +702,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!--Services Details End-->
+        </section>
+        <!--Brand One End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -647,7 +851,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="122"
+                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->

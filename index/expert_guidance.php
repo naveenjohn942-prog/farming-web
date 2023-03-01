@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
         <!--Page Header End-->
 
         <!--Google Map Start-->
@@ -20,7 +21,7 @@
                 </div>
                 <div class="contact-two__form-box">
                     <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
+                        novalidate="novalidate" method="post">
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
@@ -49,7 +50,7 @@
                                     <textarea name="message" placeholder="Write your Query"></textarea>
                                 </div>
                                 <div class="contact-form__btn-box">
-                                    <a href="#" class="thm-btn contact-two__btn">Submit Query<i
+                                    <a href="#" class="thm-btn contact-two__btn" name="submit">Submit Query<i
                                             class="icon-right-arrow"></i> </a>
                                 </div>
                             </div>
@@ -401,4 +402,17 @@
                 </div>
             </div>
         </section>
+        <?php
+         if (isset($_POST['submit']))
+         {
+             
+             $name = $_POST['name'];
+             $query = $_POST['subject'];
+             $mesg = $_POST['message'];
+
+             $insert_query = "INSERT INTO tbl_queries(q_desc ,q_date) 
+            VALUES ('$mesg','$fname')";
+            
+         }
+        ?>
         <?php include './include/footer.html'; ?>

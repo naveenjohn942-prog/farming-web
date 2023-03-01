@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html';
+include './include/connection.php'; ?>
         <!--Page Header End-->
 
         <!--Google Map Start-->
