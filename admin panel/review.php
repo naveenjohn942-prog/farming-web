@@ -50,7 +50,7 @@ include './include/connection.php'; ?>
             
             ";
             ?>
-            <td><a href="update_review.php"><i class="mdi mdi-border-color"></i></a>
+            <td><a href="update_review.php?id=<?php echo $total['review_id']; ?>"><i class="mdi mdi-border-color"></i></a>
             <a href="review-enable.php?id=<?php echo $total['review_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
             <a href="review-disable.php?id=<?php echo $total['review_id']; ?>"><i class="mdi mdi-delete"></i></a></td>

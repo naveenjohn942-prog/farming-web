@@ -1,17 +1,43 @@
 <?php include './include/header.html';
-include './include/connection.php'; 
+include './include/connection.php';
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-
-$rid = $_GET['review_id'];
-$rsql = "SELECT * FROM `tbl_reviews` WHERE f_id = $rid";
-$rquery = mysqli_query($conn, $rsql);
-$rrow = mysqli_fetch_assoc($rquery);
-?>
+  if (isset($_POST['submit']))
+  {
+    
+     
+      $review_details=$_POST['review_details'];
+      $product_name=$_POST['product_name'];
+      $update_query="UPDATE tbl_reviews SET review_details = '$review_details' WHERE product_name = '$product_name' ";
+  
+  
+      $res = mysqli_query($conn, $update_query);
+    
+      if($res){
+      
+        echo "<script>alert('Updated successfully');</script>";
+      }
+      else{
+        echo "<script>alert('Updated successfully');</script>";
+      }
+    }
+    
+  } ?>
       <!-- partial -->
       <div class="main-panel">        
         <div class="content-wrapper">
           <div class="row">
             
+          <?php $result=$conn->query("SELECT * FROM tbl_product WHERE product_name = '".$_GET['product_name']."'");
+        $row = $result->fetch_assoc();
+        $result=$conn->query("SELECT * FROM tbl_farmer WHERE first_name = '".$_GET['first_name']."'");
+        $row = $result->fetch_assoc();
+
+
+       $result1=$conn->query("SELECT review_details FROM tbl_reviews ");
+        $row1 = $result1->fetch_assoc();
+
+        ?> 
             
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
@@ -21,22 +47,22 @@ $rrow = mysqli_fetch_assoc($rquery);
                   <form class="forms-sample">
                     <div class="form-group" id="pname-update-input-div">
                       <label for="exampleInputName1">Product  Name</label>
-                      <input type="text" class="form-control" id="pname-update-input" placeholder="Name" value="<?php echo $rrow['product_name']; ?>">
+                      <input type="text" class="form-control" id="pname-update-input" value="<?php echo $row["product_name"]; ?>" name="product_name">
                       <div id="pname-update-input-label" class="form-control-feedback" style="display: none; color: red;">Please Enter alphabet</div>
                     </div>
                     <div class="form-group" id="pname-update-input-div">
                       <label for="exampleInputName1">Farmer  Name</label>
-                      <input type="text" class="form-control" id="pname-update-input" placeholder="Name" value="xyz">
+                      <input type="text" class="form-control" id="pname-update-input"  value="<?php echo $row["product_name"]; ?>" name="product_name">
                       <div id="pname-update-input-label" class="form-control-feedback" style="display: none; color: red;">Please Enter alphabet</div>
                     </div>
                      
                     <div class="form-group">
                         <label for="exampleInputName1">Review</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Description" value="afgkdguykgaguyfggfgggaykgke">
+                        <input type="text" class="form-control" id="exampleInputName1"  value="<?php echo $row["review_details"]; ?>" name="review_details" >
                     </div> 
                      
                     
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
                 </div>

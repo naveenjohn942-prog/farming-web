@@ -50,7 +50,7 @@ include './include/connection.php'; ?>
             <td>".$total['response_date']."</td>
             ";
             ?>
-            <td><a href="update_product.php"><i class="mdi mdi-border-color"></i></a>
+            <td><a href="update_response.php?rid=<?php echo $total['response_id']; ?>"><i class="mdi mdi-border-color"></i></a>
             <a href="response-enable.php?id=<?php echo $total['response_id']; ?>"><i class="mdi mdi-crosshairs-gps"></i></a>
             <!--  -->
             <a href="response-disable.php?id=<?php echo $total['response_id']; ?>"><i class="mdi mdi-delete"></i></a></td>
