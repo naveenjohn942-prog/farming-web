@@ -1,4 +1,48 @@
-<?php include './include/connection.php';?>
+<?php include './include/connection.php';
+
+if (isset($_POST['submit'])) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $usrname = $_POST['username'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+    $phoneno = $_POST['phone_no'];
+    $farmer_no = $_POST['farm_no'];
+    $gstin = $_POST['gstin'];
+    $qualif = $_POST['qual'];
+    $experience = $_POST['exp'];
+    $addr = $_POST['address'];
+    $sub = $_POST['subject'];
+    
+    if ($sub == 'farmer') {
+        $insert_query = "INSERT INTO `tbl_farmer`(`username`, `first_name`, `last_name`, `f_email`, `f_password`,`address`, `phone_no`, `farmer_no`) 
+       VALUES ('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno','$farmer_no')";
+    } elseif ($sub == 'dealer') {
+        $insert_query = "INSERT INTO `tbl_dealer`(username, first_name,last_name,d_email,d_password,address,phone_no) 
+           VALUES('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno')";
+    } else {
+        $insert_query = "INSERT INTO `tbl_expert_details`(username, first_name, last_name,e_email, e_password, phone_no, e_qualification, e_experience) 
+           VALUES('$usrname','$fname','$lname','$email','$pass','$phoneno','$qualif','$experience')";
+    }
+
+    $res = mysqli_query($conn, $insert_query);
+    if ($res) {
+?>
+        <script>
+            alert("Data inserted");
+            window.Location.href="index.php";
+        </script>
+    <?php
+    } else {
+    ?>
+        <script>
+            alert("Data not inserted");
+        </script>
+<?php
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,9 +62,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
@@ -53,359 +95,328 @@
             padding-top: 0 !important;
             padding-bottom: 100px !important;
         }
+
         .page-header {
             padding: 0 !important;
             padding-top: 5% !important;
-            
+
         }
-        .section-title__tagline{
+
+        .section-title__tagline {
             color: rgb(0, 0, 0);
             font-size: 1.3rem !important;
         }
-        .thm-breadcrumb{
+
+        .thm-breadcrumb {
             background-color: rgba(var(--agrion-white-rgb), .50);
         }
-        #username-error{
+
+        #username-error {
             color: red !important;
         }
-        .error{
+
+        .error {
             color: red;
         }
     </style>
 
 </head>
 
-<div class="custom-cursor">
+<body>
 
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
+    <div class="custom-cursor">
 
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
+        <div class="custom-cursor__cursor"></div>
+        <div class="custom-cursor__cursor-two"></div>
 
-<div class="page-wrapper">
-    <!-- <div class="page-wrapper"> -->
+        <div class="preloader">
+            <div class="preloader__image"></div>
+        </div>
+        <!-- /.preloader -->
 
-    <div class="preloader">
-        <div class="preloader__image"></div>
-    </div>
-    <!-- /.preloader -->
-</div>
+        <div class="page-wrapper">
+            <!-- <div class="page-wrapper"> -->
 
-    <div class="page-wrapper">
-        
-
-        <div class="stricky-header stricked-menu main-menu">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-
-        <!--Page Header Start-->
-        <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(./assets/images/backgrounds/main-slider-1-3.jpg)">
+            <div class="preloader">
+                <div class="preloader__image"></div>
             </div>
-            <div class="container">
-                <div class="page-header__inner">
-                    <ul class="thm-breadcrumb list-unstyled">
-                       
-                    <br>
+            <!-- /.preloader -->
+        </div>
 
-                    <!--Contact Two Start-->
-        <section class="contact-two">
-            <!-- <div class="contact-two__shape-1 float-bob-x">
+        <div class="page-wrapper">
+
+
+            <div class="stricky-header stricked-menu main-menu">
+                <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+            </div><!-- /.stricky-header -->
+
+            <!--Page Header Start-->
+            <section class="page-header">
+                <div class="page-header-bg" style="background-image: url(./assets/images/backgrounds/main-slider-1-3.jpg)">
+                </div>
+                <div class="container">
+                    <div class="page-header__inner">
+                        <ul class="thm-breadcrumb list-unstyled">
+
+                            <br>
+
+                            <!--Contact Two Start-->
+                            <section class="contact-two">
+                                <!-- <div class="contact-two__shape-1 float-bob-x">
                 <img src="assets/images/shapes/contact-two-shape-1.png" alt="">
             </div> -->
-            <div class="container">
-                <div class="section-title text-center">
-                    
-                    <h2 class="section-title__title" style="color: black;">Register</h2>
-                    <div class="section-title__icon">
-                        <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                                <div class="container">
+                                    <div class="section-title text-center">
+
+                                        <h2 class="section-title__title" style="color: black;">Register</h2>
+                                        <div class="section-title__icon">
+                                            <img src="assets/images/icon/section-title-icon-1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="contact-two__form-box">
+                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" class="contact-two__form" method="POST">
+                                            <div class="row">
+
+                                                <div class="col-xl-6">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="First Name" name="fname">
+                                                        <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="Last Name" name="lname">
+                                                        <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="Username" name="username" maxlength="12" minlength="5">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="email" required onkeyup="emails(this)" invalid-text="exampleInputemail21" placeholder="Email Address" name="email">
+                                                        <small id="exampleInputemail21" style="color: red; display: none;">Please Enter Valid Email.<br /></small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="password" placeholder="Password" name="password">
+                                                        <small id="exampleInputPassword21" style="color: red; display: none;">
+                                                            <ul>
+                                                                <li style="color: red;
+                                        display: table;">min 6 characters, max 50 characters</li>
+                                                                <li style="color: red;
+                                        display: table;">must contain 1 letter</li>
+                                                                <li style="color: red;
+                                        display: table;">must contain 1 number</li>
+                                                                <li style="color: red;
+                                        display: table;">may contain special characters like !@#$%^&*()_+</li>
+
+                                                            </ul><br />
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09" placeholder="Phone" name="phone_no">
+                                                        <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br /></small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="Address" name="address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="contact-form__input-box">
+
+
+                                                        <select name="subject" id="Subject" onchange="display_input()">
+                                                            <option value="" disabled selected>User Type</option>
+                                                            <option value="Farmers">Farmers</option>
+                                                            <option value="Dealer">Dealer</option>
+                                                            <option value="Expert">Expert</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-xl-12" id="farmer" style="display: none;">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="kheduthaq number" name="farm_no">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xl-12" id="dealer" style="display: none;">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="GSTIN" name="gstin" min="15" max="15">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xl-12" id="expert" style="display: none;">
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="Qualification" name="qual">
+                                                    </div>
+                                                    <div class="contact-form__input-box">
+                                                        <input type="text" placeholder="Experience" name="exp">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-12">
+
+                                                    <div class="contact-form__btn-box">
+                                                        <!-- <a href="" type="submit" class="thm-btn contact-two__btn" name="submit">Register -->
+                                                            <!-- <i class="icon-right-arrow"></i> </a> -->
+                                                            <input type="submit" class="thm-btn contact-two__btn" name="submit">
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-12">
+
+                                                    <div class="contact-form__btn-box">
+
+
+                                                        <span class="section-title__tagline" style="padding-top: 27px;">Already Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="login.php">Login</a></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Contact Two End-->
                     </div>
                 </div>
-                <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate" method="post">
-                        <div class="row">
-                        
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="First Name" name="fname">
-                                    <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br/></small>
-                                </div>
-                               
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="contact-form__input-box">
-                                    <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="Last Name" name="lname">
-                                    <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br/></small>
-                                </div>
-                               
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Username" name="username" maxlength="12" minlength="5">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="email" required onkeyup="emails(this)" invalid-text="exampleInputemail21"  placeholder="Email Address" name="email">
-                                    <small id="exampleInputemail21" style="color: red; display: none;">Please Enter Valid Email.<br/></small>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword21"  placeholder="Password" name="password">
-                                    <small id="exampleInputPassword21" style="color: red; display: none;"><ul>
-                                        <li style="color: red;
-                                        display: table;">min 6 characters, max 50 characters</li>
-                                        <li style="color: red;
-                                        display: table;">must contain 1 letter</li>
-                                        <li style="color: red;
-                                        display: table;">must contain 1 number</li>
-                                        <li style="color: red;
-                                        display: table;">may contain special characters like !@#$%^&*()_+</li>
-                      
-                                      </ul><br/></small>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09"  placeholder="Phone" name="phone_no">
-                                    <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br/></small>
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Address" name="address">
-                                </div>
-                            </div>
-                            <div class="col-xl-12">
-                                <div class="contact-form__input-box">
-                                   
-                                    
-                                        <select name="Subject" id="Subject" onchange="display_input()">
-                                            <option value="" disabled selected>User Type</option>
-                                            <option value="Farmers">Farmers</option>
-                                            <option value="Dealer">Dealer</option>
-                                            <option value="Expert">Expert</option>
-                                        </select>
-                                </div>
-                        </div>
+            </section>
+            <!--Page Header End-->
+
+            <!--Google Map Start-->
+
+            <!--Google Map End-->
 
 
-                            <div class="col-xl-12" id="farmer" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="kheduthaq number" name="farm_no">
-                                </div>
-                            </div>
-                            
-                            <div class="col-xl-12" id="dealer" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="GSTIN" name="gstin" min="15" max="15">
-                                </div>
-                            </div>
+        </div><!-- /.page-wrapper -->
 
-                            <div class="col-xl-12" id="expert" style="display: none;">
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Qualification" name="qual">
-                                </div>
-                                <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Experience" name="exp">
-                                </div>
-                            </div>
 
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                
-                                <div class="contact-form__btn-box">
-                                    <a href="index.php" class="thm-btn contact-two__btn"><input type="submit" value="Register" name="submit">
-                                    <i
-                                            class="icon-right-arrow"></i> </a>
-                                            
-                                            
-                                            
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                
-                                <div class="contact-form__btn-box">
-                                    
-                                            
-                             <span class="section-title__tagline" style="padding-top: 27px;">Already Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="login.php">Login</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+        <div class="mobile-nav__wrapper">
+            <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+            <!-- /.mobile-nav__overlay -->
+            <div class="mobile-nav__content">
+                <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+                <div class="logo-box">
+                    <a href="index.php" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143" alt="" /></a>
                 </div>
+                <!-- /.logo-box -->
+                <div class="mobile-nav__container"></div>
+                <!-- /.mobile-nav__container -->
+
+                <ul class="mobile-nav__contact list-unstyled">
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:needhelp@packageName__.com">needhelp@agrion.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone-alt"></i>
+                        <a href="tel:666-888-0000">666 888 0000</a>
+                    </li>
+                </ul><!-- /.mobile-nav__contact -->
+                <div class="mobile-nav__top">
+                    <div class="mobile-nav__social">
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-facebook-square"></a>
+                        <a href="#" class="fab fa-pinterest-p"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div><!-- /.mobile-nav__social -->
+                </div><!-- /.mobile-nav__top -->
+
+
+
             </div>
-        </section>
-        <!--Contact Two End-->
-                </div>
-            </div>
-        </section>
-        <!--Page Header End-->
-
-        <!--Google Map Start-->
-        
-        <!--Google Map End-->
-
-    
-    </div><!-- /.page-wrapper -->
-
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a href="index.php" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
-                        alt="" /></a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@agrion.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+            <!-- /.mobile-nav__content -->
         </div>
-        <!-- /.mobile-nav__content -->
-    </div>
-    <!-- /.mobile-nav__wrapper -->
+        <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-magnifying-glass"></i>
-                </button>
-            </form>
+        <div class="search-popup">
+            <div class="search-popup__overlay search-toggler"></div>
+            <!-- /.search-popup__overlay -->
+            <div class="search-popup__content">
+                <form action="#">
+                    <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                    <input type="text" id="search" placeholder="Search Here..." />
+                    <button type="submit" aria-label="search submit" class="thm-btn">
+                        <i class="icon-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- /.search-popup__content -->
         </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
+        <!-- /.search-popup -->
 
 
 
-    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/odometer/odometer.min.js"></script>
-    <script src="assets/vendors/swiper/swiper.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/vegas/vegas.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/timepicker/timePicker.js"></script>
-    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+        <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+        <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendors/jarallax/jarallax.min.js"></script>
+        <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+        <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+        <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+        <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+        <script src="assets/vendors/nouislider/nouislider.min.js"></script>
+        <script src="assets/vendors/odometer/odometer.min.js"></script>
+        <script src="assets/vendors/swiper/swiper.min.js"></script>
+        <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+        <script src="assets/vendors/wnumb/wNumb.min.js"></script>
+        <script src="assets/vendors/wow/wow.js"></script>
+        <script src="assets/vendors/isotope/isotope.js"></script>
+        <script src="assets/vendors/countdown/countdown.min.js"></script>
+        <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+        <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="assets/vendors/vegas/vegas.min.js"></script>
+        <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+        <script src="assets/vendors/timepicker/timePicker.js"></script>
+        <script src="assets/vendors/circleType/jquery.circleType.js"></script>
+        <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
 
 
 
 
-    <!-- template js -->
-    <script src="assets/js/agrion.js"></script>
-    <script>
-        function display_input(){
-            let role = $("#Subject").val();
-            
-            if(role == "Farmers"){
-                $('#farmer').show();
-                $('#expert').hide();
-                $('#dealer').hide();
-            }
-            else if(role == "Dealer"){
-                $('#dealer').show();
-                $('#expert').hide();
-                $('#farmer').hide();
-            }
-            else if(role == "Expert"){
-                $('#expert').show();
-                $('#dealer').hide();
-                $('#farmer').hide();
-            }
-        }
-        
-    </script>
-     <script src="assets/js/validation.js"></script>
-     <?php
-     if (isset($_POST['submit']))
-        {
-            $fname = $_POST['fname'];
-            $lname = $_POST['lname'];
-            $email = $_POST['email'];
-            $pass = $_POST['password'];
-            $phoneno = $_POST['phone_no'];
-            $farmer_no = $_POST['farm_no'];
-            $gstin = $_POST['gstin'];
-            $qualif = $_POST['qual'];
-            $experience = $_POST['exp'];
+        <!-- template js -->
+        <script src="assets/js/agrion.js"></script>
+        <script>
+            function display_input() {
+                let role = $("#Subject").val();
 
-
-            $insert_query = " INSERT INTO tbl_farmer(f_id, username, first_name, last_name, f_email, f_password, created_on, address, phone_no, farmer_no) 
-            VALUES ('','','$fname','$lname','$email','$pass','','','$phoneno','$farmer_no','')";
-
-            $res = mysqli_query($conn, $insert_query);
-            if($res){
-               ?> 
-               <script>
-                alert("Data inserted");
-                </script>
-                <?php
-            }else{
-                ?>
-                <script>
-                alert("Data not inserted");
-                </script>
-                <?php
+                if (role == "Farmers") {
+                    $('#farmer').show();
+                    $('#expert').hide();
+                    $('#dealer').hide();
+                } else if (role == "Dealer") {
+                    $('#dealer').show();
+                    $('#expert').hide();
+                    $('#farmer').hide();
+                } else if (role == "Expert") {
+                    $('#expert').show();
+                    $('#dealer').hide();
+                    $('#farmer').hide();
                 }
-                
             }
-            
-            ?>
-        
-     
+        </script>
+        <script src="assets/js/validation.js"></script>
+
+
+
 </body>
 
 </html>
