@@ -15,5 +15,5 @@ $res = mysqli_query($conn, $insert_query);
 
 ?>
 <script>
-    window.location.href = 'user.php';
+    window.location.href = 'user_farmer.php';
 </script>

@@ -1,5 +1,5 @@
-<?php include './include/header.html';
-include './include/connection.php'; ?>
+<?php include './include/header.php';
+include './include/connection_session.php'; ?>
 
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
@@ -48,11 +48,11 @@ include './include/connection.php'; ?>
                             <div class="shop-category product__sidebar-single">
                                 <h3 class="product__sidebar-title">Categories</h3>
                                 <ul class="list-unstyled">
-                                    <li class="active" id="flower-seeds"><a>Flower seeds</a></li>
-                                    <li id="seasonal-seeds"><a>Seasonal Seeds</a></li>
-                                    <li id="tools"><a>Tool and Equipment</a></li>
-                                    <li id="bio-fertilizer"><a>Bio Fertilizer</a></li>
-                                    <li id="chemical-fertilizer"><a>Chemical Fertilizers</a></li>
+                                    <li  id="flower-seeds"><a>Flower seeds</a></li>
+                                    <li> <a href="#seasonal-seeds">Seasonal Seeds</a></li>
+                                    <li> <a href="#tools-equipments">Tool and Equipment</a></li>
+                                    <li> <a href="#bio-fertilizers">Bio Fertilizer</a></li>
+                                    <li> <a href="#chemical-fertilizers">Chemical Fertilizers</a></li>
                                     
                                 </ul>
                             </div>
@@ -66,394 +66,213 @@ include './include/connection.php'; ?>
                                         <div class="product__showing-text-box">
                                             <p class="product__showing-text">Showing 1–9 of 12 Results</p>
                                         </div>
-                                        <!-- <div class="product__showing-sort">
-                                            <div class="select-box">
-                                                <select class="wide">
-                                                    <option data-display="Sort by popular">Sort by popular</option>
-                                                    <option value="1">Sort by popular</option>
-                                                    <option value="2">Sort by Price</option>
-                                                    <option value="3">Sort by Ratings</option>
-                                                </select>
-                                            </div>
-                                        </div> -->
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="product__all">
                                 <div class="row">
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 flower-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img" >
-                                                    <img src="assets/images/shop/cart-page-img-1.jpg" alt="" height="307">
-                                                    <span class="product__all-sale">Sale</span>
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                    
+                                    <?php
+                                    $sqla="SELECT * FROM `tbl_product` WHERE c_id=1";
+                                    $resulta=mysqli_query($conn,$sqla);
+                                    if($resulta){
+                                        while($rowa=mysqli_fetch_assoc($resulta)){
+                                            $name=$rowa['product_name'];
+                                            $price=$rowa['price'];
+                                            $image=$rowa['p_image'];
+                                      
+                                            echo '<div class="col-xl-4 col-lg-4 col-md-6 flower-seeds" id="flower-seeds">
+                                            <div class="product__all-single">
+                                                <div class="product__all-img-box">
+                                                    <div class="product__all-img" >
+                                                        <img src="product/'.$image.'" alt="" height="307">
+                                                        ';?>
+                                                        <div class="product__all-img-icon">
+                                                            <a href="cart.php?id=<?php echo $rowa["product_id"]; ?>"><i class="icon-shopping-cart"></i></a>
+                                                        </div><?php 
+                                                        echo '
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
+                                                <div class="product__all-content">
+                                                    <div class="product__all-review">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
+                                                    <p class="product__all-price">'.$price.'</p>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Rajnigandha Bulb</a></h4>
-                                                <p class="product__all-price">&#x20b9;25.00</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 flower-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-1.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                        </div>';
+                                        }
+                                    }
+
+                                ?>
+                                </div>
+                                <div class="row" id="tools-equipments">
+
+                                 <?php
+                                    $sqla="SELECT * FROM `tbl_product` WHERE c_id=2";
+                                    $resulta=mysqli_query($conn,$sqla);
+                                    if($resulta){
+                                        while($rowa=mysqli_fetch_assoc($resulta)){
+                                            $name=$rowa['product_name'];
+                                            $price=$rowa['price'];
+                                            $image=$rowa['p_image'];
+                                      
+                                            echo '<div class="col-xl-4 col-lg-4 col-md-6 flower-seeds" id="">
+                                            <div class="product__all-single">
+                                                <div class="product__all-img-box">
+                                                    <div class="product__all-img" >
+                                                        <img src="product/'.$image.'" alt="" height="307">
+                                                        ';?>
+                                                        <div class="product__all-img-icon">
+                                                            <a href="cart.php?id=<?php echo $rowa["product_id"]; ?>"><i class="icon-shopping-cart"></i></a>
+                                                        </div><?php 
+                                                        echo '
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
+                                                <div class="product__all-content">
+                                                    <div class="product__all-review">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
+                                                    <p class="product__all-price">'.$price.'</p>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Lavinder</a></h4>
-                                                <p class="product__all-price">&#x20b9;35.00</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 flower-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-3.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                        </div>';
+                                        }
+                                    }
+
+                                ?>
+                                </div>
+                                <div class="row" id="bio-fertilizers">
+                                 <?php
+                                    $sqla="SELECT * FROM `tbl_product` WHERE c_id=3";
+                                    $resulta=mysqli_query($conn,$sqla);
+                                    if($resulta){
+                                        while($rowa=mysqli_fetch_assoc($resulta)){
+                                            $name=$rowa['product_name'];
+                                            $price=$rowa['price'];
+                                            $image=$rowa['p_image'];
+                                      
+                                            echo '<div class="col-xl-4 col-lg-4 col-md-6 flower-seeds" id="tools">
+                                            <div class="product__all-single">
+                                                <div class="product__all-img-box">
+                                                    <div class="product__all-img" >
+                                                        <img src="product/'.$image.'" alt="" height="307">
+                                                        ';?>
+                                                        <div class="product__all-img-icon">
+                                                            <a href="cart.php?id=<?php echo $rowa["product_id"]; ?>"><i class="icon-shopping-cart"></i></a>
+                                                        </div><?php 
+                                                        echo '
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
+                                                <div class="product__all-content">
+                                                    <div class="product__all-review">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
+                                                    <p class="product__all-price">'.$price.'</p>
                                                 </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">Lotus</a></h4>
-                                                <p class="product__all-price">&#x20b9;20.00</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 seasonal-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-4.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                        </div>';
+                                        }
+                                    }
+
+                                ?>
+                                </div>
+                                <div class="row" id="chemical-fertilizers">
+                                 <?php
+                                    $sqla="SELECT * FROM `tbl_product` WHERE c_id=4";
+                                    $resulta=mysqli_query($conn,$sqla);
+                                    if($resulta){
+                                        while($rowa=mysqli_fetch_assoc($resulta)){
+                                            $name=$rowa['product_name'];
+                                            $price=$rowa['price'];
+                                            $image=$rowa['p_image'];
+                                      
+                                            echo '<div class="col-xl-4 col-lg-4 col-md-6 flower-seeds" id="bio-fertilizers">
+                                            <div class="product__all-single">
+                                                <div class="product__all-img-box">
+                                                    <div class="product__all-img" >
+                                                        <img src="product/'.$image.'" alt="" height="307">
+                                                        ';?>
+                                                        <div class="product__all-img-icon">
+                                                            <a href="cart.php?id=<?php echo $rowa["product_id"]; ?>"><i class="icon-shopping-cart"></i></a>
+                                                        </div><?php 
+                                                        echo '
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
+                                                <div class="product__all-content">
+                                                    <div class="product__all-review">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                    <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
+                                                    <p class="product__all-price">'.$price.'</p>
                                                 </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Bhendi</a></h4>
-                                                <p class="product__all-price">&#x20b9;30.00</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 seasonal-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-5.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                        </div>';
+                                        }
+                                    }
+
+                                ?>
+                                </div>
+                                <div class="row" id="seasonal-seeds">
+                                 <?php
+                                    $sqla="SELECT * FROM `tbl_product` WHERE c_id=5";
+                                    $resulta=mysqli_query($conn,$sqla);
+                                    if($resulta){
+                                        while($rowa=mysqli_fetch_assoc($resulta)){
+                                            $name=$rowa['product_name'];
+                                            $price=$rowa['price'];
+                                            $image=$rowa['p_image'];
+                                      
+                                            echo '<div class="col-xl-4 col-lg-4 col-md-6 flower-seeds" id="chemical-fertilizers">
+                                            <div class="product__all-single">
+                                                <div class="product__all-img-box">
+                                                    <div class="product__all-img" >
+                                                        <img src="product/'.$image.'" alt="" height="307">
+                                                        ?>';?>
+                                                        <div class="product__all-img-icon">
+                                                            <a href="cart.php?id=<?php echo $rowa['product_id']; ?>"><i class="icon-shopping-cart"></i></a>
+                                                        </div><?php
+                                                        echo '
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">White Bitter Gourd</a></h4>
-                                                <p class="product__all-price">&#x20b9;30.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 seasonal-seeds">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-6.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
+                                                <div class="product__all-content">
+                                                    <div class="product__all-review">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
                                                     </div>
+                                                    <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
+                                                    <p class="product__all-price">'.$price.'</p>
                                                 </div>
                                             </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Spinach</a>
-                                                </h4>
-                                                <p class="product__all-price">&#x20b9;30.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-7.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Bio Decomposer</a></h4>
-                                                <p class="product__all-price">&#x20b9;2500.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-8.jpg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">Potassium Mobilizing</a></h4>
-                                                <p class="product__all-price">&#x20b9;200.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
-                                    <!--Product All Single Start-->
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/shop/shop-product-1-2.jpg" alt="" height="307">
-                                                    <span class="product__all-sale">Sale</span>
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Zinc Solubilising</a></h4>
-                                                <p class="product__all-price">&#x20b9;200.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img" >
-                                                    <img src="assets/images/product/bf(1).jpeg" alt="" height="307">
-                                                    <span class="product__all-sale">Sale</span>
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Mustard Cake Powder </a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs200.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/product/bf(2).jpeg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Mycorrhiza Biofertilizers</a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs250.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/product/bf(3).jpeg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">Vasara Neem Cake Powder</a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs200.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/product/bf(10).jpeg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">Natures Plus Vermi Compost</a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs280.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/product/bf(4).jpeg" alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <!-- <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i> -->
-                                                </div>
-                                                <h4 class="product__all-title"><a href="product-details.php">Azofix - Liquid 1 Litre</a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs665.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 bio-fertilizer">
-                                        <div class="product__all-single">
-                                            <div class="product__all-img-box">
-                                                <div class="product__all-img">
-                                                    <img src="assets/images/product/bf(5).jpeg"  alt="" height="307">
-                                                    <div class="product__all-img-icon">
-                                                        <a href="cart.php"><i class="icon-shopping-cart"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__all-content">
-                                                <div class="product__all-review">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <h4 class="product__all-title"><a
-                                                        href="product-details.php">SPIC MOB-K</a></h4>
-                                                <p class="product__all-price">&#x20b9;Rs235.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--Product All Single End-->
+                                        </div>';
+                                        }
+                                    }
+
+                                ?>
+                        
                                 </div>
                             </div>
                         </div>
@@ -461,7 +280,6 @@ include './include/connection.php'; ?>
                 </div>
             </div>
         </section>
-        <!--Product End-->
 
 
     <script>

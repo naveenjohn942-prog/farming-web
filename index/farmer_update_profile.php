@@ -1,5 +1,6 @@
-<?php include './include/header.html';
-include './include/connection.php'; ?><br>
+<?php
+include './include/header.php';
+include './include/connection_session.php'; ?><br>
         <h2 style="font-family: 'Times New Roman';text-align: center;">PROFILE SETTING</h2><br>
 <section class="contact-one">
     <div class="container">

@@ -1,16 +1,11 @@
-<?php include './include/header.html';
-include './include/connection.php'; ?><br>
+<?php include './include/header.php';
+include './include/connection_session.php'; ?><br>
         <h2 style="font-family: 'Times New Roman';text-align: center;">PROFILE SETTING</h2><br>
 <section class="contact-one">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-5">
-                <div class="contact-one__left" style="text-align: center; color: black;">
-                    <img src="assets/images/testimonial/testimonial-1-1.jpg" alt="Broken image" style="width: 250px;border-radius: 50%;height: 300px;"><br> <span><b style="text-align: center;">Amelly</b></span><br>
-                    <span><b style="text-align: center; ">amelly@gmail.com</b></span>
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-7">
+            
+            <div class="col-xl-12 col-lg-12">
                 <div class="contact-one__right">
                     <div class="contact-one__bg float-bob-x" style="background-image: url(assets/images/shapes/contact-one-shape-1.png);"></div>
                     <div class="row">

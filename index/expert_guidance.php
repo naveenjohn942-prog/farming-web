@@ -1,5 +1,26 @@
-<?php include './include/header.html';
-include './include/connection.php'; ?>
+<?php include './include/header.php';
+include './include/connection_session.php'; 
+$sql = "SELECT * FROM tbl_farmer;";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+if (isset($_POST['submit']))
+{
+    
+    
+    $query = $_POST['subject'];
+    $mesg = $_POST['message'];
+
+    $insert_query = "INSERT INTO tbl_queries(q_desc,query_type) VALUES ('$mesg','$query')";
+       
+    if ($conn->query($insert_query) === TRUE) {
+       echo "<script>alert('Done');</script>";
+       }
+       else{
+         
+         echo "Error".mysqli_error($conn);
+       }
+}
+?>
         <!--Page Header End-->
 
         <!--Google Map Start-->
@@ -20,12 +41,24 @@ include './include/connection.php'; ?>
                     </div>
                 </div>
                 <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
+                    <form action="" method="post">
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
+                                <?php if($resultCheck!=0)
+            {
+        while(($total=mysqli_fetch_assoc($result)))
+        {
+        ?>
+                                    <input type="text" placeholder="Your Name" name="name" value="<?php echo $total['first_name']." ".$total['last_name'];?>">
+                                    <?php
+                                    break;
+        }}
+        else
+    {
+        echo "No Records Found";
+    }
+        ?>
                                 </div>
                             </div>
                             
@@ -33,7 +66,7 @@ include './include/connection.php'; ?>
                                 <div class="contact-form__input-box">
                                     <!-- <input type="text" placeholder="Query Type" name="Subject"> -->
                                     
-                                        <select name="Subject" id="Subject">
+                                        <select name="subject" id="Subject">
                                             <option value="" disabled selected>Query Type</option>
                                             <option value="Flower seeds">Flower seeds</option>
                                             <option value="Seasonal seeds">Seasonal seeds</option>
@@ -50,8 +83,7 @@ include './include/connection.php'; ?>
                                     <textarea name="message" placeholder="Write your Query"></textarea>
                                 </div>
                                 <div class="contact-form__btn-box">
-                                    <a href="#" class="thm-btn contact-two__btn">Submit Query<i
-                                            class="icon-right-arrow"></i> </a>
+                                    <button type="submit" class="btn btn-primary mr-2" name="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -402,4 +434,5 @@ include './include/connection.php'; ?>
                 </div>
             </div>
         </section>
+        
         <?php include './include/footer.html'; ?>

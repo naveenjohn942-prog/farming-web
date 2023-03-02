@@ -119,6 +119,7 @@ if (isset($_POST['active']))
     }
     
 ?>
+
                     </table>
                     
                   </div>

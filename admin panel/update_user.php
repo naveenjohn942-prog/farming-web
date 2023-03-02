@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Update Users Details</h4>
+                  <h4 class="card-title">Update Farmer Details</h4>
                   
                   <form class="forms-sample">
                     <div class="form-group">

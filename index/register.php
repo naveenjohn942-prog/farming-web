@@ -1,5 +1,6 @@
 <?php include './include/connection.php';
 
+
 if (isset($_POST['submit'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -13,14 +14,40 @@ if (isset($_POST['submit'])) {
     $experience = $_POST['exp'];
     $addr = $_POST['address'];
     $sub = $_POST['subject'];
-    
-    if ($sub == 'farmer') {
+
+//     if (empty($fname)) {
+// 		$error = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your first name </p>";
+// 	} else {if (empty($fname)) {
+// 		$error = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your first name </p>";
+// 	}
+// }
+
+//     if (empty($lname)) {
+// 		$error1 = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your last name </p>";
+// 	} else {
+// 		if (!preg_match("/^([a-zA-Z' ]+)$/", $lname)) {
+// 			$error1 = "<p style='color:red;font-size:14;margin:0px;margin-left:-55px'>*Please Enter only characters... </p>";
+// 		}
+// 	}
+
+//     if (empty($_POST["email"])) {
+// 		$error2 = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:54px'>*Please Enter your E-mail </p>";
+// 	} else {
+// 		$email = test_input($_POST["email"]);
+// 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+// 			$error2 = "<p style='color:red;font-size:14;margin:0px;margin-left:-130px'>*Invalid email format</p>";
+// 		}
+// 	}
+
+    if ($sub == 'Farmers') {
         $insert_query = "INSERT INTO `tbl_farmer`(`username`, `first_name`, `last_name`, `f_email`, `f_password`,`address`, `phone_no`, `farmer_no`) 
        VALUES ('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno','$farmer_no')";
-    } elseif ($sub == 'dealer') {
-        $insert_query = "INSERT INTO `tbl_dealer`(username, first_name,last_name,d_email,d_password,address,phone_no) 
-           VALUES('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno')";
-    } else {
+    }
+    elseif ($sub == 'Dealer') {
+        $insert_query = "INSERT INTO `tbl_dealer`(username, first_name,last_name,d_email,d_password,address,phone_no,gst_no) 
+           VALUES('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno','$gstin')";
+    } 
+    elseif($sub == 'Expert') {
         $insert_query = "INSERT INTO `tbl_expert_details`(username, first_name, last_name,e_email, e_password, phone_no, e_qualification, e_experience) 
            VALUES('$usrname','$fname','$lname','$email','$pass','$phoneno','$qualif','$experience')";
     }
@@ -30,7 +57,7 @@ if (isset($_POST['submit'])) {
 ?>
         <script>
             alert("Data inserted");
-            window.Location.href="index.php";
+            window.location.href="login.php";
         </script>
     <?php
     } else {
@@ -179,14 +206,15 @@ if (isset($_POST['submit'])) {
 
                                                 <div class="col-xl-6">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="First Name" name="fname">
-                                                        <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small>
+                                                        <input type="text"  placeholder="First Name" name="fname">
+                                                        <!-- <?php echo $error ?> -->
+                                                        <!-- <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small> -->
                                                     </div>
 
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text" required onkeyup="text(this)" invalid-text="exampleInputName20" placeholder="Last Name" name="lname">
+                                                        <input type="text" placeholder="Last Name" name="lname">
                                                         <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small>
                                                     </div>
 
@@ -198,7 +226,7 @@ if (isset($_POST['submit'])) {
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <div class="contact-form__input-box">
-                                                        <input type="email" required onkeyup="emails(this)" invalid-text="exampleInputemail21" placeholder="Email Address" name="email">
+                                                        <input type="email"  placeholder="Email Address" name="email">
                                                         <small id="exampleInputemail21" style="color: red; display: none;">Please Enter Valid Email.<br /></small>
                                                     </div>
                                                 </div>
@@ -222,7 +250,7 @@ if (isset($_POST['submit'])) {
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text" required onkeyup="tel(this)" invalid-text="exampleInputMobile09" placeholder="Phone" name="phone_no">
+                                                        <input type="text" placeholder="Phone" name="phone_no">
                                                         <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br /></small>
                                                     </div>
                                                 </div>
@@ -237,9 +265,9 @@ if (isset($_POST['submit'])) {
 
                                                         <select name="subject" id="Subject" onchange="display_input()">
                                                             <option value="" disabled selected>User Type</option>
-                                                            <option value="Farmers">Farmers</option>
-                                                            <option value="Dealer">Dealer</option>
-                                                            <option value="Expert">Expert</option>
+                                                            <option name="Farmers" value="Farmers">Farmers</option>
+                                                            <option name="Dealer" value="Dealer">Dealer</option>
+                                                            <option name="Expert" value="Expert">Expert</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -271,9 +299,8 @@ if (isset($_POST['submit'])) {
                                                 <div class="col-xl-12">
 
                                                     <div class="contact-form__btn-box">
-                                                        <!-- <a href="" type="submit" class="thm-btn contact-two__btn" name="submit">Register -->
-                                                            <!-- <i class="icon-right-arrow"></i> </a> -->
-                                                            <input type="submit" class="thm-btn contact-two__btn" name="submit">
+                                                       
+                                                            <input type="submit" class="thm-btn contact-two__btn text-center" style="text-align: center; padding: auto auto;" name="submit" value="Register">
 
 
                                                     </div>

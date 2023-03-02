@@ -1,6 +1,10 @@
 
-<?php include './include/header.html';
-include './include/connection.php'; ?>
+<?php 
+
+// include './include/header.html';
+include './include/header.php';
+include './include/connection_session.php';
+?>
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
@@ -46,7 +50,7 @@ include './include/connection.php'; ?>
                         <div class="image-layer"
                             style="background-image: url(assets/images/backgrounds/main-slider-1-3.jpg);"></div>
                         <!-- /.image-layer -->
-                        <div class="container">
+                        <div class="container fluid">
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
@@ -174,7 +178,7 @@ include './include/connection.php'; ?>
                                 </div>
                             </div>
                             <div class="services-one__content">
-                                <h3 class="services-one__title"><a href="Expert-Guidance.php">Expert
+                                <h3 class="services-one__title"><a href="Expert_Guidance.php">Expert
                                         <br>Guidance</a></h3>
                                 <p class="services-one__text">We are providing expertise guidance to farmers 
                                     having any issues or queries.</p>
@@ -262,8 +266,8 @@ include './include/connection.php'; ?>
                                     <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
                                            
-                                            <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-6.jpg" alt=""/></a>
-                                            <p style="color: white; font-size: 40px;    ">Spinach seeds </p>
+                                            <a href="product-details2.php"><img src="./assets/images/product/bf(2).jpeg" alt="" height="500px" style="width: 400px;"></a>
+                                            <p style="color: white; font-size: 40px;">Mycorrhiza Biofertilizers</p>
                                         </div>
                                         
                                     <!-- </div> -->
@@ -273,8 +277,8 @@ include './include/connection.php'; ?>
                                 <div class="item">
                                     <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
-                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-3.jpg" alt=""/></a>
-                                        <p style="color: white; font-size: 40px;    ">Lotus seeds </p>
+                                        <a href="product-details3.php"><img src="./assets/images/product/bf(3).jpeg" alt=""  height="500px" style="width: 400px;"></a>
+                                        <p style="color: white; font-size: 40px;    ">Vasara Neem Cake Powder </p>
                                         <!-- </div> -->
                                         
                                     </div>
@@ -284,8 +288,8 @@ include './include/connection.php'; ?>
                                 <div class="item">
                                     <!-- <div class="testimonial-one__single"> -->
                                         <div class="testimonial-one__content">
-                                        <a href="product-details.php"><img src="./assets/images/shop/shop-product-1-2.jpg" alt=""/></a>
-                                        <p style="color: white; font-size: 40px;    ">Biofertilizer </p>
+                                        <a href="product-details4.php"><img src="./assets/images/product/bf(4).jpeg" alt="" height="500px" style="width: 400px;"></a>
+                                        <p style="color: white; font-size: 40px;    ">Natures Plus Vermi Compost</p>
                                         <!-- </div> -->
                                     
                                         
@@ -358,11 +362,11 @@ include './include/connection.php'; ?>
                                     <img src="./assets/images/category/cat1.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="product-details.php"><i class="icon-right-arrow"></i></a>
+                                    <a href="product.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="product-details.php">Biofertilizers</a></h3>
+                                    <h3 class="project-one__title"><a href="product.php">Biofertilizers</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -376,11 +380,11 @@ include './include/connection.php'; ?>
                                     <img src="./assets/images/category/cat2.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="product-details.php"><i class="icon-right-arrow"></i></a>
+                                    <a href="product.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="product-details.php">Seasonal<br>Seeds</a></h3>
+                                    <h3 class="project-one__title"><a href="product.php">Seasonal<br>Seeds</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -395,11 +399,11 @@ include './include/connection.php'; ?>
                                    
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
+                                    <a href="project.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.php">Tools and<br>Equipments</a></h3>
+                                    <h3 class="project-one__title"><a href="project.php">Tools and<br>Equipments</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -413,11 +417,11 @@ include './include/connection.php'; ?>
                                     <img src="./assets/images/category/cat4.jpg" alt="" height="300px">
                                 </div>
                                 <div class="project-one__arrow">
-                                    <a href="project-details.php"><i class="icon-right-arrow"></i></a>
+                                    <a href="project.php"><i class="icon-right-arrow"></i></a>
                                 </div>
                                 <div class="project-one__content">
                                     
-                                    <h3 class="project-one__title"><a href="project-details.php">Chemical <br> Fertilizers</a></h3>
+                                    <h3 class="project-one__title"><a href="project.php">Chemical <br> Fertilizers</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -429,9 +433,9 @@ include './include/connection.php'; ?>
         <!--Project One End-->
 
 
-        <!--Healthey Food One Start-->
+        <!--Healthy Food One Start-->
         
-        <!--Healthey Food One End-->
+        <!--Healthy Food One End-->
 
        
 

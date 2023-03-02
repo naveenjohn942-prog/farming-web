@@ -118,10 +118,9 @@
                     </div>
                 </div>
                 <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
+                    <form action="" class="contact-two__form contact-form-validated" method="POST"novalidate="novalidate">
                         <div class="row">
-                            
+                        
                             <div class="col-xl-12">
                                 <div class="contact-form__input-box">
                                     <input type="email" placeholder="Email Address Or Username" name="email" >

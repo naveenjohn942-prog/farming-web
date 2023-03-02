@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Product Details || Agrion || Agrion HTML 5 Template </title>
+    <title> Product Details </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -108,7 +108,7 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li class="current megamenu">
-                                                        <a href="index.html">Home </a>
+                                                        <a href="index.php">Home </a>
                                                             
                                                     </li>
                                                     <li>
@@ -117,13 +117,13 @@
                                                     <li class="dropdown">
                                                         <a href="#">Help</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="#">FAQs</a></li>
-                                                            <li><a href="#fcontact">Contact Us</a></li>
+                                                            <li><a href="faq.php">FAQs</a></li>
+                                                            <li><a href="contact.php">Contact Us</a></li>
                                     
                                                         </ul>
                                                     </li>
                                                     <li class="dropdown">
-                                                        <a href="expert_guidence.html">Expert-Guidence</a>
+                                                        <a href="expert_guidance.php">Expert-Guidance</a>
                                                         
                                                     </li>
                                                     <!-- <li class="dropdown">
@@ -161,19 +161,19 @@
                                                     <li class="dropdown">
                                                         <a href="#">Account</a>
                                                         <ul class="shadow-box">
-                                                            <li><a href="products.html">Products</a></li>
-                                                            <li><a href="cart.html">Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="product.php">Products</a></li>
+                                                            <li><a href="cart.php">Cart</a></li>
+                                                            <li><a href="checkout.php">Checkout</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="about.html">About</a>
+                                                        <a href="about.php">About</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Login</a>
+                                                        <a href="login.php">Login</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">Register</a>
+                                                        <a href="register.php">Register</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -187,10 +187,7 @@
                                                 <div class="main-menu__cart-box">
                                                     <a href="cart.html" class="main-menu__cart icon-shopping-cart"></a>
                                                 </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.html" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +211,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Shop</li>
                     </ul>
@@ -431,8 +428,7 @@
                                                 alt=""></a>
                                     </div>
                                     <div class="footer-widget__about-text-box">
-                                        <p class="footer-widget__about-text">Welcome to our Agriculture Farming. Lorem
-                                            simply text amet cing elit.</p>
+                                        <p class="footer-widget__about-text">Welcome to our Agriculture Farming.</p>
                                     </div>
                                 </div>
                             </div>
@@ -442,46 +438,15 @@
                                         <h3 class="footer-widget__title">Explore</h3>
                                     </div>
                                     <ul class="footer-widget__Explore-list list-unstyled">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="farmers.html">Our Farmers</a></li>
-                                        <li><a href="project-01.html">New Projects</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="about.php">About</a></li>
+                                        <li><a href="farmers.php">Our Farmers</a></li>
+                                        <li><a href="project-01.php">New Projects</a></li>
+                                        <li><a href="services.php">Services</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget__column footer-widget__news">
-                                    <div class="footer-widget__title-box">
-                                        <h3 class="footer-widget__title">News</h3>
-                                    </div>
-                                    <ul class="footer-widget__news-list list-unstyled">
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="assets/images/resources/footer-widget-news-img-1.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Organic Food
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="footer-widget__news-img">
-                                                <img src="assets/images/resources/footer-widget-news-img-2.jpg" alt="">
-                                            </div>
-                                            <div class="footer-widget__news-content">
-                                                <p class="footer-widget__news-date">20 Jul, 2022</p>
-                                                <h5 class="footer-widget__news-sub-title"><a href="blog-details.html">A
-                                                        Organic Food
-                                                        Gives
-                                                        More Good Taste</a></h5>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                            
+                    
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="footer-widget__column footer-widget__Contact">
@@ -494,7 +459,7 @@
                                                 <span class="fas fa-phone-square-alt"></span>
                                             </div>
                                             <div class="text">
-                                                <p><a href="tel:9200886823">+92 (0088) 6823</a></p>
+                                                <p><a href="tel:9200886823">+92 85888 58823</a></p>
                                             </div>
                                         </li>
                                         <li>
@@ -510,7 +475,7 @@
                                                 <span class="icon-pin"></span>
                                             </div>
                                             <div class="text">
-                                                <p>80 Broklyn Golden Street. USA</p>
+                                                <p>St. Xavier's college, Ahmedabad</p>
                                             </div>
                                         </li>
                                     </ul>
@@ -519,6 +484,7 @@
                                             <input type="email" placeholder="Email Address" name="email">
                                             <button type="submit" class="footer-widget__Contact-btn"><i
                                                     class="icon-right-arrow"></i></button>
+                                        </div>
                                         </div>
                                     </form>
                                 </div>
@@ -532,7 +498,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">Agrion.com</a></p>
+                                
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -562,23 +528,14 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
+                <a href="index.php" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="143"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
             <!-- /.mobile-nav__container -->
 
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@agrion.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
+            <!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="#" class="fab fa-twitter"></a>

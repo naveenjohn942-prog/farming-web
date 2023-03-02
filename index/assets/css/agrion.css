@@ -871,7 +871,7 @@ left: -78px;
 
 .main-menu .main-menu__list>li+li,
 .stricky-header .main-menu__list>li+li {
-  margin-left: 75px;
+  margin-left: 56px;
 }
 
 .main-menu .main-menu__list>li>a,
@@ -9827,7 +9827,8 @@ left: -78px;
 }
 
 .contact-two__btn {
-  padding-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*--------------------------------------------------------------

@@ -1,4 +1,5 @@
-<?php include './include/header.html'; ?>
+<?php include './include/header.html'; 
+include './include/connection.php';?>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -17,7 +18,7 @@
                             Payment id
                           </th>
                           <th>
-                            Payment name
+                            Payment Mode
                           </th>
                           <th>
                           Date    
@@ -25,185 +26,53 @@
                           <th>Payment Status</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            rishika
-                          </td>
-                          <td>
-                          20/1/2023
-                          </td>
-                          
-                          <td>
-                            Rejected
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            dhruv rathore
-                          </td>
-                          
-                          <td>
-                            12/1/2023
-                          </td>
-                          
-                          <td>
-                            pending
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            deep patel 
-                          </td>
-                          
-                          <td>
-                            20/12/2022
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            tanuu
-                          </td>
-                          
-                          <td>
-                            20/11/2022
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            roshni jha  
-                          </td>
-                          
-                          <td>
-                            05/12/2022
-                          </td>
-                          
-                          <td>
-                            Rejected
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            devv
-                          </td>
-                          
-                          <td>
-                            02/01/2023
-                          </td>
-                          
-                          <td>
-                            Pending
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            7
-                          </td>
-                          <td>
-                            Kavita 
-                          </td>
-                          
-                          <td>
-                            22/01/2023
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            8
-                          </td>
-                          <td>
-                            gangg
-                          </td>
-                          
-                          <td>
-                            29/11/2022
-                          </td>
-                          
-                          <td>
-                            Rejected
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            9
-                          </td>
-                          <td>
-                            hellyy 
-                          </td>
-                          
-                          <td>
-                            08/12/2022
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            9
-                          </td>
-                          <td>
-                            Yashh
-                          </td>
-                          
-                          <td>
-                            14/11/2022
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            10
-                          </td>
-                          <td>
-                            suhani
-                          </td>
-                          
-                          <td>
-                            25/01/2023
-                          </td>
-                          
-                          <td>
-                            successful
-                          </td>
-                        </tr>      
-                
+ <?php
+    $sql = "SELECT payment_id, payment_mode,created_on, payment_status FROM tbl_payment;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    
+   
 
-                      </tbody>
+    if($resultCheck!=0)
+    {
+        while(($total=mysqli_fetch_assoc($result)))
+        {
+            echo "
+            <tr>
+            <td>".$total['payment_id']."</td>
+            <td>".$total['payment_mode']."</td>
+            <td>".$total['created_on']."</td>
+            
+            ";
+            ?>
+            
+            <?php
+            if($total['payment_status']=='Rejected'){
+              ?>
+            <td><label for="" class="badge badge-danger">Rejected</label></td>
+            <?php
+            }
+            elseif($total['payment_status']=='success'){?>
+              <td><label for="" class="badge badge-success">Successful</label></td>
+            <?php }
+            else{
+              ?>
+            <td><label for="" class="badge badge-warning">Pending</label></td>
+            <?php
+            }
+            ?>
+            <?php
+            echo "</tr>";
+            
+            
+        }
+
+    }
+    else
+    {
+        echo "No Records Found";
+    }
+?>
                     </table>
                     
                   </div>

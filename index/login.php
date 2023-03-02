@@ -1,11 +1,112 @@
-<?php include './include/connection.php';?>
+<?php
+    
+ include './include/connection.php';
+ session_start();
+ $sub=""; 
+ $f_error=""; 
+if (isset($_POST['submit'])) {
+    $sub=$_POST['subject'];
+	$email = ($_POST['email']);
+	$pass = $_POST['password'];
+	if (empty($_POST["email"])) {
+		$error = "<p style='color:red;font-size:10;margin:0px;margin-left:-130px'>*Email is required</p>";
+        echo $error;
+	  } else {
+		$email = $_POST["email"];
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		  $error = "<p style='color:red;font-size:10;margin:0px;margin-left:-40px'>Invalid email format</p>";
+		}
+	  }
+	if (empty($pass)) {
+		$error1 = "<p style='color:red;font-size:10;margin:0px;margin-left:-40px'>*Please Enter your password</p>";
+        echo $error1;
+    }
+	if($sub == 'Farmers'){
+		$query = "select * from tbl_farmer where f_email='$email'";
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['f_id'];
+                
+				$db_pass = $row['f_password'];
+                
+				if($pass != $db_pass) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+                    
+                }
+				else{
+                   
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['f_id'];
+                        $_SESSION['EMAIL_id'] = $row['f_email'];
+				
+				}
+			}
+    }
+    elseif($sub == 'Dealer'){
+                $query = "select * from tbl_dealer where d_email='$email'";
+		
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['d_id'];
+				$db_pass = $row['d_password'];
+				if($pass != $db_pass) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+                    
+                }
+				else{
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['d_id'];
+                        $_SESSION['EMAIL_id'] = $row['d_email'];
+				
+				}
+			}
+
+    }
+	elseif($sub == 'Expert'){
+            $query = "select * from tbl_expert_details where e_email='$email'";
+		
+        $res = mysqli_query($conn, $query);
+		
+			if ($row = mysqli_fetch_assoc($res)) {
+				$_SESSION['id'] = $row['e_id'];
+				$db_pass = $row['e_password'];
+				if($pass != $db_pass) {
+					$f_error = "<p style='background: #f2dedf;color: #9c4150;border: 1px solid #e7ced1;padding:10px;text-align:center;border-radius:10px;'>Please Enter Valid Password</p> ";
+                    
+                }
+				else{
+					?>
+                    <script>
+                    window.location.href = 'index.php';
+                    </script>
+                    <?php
+                        $_SESSION['id'] = $row['e_id'];
+                        $_SESSION['EMAIL_id'] = $row['e_email'];
+				
+				}
+			}
+
+        }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home One || Agrion || Agrion HTML 5 Template </title>
+    
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -131,14 +232,11 @@
                     </div>
                 </div>
                 <div class="contact-two__form-box">
-                    <form action="assets/inc/sendemail.php" class="contact-two__form contact-form-validated"
-                        novalidate="novalidate">
-                        <div class="row" style="
-                        text-align: center;
+                    <form action="" method="POST">
+                        <div class="row" style="text-align: center;
                         display: flex;
-                        justify-content: center;
-                        ">
-                            
+                        justify-content: center;">
+                        
                             <div class="col-xl-9">
                                 <div class="contact-form__input-box">
                                     <input type="email" placeholder="Email Address" name="email">
@@ -146,25 +244,36 @@
                             </div>
                             <div class="col-xl-9">
                                 <div class="contact-form__input-box">
-                                    <input type="password" required onkeyup="pswds(this)" invalid-text="exampleInputPassword16" placeholder="Password" name="Password">
-                                    <small id="exampleInputPassword16" style="color: red; display: none;">
+                                    <input type="password" invalid-text="exampleInputPassword16" placeholder="Password" name="password">
+                                    <!-- <small id="exampleInputPassword16" style="color: red; display: none;">
                                         <ul>
                                         <li style="color: red; display: table;">min 6 characters, max 50 characters</li>
                                         <li style="color: red; display: table;">must contain 1 letter</li>
                                         <li style="color: red; display: table;">must contain 1 number</li>
                                         <li style="color: red; display: table;">may contain special characters like !@#$%^&*()_+</li>
                                         </ul>
-                                    </small>
+                                    </small> -->
                                 </div>
                             </div>
+                            <div class="col-xl-9">
+                                                    <div class="contact-form__input-box">
+
+
+                                                        <select name="subject" id="Subject">
+                                                            <option value="" disabled selected>User Type</option>
+                                                            <option name="farmers" value="Farmers">Farmers</option>
+                                                            <option name="dealer" value="Dealer">Dealer</option>
+                                                            <option name="expert" value="Expert">Expert</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                             
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
                                 <a href="forgot_pass.php" class="forgot_link">Forgot Password?</a>
                                 <div class="contact-form__btn-box">
-                                    <a href="#" class="thm-btn contact-two__btn">Login<i
-                                            class="icon-right-arrow"></i> </a>
+                                <button type="submit" class="btn btn-primary mr-2" name="submit">Login</button>
                                             <br>
                              <span class="section-title__tagline" style="padding-top: 27px;">Don't Have an Account?<br><a style="padding-top: 15px;" class="section-title__tagline" href="register.php">  Create a New Account</a></span>
                                 </div>
@@ -173,9 +282,13 @@
                     </form>
                 </div>
             </div>
+            <?php
+                 echo $f_error;
+                 ?>
         </section>
         <!--Contact Two End-->
                 </div>
+                
             </div>
         </section>
         <!--Page Header End-->
@@ -213,14 +326,7 @@
                     <a href="tel:666-888-0000">666 888 0000</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
+            
 
 
 
@@ -229,20 +335,7 @@
     </div>
     <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="icon-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
+    
     <!-- /.search-popup -->
 
 
@@ -277,6 +370,8 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
+    
+
 </body>
 
 </html>

@@ -1,6 +1,9 @@
 <?php include './include/header.html';
 include './include/connection.php'; ?>
-      <!-- partial -->
+      <!-- partial --><style>
+       table {border-collapse:collapse; table-layout:fixed; width:310px;}
+   table td {border:solid 1px #fab; width:100px; word-wrap:break-word; overflow: hidden;}
+      </style>
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="row">
@@ -32,6 +35,7 @@ include './include/connection.php'; ?>
                           </th>
                         </tr>
                       </thead>
+                      
                       <?php
     $sql = "SELECT response_id,response_details, response_date, status FROM tbl_response;";
     $result = mysqli_query($conn, $sql);
