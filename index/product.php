@@ -48,7 +48,7 @@ include './include/connection_session.php'; ?>
                             <div class="shop-category product__sidebar-single">
                                 <h3 class="product__sidebar-title">Categories</h3>
                                 <ul class="list-unstyled">
-                                    <li  id="flower-seeds"><a>Flower seeds</a></li>
+                                    <li class="active"  id="flower-seeds"><a>Flower seeds</a></li>
                                     <li> <a href="#seasonal-seeds">Seasonal Seeds</a></li>
                                     <li> <a href="#tools-equipments">Tool and Equipment</a></li>
                                     <li> <a href="#bio-fertilizers">Bio Fertilizer</a></li>
@@ -95,13 +95,7 @@ include './include/connection_session.php'; ?>
                                                     </div>
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
+                                                    
                                                     <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
                                                     <p class="product__all-price">'.$price.'</p>
                                                 </div>
@@ -136,13 +130,7 @@ include './include/connection_session.php'; ?>
                                                     </div>
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
+                                                    
                                                     <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
                                                     <p class="product__all-price">'.$price.'</p>
                                                 </div>
@@ -176,13 +164,7 @@ include './include/connection_session.php'; ?>
                                                     </div>
                                                 </div>
                                                 <div class="product__all-content">
-                                                    <div class="product__all-review">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
+                                                    
                                                     <h4 class="product__all-title"><a href="product-details.php">'.$name.'</a></h4>
                                                     <p class="product__all-price">'.$price.'</p>
                                                 </div>

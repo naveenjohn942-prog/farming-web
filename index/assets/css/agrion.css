@@ -51,6 +51,7 @@ body {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 body.locked {
@@ -4601,6 +4602,7 @@ left: -78px;
   display: block;
   background-color: var(--agrion-black);
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .site-footer__top {
@@ -4614,6 +4616,7 @@ left: -78px;
   position: relative;
   display: block;
 }
+
 
 .site-footer-shape-1 {
   position: absolute;
@@ -4870,6 +4873,7 @@ left: -78px;
   background-color: #0a1905;
   padding: 22px 0 22px;
   padding-left: 120px;
+  overflow-x: hidden;
   border-top-left-radius: var(--agrion-bdr-radius);
   z-index: 1;
 }

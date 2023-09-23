@@ -1,7 +1,25 @@
 
 <?php 
-include './include/header.html';
-include './include/connection.php'; 
+ 
+include './include/header.php';
+include './include/connection_session.php';
+
+$rid = $_SESSION['id'];
+$rsql = "SELECT * FROM `tbl_farmer` WHERE f_id = $rid";
+$rquery = mysqli_query($conn, $rsql);
+$rrow = mysqli_fetch_assoc($rquery);
+$fname = $rrow['first_name'];
+$lname = $rrow['last_name'];
+$address = $rrow['address'];
+$email = $rrow['f_email'];
+$phone = $rrow['phone_no'];
+
+$pid = $_SESSION['id'];
+$psql = "SELECT * FROM `tbl_product` WHERE f_id = $pid";
+$pquery = mysqli_query($conn, $psql);
+// $prow = mysqli_fetch_assoc($pquery);
+// $pname = $prow['product_name'];
+// $price = $prow['price'];
 
      if(isset($_POST['submit']))
         {
@@ -70,13 +88,13 @@ include './include/connection.php';
                                 <div class="row bs-gutter-x-20">
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="fname" value="" placeholder="First Name"
+                                            <input type="text" name="fname" value="<?php echo $fname ?>" placeholder="First Name"
                                                 required="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input type="text" name="lname" value="" placeholder="Last Name"
+                                            <input type="text" name="lname" value="<?php echo $lname ?>" placeholder="Last Name"
                                                 required="">
                                         </div>
                                     </div>
@@ -85,19 +103,19 @@ include './include/connection.php';
                                     
                                     <div class="col-xl-12">
                                         <div class="billing_input_box">
-                                            <input type="text" name="address" value="" placeholder="Address">
+                                            <input type="text" name="address" value="<?php echo $address ?>" placeholder="Address">
                                         </div>
                                     </div>
                                     
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
-                                            <input name="email" type="email" placeholder="Email Address">
+                                            <input name="email" type="email" placeholder="Email Address" value="<?php echo $email ?>">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="billing_input_box">
                                             <input type="tel" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                                required="" placeholder="Phone Number">
+                                                required="" placeholder="Phone Number" value="<?php echo $phone ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -122,22 +140,18 @@ include './include/connection.php';
                                         </tr>
                                     </thead>
                                     <tbody>
+                           <?php         while(($prow = mysqli_fetch_assoc($pquery)))
+                                    {  $pname = $prow['product_name'];
+                                        $price = $prow['price'];
+                                        echo '
                                         <tr>
-                                            <td class="pro__title">Product Name</td>
-                                            <td class="pro__price">&#8377;100.00 </td>
+                                           
+                                            <td class="pro__price" style="text-align:left;">';?> <?php echo $pname ?> <?php echo'</td>
+                                            <td class="pro__price">'?><?php echo $price ?> <?php echo '</td>
                                         </tr>
-                                        <tr>
-                                            <td class="pro__title">Subtotal</td>
-                                            <td class="pro__price">&#8377;100.00 </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pro__title">Shipping</td>
-                                            <td class="pro__price">&#8377;0.00 </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="pro__title">Total</td>
-                                            <td class="pro__price">&#8377;200.00</td>
-                                        </tr>
+                                        
+                                       ';
+                                    }?>
                                     </tbody>
                                 </table>
                             </div>

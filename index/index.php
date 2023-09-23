@@ -1,9 +1,34 @@
 
 <?php 
 
-// include './include/header.html';
+//  include './include/header.html';
+//  include './include/connection.php';
 include './include/header.php';
 include './include/connection_session.php';
+
+$rid = $_SESSION['id'];
+$rsql = "SELECT * FROM `tbl_farmer` WHERE f_id = $rid";
+$rquery = mysqli_query($conn, $rsql);
+$rrow = mysqli_fetch_assoc($rquery);
+$name = $rrow['first_name'];
+
+if (isset($_POST['submit']))
+{
+
+$review = $_POST['review'];
+
+
+$query = "INSERT INTO tbl_queries(f_id,q_desc) VALUES('$rid','$review')";
+
+if ($conn->query($query) === TRUE) {
+echo "<script>alert('Successfully Recorded');";
+echo "window.location.href = 'index.php';</script>;";
+}
+else{
+
+echo "Error".mysqli_error($conn);
+}
+}
 ?>
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
@@ -459,7 +484,7 @@ include './include/connection_session.php';
                                         </div>
                                     </div>
                                     <div class="counter-one__content-box count-box">
-                                        <h3 class="count-text" data-stop="50" data-speed="20">00</h3>
+                                        <h3 class="count-text" data-stop="25" data-speed="20">00</h3>
                                         <p class="counter-one__text">Agriculture Products</p>
                                     </div>
                                 </li>
@@ -475,7 +500,7 @@ include './include/connection_session.php';
                                         </div>
                                     </div>
                                     <div class="counter-one__content-box count-box">
-                                        <h3 class="count-text" data-stop="5" data-speed="2">00</h3>
+                                        <h3 class="count-text" data-stop="10" data-speed="2">00</h3>
                                         <p class="counter-one__text">satisfied customers</p>
                                     </div>
                                 </li>
@@ -558,28 +583,22 @@ include './include/connection_session.php';
                                 style="background-image: url(assets/images/shapes/contact-one-shape-1.png);"></div>
                             <div class="row">
                                 <div class="contact-one__form-box">
-                                    <form action="assets/inc/sendemail.php"
-                                        class="contact-one__form contact-one-validated" novalidate="novalidate">
+                                    <form action="" class="contact-one__form contact-one-validated" method="POST">
                                         <div class="row">
-                                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
                                                 <div class="contact-one__input-box">
-                                                    <input type="text" placeholder="Your Name" name="name">
+                                                    <input type="text" name="name" value="<?php echo $name ?>">
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                                <div class="contact-one__input-box">
-                                                    <input type="email" placeholder="Email Address" name="email">
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="contact-one__input-box text-message-box">
-                                                    <textarea name="message" placeholder="Write a Message"></textarea>
+                                                    <textarea name="review" placeholder="Write a Message"></textarea>
                                                 </div>
                                                 <div class="contact-one__btn-box">
-                                                    <a href="index.php" class="thm-btn contact-one__btn">Send a Message
-                                                        <i class="icon-right-arrow"></i> </a>
+                                                <button class="w-10 btn btn-primary" type="submit" name="submit">Submit</button>
                                                 </div>
                                             </div>
                                         </div>

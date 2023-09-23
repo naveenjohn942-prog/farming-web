@@ -13,7 +13,7 @@ $equery = mysqli_query($conn, $esql);
 $erow = mysqli_fetch_assoc($equery);
 
 $revid = $_GET['id'];
-$revsql = "SELECT * FROM `tbl_reviews` WHERE review_id = $eid";
+$revsql = "SELECT * FROM `tbl_reviews` WHERE review_id = $revid";
 $revquery = mysqli_query($conn, $revsql);
 $revrow = mysqli_fetch_assoc($revquery);
 ?>

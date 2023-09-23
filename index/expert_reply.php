@@ -12,6 +12,13 @@ include './include/connection_session.php';
     $sql2 = "SELECT * FROM tbl_expert_details;";
     $result2 = mysqli_query($conn, $sql2);
     $resultCheck2 = mysqli_num_rows($result2);
+
+    $rid = $_SESSION['id'];
+    $rsql = "SELECT * FROM `tbl_expert_details` WHERE e_id = $rid";
+    $rquery = mysqli_query($conn, $rsql);
+    $rrow = mysqli_fetch_assoc($rquery);
+    $name = $rrow['first_name'];
+
     
     if (isset($_POST['submit']))
         {
@@ -84,20 +91,9 @@ include './include/connection_session.php';
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="comment-form__input-box">
-                                                <?php if($resultCheck2!=0)
-                                                 {
-                                                     while(($total=mysqli_fetch_assoc($result2)))
-                                                         {
-                                                          ?>
-                                                         <input type="text" placeholder="Your Name" name="name" value="<?php echo $total['first_name']." ".$total['last_name'];?>">
-                                                          <?php
-                                                          break;
-                                                         }
-                                                }
-                                                else
-                                                            {
-                                                      echo "No Records Found";
-                                                            }     ?>
+                                                
+                                                         <input type="text" placeholder="Your Name" name="name" value="<?php echo $name ?>">
+                                                          
                                                 </div>
                                             </div>
                                             

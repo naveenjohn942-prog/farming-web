@@ -77,39 +77,33 @@ include './include/connection.php';?>
                           
                         </tr>  
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>Marigold Seeds</td>
-                          <td class="font-weight-bold">Rs.62</td>
-                          <td>21 Jan 2023</td>
-                          
-                        </tr>
-                        <tr>
-                          <td>Coriander Seeds</td>
-                          <td class="font-weight-bold">Rs.116</td>
-                          <td>13 Jan 2023</td>
-                          
-                        </tr>
-                        <tr>
-                          <td>Tomato Seeds</td>
-                          <td class="font-weight-bold">Rs.55</td>
-                          <td>28 Jan 2023</td>
-                          
-                        </tr>
-                        <tr>
-                          <td>Spade</td>
-                          <td class="font-weight-bold">Rs.523</td>
-                          <td>13 Jan 2023</td>
-                         
-                        </tr>
-                        <tr>
-                          <td>Azospirillum</td>
-                          <td class="font-weight-bold">Rs.781</td>
-                          <td>01 Jan 2023</td>
-                          
-                        </tr>
-                        
-                      </tbody>
+                      <?php
+    $sql = "SELECT * FROM tbl_product;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+    
+   
+
+    if($resultCheck!=0)
+    {
+        while(($total=mysqli_fetch_assoc($result)))
+        {
+            echo "
+            <tr>
+            
+            <td>".$total['product_name']."</td>
+            
+            <td>".$total['price']."</td>
+            <td>".$total['p_description']."</td>
+            
+            
+            </tr>";
+            
+            
+        }
+
+      }
+?>
                     </table>
                   </div>
                 </div>

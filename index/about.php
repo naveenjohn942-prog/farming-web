@@ -103,11 +103,11 @@
                                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                                 <ul class="main-menu__list">
                                                     <li class="current megamenu">
-                                                        <a href="index.html">Home </a>
+                                                        <a href="index.php">Home </a>
                                                             
                                                     </li>
                                                     <li>
-                                                        <a href="#">Category</a>
+                                                        <a href="#fcategory">Category</a>
                                                     </li>
                                                     <li class="dropdown">
                                                         <a href="#">Help</a>
@@ -121,54 +121,18 @@
                                                         <a href="expert_guidance.php">Expert-Guidance</a>
                                                         
                                                     </li>
-                                                    <!-- <li class="dropdown">
-                                                        <a href="#">Projects</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="project-01.html">Projects 01</a></li>
-                                                            <li><a href="project-02.html">Projects 02</a></li>
-                                                            <li><a href="project-carousel.html">Project Carousel</a>
-                                                            </li>
-                                                            <li><a href="project-details.html">Project Details</a></li>
-                                                        </ul>
-                                                    </li> -->
-                                                    <!-- <li class="dropdown">
-                                                        <a href="#">Pages</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="farmers.html">Farmers</a></li>
-                                                            <li><a href="farmers-carousel.html">Farmers Carousel</a>
-                                                            </li>
-                                                            <li><a href="testimonials.html">Testimonials</a></li>
-                                                            <li><a href="testimonials-carousel.html">Testimonial
-                                                                    Carousel</a></li>
-                                                            <li><a href="faq.html">FAQs</a></li>
-                                                            <li><a href="404.html">404 Error</a></li>
-                                                        </ul>
-                                                    </li> -->
-                                                    <!-- <li class="dropdown">
-                                                        <a href="#">Blog</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog-carousel.html">Blog Carousel</a></li>
-                                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                                        </ul>
-                                                    </li> -->
-                                                    <li class="dropdown">
-                                                        <a href="farmer_update_profile.php">Account</a>
-                                                        <ul class="shadow-box">
-                                                            <li><a href="products.php">Products</a></li>
-                                                            <li><a href="cart.php">Cart</a></li>
-                                                            <li><a href="checkout.php">Checkout</a></li>
-                                                        </ul>
-                                                    </li>
+                                                    
+                                                    
+                                                        <li><a href="products.php">Products</a></li>
+                                                            
                                                     <li>
                                                         <a href="about.php">About</a>
                                                     </li>
                                                     <li>
-                                                        <a href="login.php">Login</a>
+                                                        <a href="logout.php">Logout</a>
                                                     </li>
                                                     <li>
-                                                        <a href="register.php">Register</a>
+                                                        <a href="farmer_update_profile.php">Welcome nj942</a>
                                                     </li>
                                                 </ul>
                                             </div>

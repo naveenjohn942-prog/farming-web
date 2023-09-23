@@ -147,7 +147,7 @@ include './include/connection_session.php';
                                                         <a href="logout.php">Logout</a>
                                                     </li>
                                                     <li>
-                                                    <li style="display: inline-flex;"><a href="#">Welcome <?php echo $Name ?> </a><i style="padding: 10px;" class="fa fa-user"></i></li>
+                                                    <li style="display: inline-flex;"><a href="farmer_update_profile.php">Welcome <?php echo $Name ?> </a><i style="padding: 10px;" class="fa fa-user"></i></li>
                                                     </li>
                                                    
                                                     
@@ -163,10 +163,7 @@ include './include/connection_session.php';
                                                 <div class="main-menu__cart-box">
                                                     <a href="cart.php" class="main-menu__cart icon-shopping-cart"></a>
                                                 </div>
-                                                <div class="main-menu__btn-box">
-                                                    <a href="contact.php" class="thm-btn main-menu__btn">Get Free Quote
-                                                        <i class="icon-right-arrow"></i> </a>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

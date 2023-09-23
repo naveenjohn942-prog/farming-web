@@ -1,5 +1,11 @@
 <?php include './include/connection.php';
 include './include/header.html'; 
+
+// $rid = $_GET['id'];
+// $rsql = "SELECT * FROM `tbl_expert_details` WHERE e_id = $rid";
+// $rquery = mysqli_query($conn, $rsql);
+// $rrow = mysqli_fetch_assoc($rquery);
+
  ?>
  <div class="main-panel">
         <div class="content-wrapper">
@@ -8,9 +14,12 @@ include './include/header.html';
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Dealers Details</h4>
+                  <h4 class="card-title">Expert Details</h4>
                   
                   <div class="table-responsive pt-3">
+                  <button type="submit" class="btn btn-primary mr-2" name="submit"><a href="../../Report/expert_reportrpt.php" style="
+    color: white;
+">Report</a></button><br><br>
                     <table class="table table-bordered" id="myTable">
                       <thead>
 <tr>

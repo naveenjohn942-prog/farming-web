@@ -131,7 +131,8 @@ include './include/connection.php'; ?>
                                 <div class="item">
                                     <div class="testimonial-one__single" style="height: 500px;">
                                         <div class="testimonial-one__content">
-                                            <p class="testimonial-one__text"><b>Question:</b>What are the benefits of sustainable agriculture? <br>
+                                            <p class="testimonial-one__text">
+                                                <b>Question:</b>What are the benefits of sustainable agriculture? <br>
                                                 <b>Answer:</b>The benefits of sustainable agriculture include increased biodiversity, improved soil health, reduced use of harmful chemicals, and a more resilient food system. It also helps to protect natural resources, such as water ...</p>
                                             <div class="testimonial-one__client-info">
                                                 <div class="testimonial-one__client-img">

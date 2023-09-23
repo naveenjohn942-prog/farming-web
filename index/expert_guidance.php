@@ -1,8 +1,11 @@
 <?php include './include/header.php';
 include './include/connection_session.php'; 
-$sql = "SELECT * FROM tbl_farmer;";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
+$rid = $_SESSION['id'];
+$rsql = "SELECT * FROM `tbl_farmer` WHERE f_id = $rid";
+$rquery = mysqli_query($conn, $rsql);
+$rrow = mysqli_fetch_assoc($rquery);
+$name = $rrow['first_name'];
+
 if (isset($_POST['submit']))
 {
     
@@ -45,20 +48,9 @@ if (isset($_POST['submit']))
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="contact-form__input-box">
-                                <?php if($resultCheck!=0)
-            {
-        while(($total=mysqli_fetch_assoc($result)))
-        {
-        ?>
-                                    <input type="text" placeholder="Your Name" name="name" value="<?php echo $total['first_name']." ".$total['last_name'];?>">
-                                    <?php
-                                    break;
-        }}
-        else
-    {
-        echo "No Records Found";
-    }
-        ?>
+                               
+                                    <input type="text" placeholder="Your Name" name="name" value="<?php echo $name ?>">
+                                    
                                 </div>
                             </div>
                             

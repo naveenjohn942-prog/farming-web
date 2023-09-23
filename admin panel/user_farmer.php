@@ -11,6 +11,9 @@ include './include/header.html';
                   <h4 class="card-title">Farmer Details</h4>
                   
                   <div class="table-responsive pt-3">
+                  <button type="submit" class="btn btn-primary mr-2" name="submit"><a href="../../Report/farmer_reportrpt.php" style="
+    color: white;
+">Report</a></button><br><br>
                     <table class="table table-bordered" id="myTable">
                       <thead>
 <tr>

@@ -54,9 +54,9 @@ if (isset($_POST['active']))
                 <div class="card-body">
                   <h4 class="card-title">All Category Details</h4>
                   <div>
-                    <a href="add_category.php">
-                    <button class="btn-primary">Add New Category</button>
-                  </a>
+                  <button type="submit" class="btn btn-primary mr-2" name="submit"><a href="../../Report/category_reportrpt.php" style="
+    color: white;
+">Report</a></button><br><br>
                   </div>
                   <div class="table-responsive pt-3">
                     <table class="table table-bordered" id="myTable">

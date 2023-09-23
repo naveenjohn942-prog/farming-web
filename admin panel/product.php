@@ -12,8 +12,9 @@ include './include/connection.php';
                 <div class="card-body">
                   <h4 class="card-title">All Products Details</h4>
                   <div>
-                    <a href="add_product.php">
-                    <button class="btn-primary">Add New Product</button>
+                  <button type="submit" class="btn btn-primary mr-2" name="submit"><a href="../../Report/product_reportrpt.php" style="
+    color: white;
+">Report</a></button><br><br>
                   </a>
                   </div>
                   <div class="table-responsive pt-3">

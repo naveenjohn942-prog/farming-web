@@ -1,5 +1,5 @@
-<?php include './include/header.html';
-      include './include/connection.php';
+<?php include './include/header.php';
+include './include/connection_session.php'; 
 ?>
 
         <div class="stricky-header stricked-menu main-menu">
