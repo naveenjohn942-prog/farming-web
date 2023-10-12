@@ -571,7 +571,7 @@ echo "Error".mysqli_error($conn);
                                     </div>
                                     <div class="content">
                                         <p>Visit Now</p>
-                                        <h4>St Xavier's college, Ahmedabad</h4>
+                                        <h4>Christ University, Bangalore</h4>
                                     </div>
                                 </li>
                             </ul>

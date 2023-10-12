@@ -1,5 +1,9 @@
-<?php include './include/connection.php';
+<?php
+include './include/connection.php';
 
+$registrationStatus = null;
+$validationSuccess = true;
+$sub = '';
 
 if (isset($_POST['submit'])) {
     $fname = $_POST['fname'];
@@ -13,59 +17,70 @@ if (isset($_POST['submit'])) {
     $qualif = $_POST['qual'];
     $experience = $_POST['exp'];
     $addr = $_POST['address'];
-    $sub = $_POST['subject'];
+    $sub = isset($_POST['subject']) ? $_POST['subject'] : '';
 
-//     if (empty($fname)) {
-// 		$error = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your first name </p>";
-// 	} else {if (empty($fname)) {
-// 		$error = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your first name </p>";
-// 	}
-// }
-
-//     if (empty($lname)) {
-// 		$error1 = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:30px'>*Please Enter your last name </p>";
-// 	} else {
-// 		if (!preg_match("/^([a-zA-Z' ]+)$/", $lname)) {
-// 			$error1 = "<p style='color:red;font-size:14;margin:0px;margin-left:-55px'>*Please Enter only characters... </p>";
-// 		}
-// 	}
-
-//     if (empty($_POST["email"])) {
-// 		$error2 = "<p style='color:red;font-size:14;margin:0px;margin-left:-40px;margin-right:54px'>*Please Enter your E-mail </p>";
-// 	} else {
-// 		$email = test_input($_POST["email"]);
-// 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-// 			$error2 = "<p style='color:red;font-size:14;margin:0px;margin-left:-130px'>*Invalid email format</p>";
-// 		}
-// 	}
-
-    if ($sub == 'Farmers') {
-        $insert_query = "INSERT INTO `tbl_farmer`(`username`, `first_name`, `last_name`, `f_email`, `f_password`,`address`, `phone_no`, `farmer_no`) 
-       VALUES ('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno','$farmer_no')";
-    }
-    elseif ($sub == 'Dealer') {
-        $insert_query = "INSERT INTO `tbl_dealer`(username, first_name,last_name,d_email,d_password,address,phone_no,gst_no) 
-           VALUES('$usrname','$fname','$lname','$email','$pass','$addr','$phoneno','$gstin')";
-    } 
-    elseif($sub == 'Expert') {
-        $insert_query = "INSERT INTO `tbl_expert_details`(username, first_name, last_name,e_email, e_password, phone_no, e_qualification, e_experience) 
-           VALUES('$usrname','$fname','$lname','$email','$pass','$phoneno','$qualif','$experience')";
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 
-    $res = mysqli_query($conn, $insert_query);
-    if ($res) {
-?>
-        <script>
-            alert("Data inserted");
-            window.location.href="login.php";
-        </script>
-    <?php
+    // Function to validate email format
+    function isValidEmail($email) {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+
+    // Function to validate password format
+    function isValidPassword($password) {
+        // Password should have at least 6 characters, 1 letter, and 1 number
+        return preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+]{6,}$/', $password);
+    }
+
+    // Clear previous error messages
+    $errors = [];
+
+    if (empty($lname)) {
+        $errors['lname'] = "Please Enter your last name";
+    } elseif (!preg_match("/^([a-zA-Z' ]+)$/", $lname)) {
+        $errors['lname'] = "Please Enter only characters";
+    }
+
+    if (empty($_POST["email"])) {
+        $errors['email'] = "Please Enter your E-mail";
     } else {
-    ?>
-        <script>
-            alert("Data not inserted");
-        </script>
-<?php
+        $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = "Invalid email format";
+        }
+    }
+
+    // Check for other form fields and add error handling as needed...
+
+    if (empty($errors)) {
+        // Process the form data and insert into the database
+
+        $insert_query = "";
+
+        if ($sub == 'Farmers') {
+            $insert_query = "INSERT INTO `tbl_farmer`(`username`, `first_name`, `last_name`, `f_email`, `f_password`, `address`, `phone_no`, `farmer_no`) 
+            VALUES ('$usrname', '$fname', '$lname', '$email', '$pass', '$addr', '$phoneno', '$farmer_no')";
+        } elseif ($sub == 'Dealer') {
+            $insert_query = "INSERT INTO `tbl_dealer`(username, first_name, last_name, d_email, d_password, address, phone_no, gst_no) 
+            VALUES ('$usrname', '$fname', '$lname', '$email', '$pass', '$addr', '$phoneno', '$gstin')";
+        } elseif ($sub == 'Expert') {
+            $insert_query = "INSERT INTO `tbl_expert_details`(username, first_name, last_name, e_email, e_password, phone_no, e_qualification, e_experience) 
+            VALUES ('$usrname', '$fname', '$lname', '$email', '$pass', '$phoneno', '$qualif', '$experience')";
+        }
+
+        if (!empty($insert_query)) {
+            $res = mysqli_query($conn, $insert_query);
+            if ($res) {
+                $registrationStatus = true;
+            } else {
+                $registrationStatus = false;
+            }
+        }
     }
 }
 
@@ -201,21 +216,29 @@ if (isset($_POST['submit'])) {
                                         </div>
                                     </div>
                                     <div class="contact-two__form-box">
-                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" class="contact-two__form" method="POST">
+                                    <?php if (isset($registrationStatus)): ?>
+    <div class="registration-message <?php echo $registrationStatus ? 'success' : 'error'; ?>">
+        <?php echo $registrationStatus ? 'Registration successful' : 'Registration failed'; ?>
+    </div>
+    <?php endif; ?>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="contact-two__form" method="POST" onsubmit="return validateForm()">
+
+
                                             <div class="row">
 
                                                 <div class="col-xl-6">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text"  placeholder="First Name" name="fname">
-                                                        <!-- <?php echo $error ?> -->
-                                                        <!-- <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small> -->
+                                                    <input type="text" placeholder="First Name" name="fname" onblur="validateName(this, document.getElementById('fname-error'))">
+                                                    <small id="fname-error" class="error"></small>
+
                                                     </div>
 
                                                 </div>
                                                 <div class="col-xl-6">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text" placeholder="Last Name" name="lname">
-                                                        <small id="exampleInputName20" style="color: red; display: none;">Please Enter Only Alphabet.<br /></small>
+                                                    <input type="text" placeholder="Last Name" name="lname" onblur="validateName(this, document.getElementById('lname-error'))">
+                                                    <small id="lname-error" class="error"></small>
+
                                                     </div>
 
                                                 </div>
@@ -227,14 +250,16 @@ if (isset($_POST['submit'])) {
                                                 <div class="col-xl-12">
                                                     <div class="contact-form__input-box">
                                                         <input type="email"  placeholder="Email Address" name="email">
-                                                        <small id="exampleInputemail21" style="color: red; display: none;">Please Enter Valid Email.<br /></small>
+                                                        <small id="email-error" class="error"></small>
+
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <div class="contact-form__input-box">
                                                         <input type="password" placeholder="Password" name="password">
-                                                        <small id="exampleInputPassword21" style="color: red; display: none;">
-                                                            <ul>
+                                                        <small id="password-error" class="error"></small>
+
+                                                            <!-- <ul>
                                                                 <li style="color: red;
                                         display: table;">min 6 characters, max 50 characters</li>
                                                                 <li style="color: red;
@@ -244,14 +269,16 @@ if (isset($_POST['submit'])) {
                                                                 <li style="color: red;
                                         display: table;">may contain special characters like !@#$%^&*()_+</li>
 
-                                                            </ul><br />
+                                                            </ul><br /> -->
                                                         </small>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12">
                                                     <div class="contact-form__input-box">
-                                                        <input type="text" placeholder="Phone" name="phone_no">
-                                                        <small id="exampleInputMobile09" style="color: red; display: none;">Please Enter valid Phone number.<br /></small>
+                                                    <input type="text" placeholder="Phone" name="phone_no" id="phone_no">
+                                                    <small id="phone-error" class="error"></small>
+
+
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12">
@@ -263,12 +290,13 @@ if (isset($_POST['submit'])) {
                                                     <div class="contact-form__input-box">
 
 
-                                                        <select name="subject" id="Subject" onchange="display_input()">
-                                                            <option value="" disabled selected>User Type</option>
-                                                            <option name="Farmers" value="Farmers">Farmers</option>
-                                                            <option name="Dealer" value="Dealer">Dealer</option>
-                                                            <option name="Expert" value="Expert">Expert</option>
-                                                        </select>
+                                                    <select name="subject" id="Subject" onchange="display_input()">
+    <option value="" disabled selected>User Type</option>
+    <option name="Farmers" value="Farmers">Farmers</option>
+    <option name="Dealer" value="Dealer">Dealer</option>
+    <option name="Expert" value="Expert">Expert</option>
+</select>
+
                                                     </div>
                                                 </div>
 
@@ -276,12 +304,15 @@ if (isset($_POST['submit'])) {
                                                 <div class="col-xl-12" id="farmer" style="display: none;">
                                                     <div class="contact-form__input-box">
                                                         <input type="text" placeholder="kheduthaq number" name="farm_no">
+                                                        <small id="farm_no-error" class="error"></small>
+
                                                     </div>
                                                 </div>
 
                                                 <div class="col-xl-12" id="dealer" style="display: none;">
                                                     <div class="contact-form__input-box">
                                                         <input type="text" placeholder="GSTIN" name="gstin" min="15" max="15">
+
                                                     </div>
                                                 </div>
 
@@ -422,25 +453,152 @@ if (isset($_POST['submit'])) {
         <!-- template js -->
         <script src="assets/js/agrion.js"></script>
         <script>
-            function display_input() {
-                let role = $("#Subject").val();
+    function display_input() {
+        let role = $("#Subject").val();
 
-                if (role == "Farmers") {
-                    $('#farmer').show();
-                    $('#expert').hide();
-                    $('#dealer').hide();
-                } else if (role == "Dealer") {
-                    $('#dealer').show();
-                    $('#expert').hide();
-                    $('#farmer').hide();
-                } else if (role == "Expert") {
-                    $('#expert').show();
-                    $('#dealer').hide();
-                    $('#farmer').hide();
-                }
+        if (role == "Farmers") {
+            $('#farmer').show();
+            $('#expert').hide();
+            $('#dealer').hide();
+        } else if (role == "Dealer") {
+            $('#dealer').show();
+            $('#expert').hide();
+            $('#farmer').hide();
+        } else if (role == "Expert") {
+            $('#expert').show();
+            $('#dealer').hide();
+            $('#farmer').hide();
+        }
+    }
+    function validateName(inputElement, errorElement) {
+        const nameRegex = /^[A-Za-z]+$/; // Regular expression for alphabets only
+
+        if (!nameRegex.test(inputElement.value)) {
+            errorElement.textContent = 'Only alphabets are allowed.';
+            return false;
+        } else {
+            errorElement.textContent = ''; // Clear error message
+            return true;
+        }
+    }
+    function validatePhoneNumber(inputElement, errorElement) {
+        const phoneNumber = inputElement.value;
+        const phoneRegex = /^\d{10}$/; // Regular expression for exactly 10 digits
+
+        if (!phoneRegex.test(phoneNumber)) {
+            errorElement.textContent = 'Phone number must be exactly 10 digits.';
+            return false;
+        } else {
+            errorElement.textContent = ''; // Clear error message
+            return true;
+        }
+    }
+    function validateForm() {
+        let isValid = true;
+
+        // Clear previous error messages
+        clearErrors();
+
+        const subject = document.querySelector('select[name="subject"]');
+
+        // Validate First Name
+        const fname = document.querySelector('input[name="fname"]');
+        if (fname.value.trim() === '') {
+            document.getElementById('fname-error').textContent = 'Please enter your first name.';
+            isValid = false;
+        }
+
+        // Validate Last Name
+        const lname = document.querySelector('input[name="lname"]');
+        if (lname.value.trim() === '') {
+            document.getElementById('lname-error').textContent = 'Please enter your last name.';
+            isValid = false;
+        }
+
+        // Validate Username
+        const username = document.querySelector('input[name="username"]');
+        if (username.value.trim() === '') {
+            document.getElementById('username-error').textContent = 'Please enter a username.';
+            isValid = false;
+        }
+
+        // Validate Email
+        const email = document.querySelector('input[name="email"]');
+        if (email.value.trim() === '') {
+            document.getElementById('email-error').textContent = 'Please enter your email address.';
+            isValid = false;
+        } else if (!isValidEmail(email.value)) {
+            document.getElementById('email-error').textContent = 'Invalid email format.';
+            isValid = false;
+        }
+
+        // Validate Password
+        const password = document.querySelector('input[name="password"]');
+        if (password.value.trim() === '') {
+            document.getElementById('password-error').textContent = 'Please enter a password.';
+            isValid = false;
+        } else {
+            // Only validate if the password field is not empty
+            if (!isValidPassword(password.value)) {
+                document.getElementById('password-error').textContent = 'Invalid password format.';
+                isValid = false;
             }
-        </script>
-        <script src="assets/js/validation.js"></script>
+        }
+
+        // Validate Phone Number
+        const phoneNo = document.querySelector('input[name="phone_no"]');
+        if (phoneNo.value.trim() === '') {
+            document.getElementById('phone-error').textContent = 'Please enter a phone number.';
+            isValid = false;
+        } else {
+            if (!validatePhoneNumber(phoneNo, document.getElementById('phone-error'))) {
+                isValid = false;
+            }
+        }
+
+        // Additional validation for other form fields goes here
+
+        if (subject.value === 'Farmers') {
+            // Validate Farmer Number
+            const farmNo = document.querySelector('input[name="farm_no"]');
+            if (farmNo.value.trim() === '') {
+                document.getElementById('farm_no-error').textContent = 'Please enter your kheduthaq number.';
+                isValid = false;
+            }
+        }
+
+        if (subject.value === 'Dealer') {
+            // Validate GSTIN
+            const gstin = document.querySelector('input[name="gstin"]');
+            if (gstin.value.trim() === '') {
+                document.getElementById('gstin-error').textContent = 'Please enter your GSTIN.';
+                isValid = false;
+            }
+        }
+
+        return isValid;
+    }
+
+    function clearErrors() {
+        const errorElements = document.querySelectorAll('.error');
+        errorElements.forEach((element) => {
+            element.textContent = '';
+        });
+    }
+
+    function isValidEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+    }
+
+    function isValidPassword(password) {
+        // Password should have at least 6 characters, 1 letter, and 1 number
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()_+]{6,}$/;
+        return passwordPattern.test(password);
+    }
+</script>
+
+
 
 
 
