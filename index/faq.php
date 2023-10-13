@@ -85,7 +85,7 @@
                                         <i class="icon-pin"></i>
                                     </div>
                                     <div class="text">
-                                        <p>  St. Xavier's College, Ahmedabad</p>
+                                        <p> Christ University Bangalore</p>
                                     </div>
                                 </li>
                             </ul>
